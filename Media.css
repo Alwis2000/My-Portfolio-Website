@@ -1,0 +1,14 @@
+@media screen and (max-width: 400px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    /*switch row based on width*/
+  }
+}
+
+@media screen and (width: 1000px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+
+    /*switch row based on width*/
+  }
+}

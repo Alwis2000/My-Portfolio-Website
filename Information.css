@@ -1,0 +1,189 @@
+body {
+  background-color: #bbb;
+  margin: 0px;
+  padding: 0;
+  text-align: center;
+  font-family: "Bebas Neue";
+  color: white;
+  user-select: none;
+  overflow-x: hidden;
+}
+
+.InfoContainer {
+  background-color: white;
+  position: relative;
+  height: 33vw;
+  width: 100%;
+  display: flex;
+}
+
+.ContainerOverlay {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 8;
+  pointer-events: none;
+}
+
+.HoverClass {
+  width: 35%;
+  height: 100%;
+  position: absolute;
+  left: 32.5%;
+  z-index: 6;
+}
+
+#ProfileImage {
+  position: relative;
+  clip-path: circle(44% at center);
+  transform: translate(0, 15%);
+  display: block;
+  z-index: 2;
+  width: fit-content;
+  margin: auto;
+  transition: 0.4s ease;
+}
+
+#ProfileWrap {
+  width: fit-content;
+}
+
+#ProfileImage:hover {
+  clip-path: circle(46% at center);
+}
+
+#ProfileImage img:hover {
+  transform: scale(1.025);
+}
+
+#ProfileImage img {
+  background-color: #ffffff;
+  width: 23vw;
+
+  transform: scale(1);
+  /* transform-origin: center center; */
+  transition: 0.5s ease;
+  opacity: 1;
+  /* left: 0; */
+  cursor: pointer;
+  /* display: block; */
+}
+
+.NameClass {
+  width: 100%;
+  color: black;
+  transform: translateY(100%);
+  font-size: 3vw;
+  transition: 0.2s ease-in-out;
+}
+
+.NameClass:hover {
+  transform: translateY(100%) scale(1.05);
+}
+
+.DigitalArtistBgText {
+  position: absolute;
+  z-index: 5;
+  color: #a6a6a6;
+  line-height: 0px;
+  font-size: 11vw;
+  top: -1.5%;
+  left: 5%;
+  transition: 0.5s ease;
+}
+
+.GameDevBgText {
+  position: absolute;
+  height: 100px;
+  z-index: 5;
+  color: #a6a6a6;
+  line-height: 0;
+  font-size: 15vw;
+  top: -7%;
+  right: 5%;
+  transition: 0.5s ease;
+}
+
+.DigitalArtistBgText:hover {
+  color: #f90;
+  text-shadow: -1px 1px 0px #d50, -2px 2px 0px #d50, -3px 3px 0px #d50,
+    -4px 4px 0px #d50, -5px 5px 0px #d50, -6px 6px 0px #d50, -7px 7px 0px #d50,
+    -8px 8px 0px #d50, -50px 40px 0px rgba(0, 0, 0, 0.14);
+  translate: 20px -10px;
+}
+
+.GameDevBgText:hover {
+  color: #f90;
+  text-shadow: 1px 1px 0px #d50, 2px 2px 0px #d50, 3px 3px 0px #d50,
+    4px 4px 0px #d50, 5px 5px 0px #d50, 6px 6px 0px #d50, 7px 7px 0px #d50,
+    8px 8px 0px #d50, 50px 40px 0px rgba(0, 0, 0, 0.14);
+  translate: -20px -10px;
+}
+
+.AboutMe .AboutBody {
+  position: relative;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 27%;
+  top: 60%;
+  opacity: 1;
+  z-index: 2;
+  background-color: rgb(30, 30, 30);
+  background-image: url("images/Scene\ Runner1.png");
+  background-position: 0% 70%;
+  background-size: cover;
+  transition: 1s ease;
+  transition:  1s ease, background-position 0s ease;
+  box-shadow: -500px 0px 0px #f90, 500px 0px 0px #f90, 0 0 0 rgba(0, 0, 0, 0.14);
+  overflow: hidden;
+}
+
+.AboutMe.CurrentItem .AboutBody {
+  height: 0;
+  width: 1%;
+  left: 50%;
+  box-shadow: 0px 0px 0px #d50, 0px 0px 0px #d50, 0 0 0 rgba(0, 0, 0, 0.14);
+  /* background-color: #f90; */
+  border-radius: 10%;
+  overflow: hidden;
+}
+
+.AboutMeText {
+  padding: 0%;
+  padding-top: 1%;
+  color: rgb(221, 221, 221);
+  font-size: 2.1vh;
+  /* height: fit-content; */
+  /* position: fixed; */
+  /* width: 50%; */
+  left: 37%;
+  right: 0;
+  transform: translateX(37%);
+  pointer-events: none;
+}
+
+.Credit {
+  background-color: #f90;
+  /* height: 5%; */
+  font-size: 25px;
+  color: rgb(255, 206, 132);
+  padding-left: 1%;
+  text-align: left;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f90;
+  border-radius: 10px;
+}

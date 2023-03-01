@@ -1,0 +1,96 @@
+.Container {
+  position: relative;
+  background-color: rgb(46, 46, 46);
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 350px;
+  grid-gap: 10px;
+  grid-auto-flow: dense;
+  z-index: 2;
+  box-shadow: 100px 0 0 rgba(0, 0, 0, 0.5);
+}
+
+.GalleryItem {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0.25em 0.4em 0.4em rgba(0, 0, 0, 0.301);
+  transition: 0.3s ease-in-out;
+  outline: #ffffff00 solid 0px;
+  transition: 0.2s ease;
+  /* animation: scaleIn 0.3s ease alternate-reverse ; */
+}
+
+.GalleryItem .image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: black;
+}
+
+.GalleryItem .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  /*centers image while resize*/
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.GalleryItem:hover .image img {
+  transform: scale(1.1);
+  filter: brightness(40%) blur(5px);
+}
+
+.GalleryItem:hover {
+  /* transform: scale(calc(100% + 2%)); */
+  z-index: 6;
+  outline: #f90 solid 2px;
+  --imgincr: 15px;
+  /* animation: scaleOut 0.3s ease forwards; */
+}
+
+.GalleryItem .Text {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  pointer-events: none;
+  z-index: 4;
+  /*postions depth of element */
+  transition: 0.5s ease-in-out;
+}
+
+.GalleryItem:hover .Text {
+  opacity: 1;
+  animation: move-up 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
+  padding: 1em;
+  width: 100%;
+}
+
+.w-1 {
+  grid-column: span 1;
+}
+.w-2 {
+  grid-column: span 2;
+}
+.w-3 {
+  grid-column: span 3;
+}
+
+.h-1 {
+  grid-row: span 1;
+}
+.h-2 {
+  grid-row: span 2;
+}
+.h-3 {
+  grid-row: span 3;
+}
