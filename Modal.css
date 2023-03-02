@@ -16,30 +16,29 @@
   transition: 1s ease;
   transform-origin: center;
   overflow: auto;
+
 }
 
 #ModalContentWrap {
   width: fit-content;
-  transform: translateX(17.5%);
+  margin: auto;
 }
 
 .ModalContent {
-  margin: auto;
   display: block;
   height: 80%;
   width: fit-content;
-  max-width: 100%;
-  transform-origin: inherit;
+  margin: auto;
   transform: scale(1);
   transition: 0.2s ease;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 #Caption {
   margin: auto;
   display: block;
   font-size: 160%;
-  max-width: 700px;
+  max-width: 800px;
   text-align: center;
   color: #ccc;
   padding: 25px 0;

@@ -11,6 +11,7 @@
   box-shadow: 100px 0 0 rgba(0, 0, 0, 0.5);
 }
 
+
 .GalleryItem {
   width: 100%;
   height: 100%;
@@ -60,12 +61,14 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
   color: white;
-  font-size: 20px;
+  font-size: 23px;
   pointer-events: none;
   z-index: 4;
   /*postions depth of element */
   transition: 0.5s ease-in-out;
+  text-decoration: none;
 }
 
 .GalleryItem:hover .Text {
