@@ -93,14 +93,21 @@ function Hover() {
   // this code is in place such that the queued unhover animation
   // will be cancelled.
   clearTimeout(delayNHover);
+  //here we have this check so that we don't restart the animation
   if (hovered) return;
+  //we are taking the current time and calculating the time taken from the animation start
   const elapsed = new Date().getTime() - hoverAnimStart;
+  //here we are checking whether the time taken is less than the animation duration 
+  //to set a delay to the function when triggered again
   if (elapsed < hoverAnimDur) {
+    //here we are adding the necessary delay to complete the animation 
     delayHover = setTimeout(Hover, hoverAnimDur - elapsed + 10);
     return;
   }
   hovered = true;
+  //the current time is set so we can retrigger the function properly
   hoverAnimStart = new Date().getTime();
+  //the animation data itself
   socT.animate(twitter, NormalTime);
   socI.animate(instagram, NormalTime);
   socR.animate(reddit, NormalTimeSlower);
