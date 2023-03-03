@@ -1,9 +1,9 @@
 #socialtwitter {
     position: absolute;
-    height: 10vw;
-    width: 10vw;
-    top: 45%;
-    left: 25%;
+    height: 175px;
+    width: 175px;
+    top: 257px;
+    left: 155px;
     background-color: #f90;
     border-radius: 100%;
     opacity: 1;
@@ -11,12 +11,28 @@
     transform: scale(100%);
     transition: 0.4s ease;
   }
+
+  #socialinstagram {
+    position: absolute;
+    /* height: width; */
+    height: 175px;
+    width: 175px;
+    top: 257px;
+    right: 155px;
+    background-color: #f90;
+    border-radius: 100%;
+    opacity: 1;
+    z-index: 1;
+    transform: scale(100%);
+    transition: 0.4s ease;
+  }
+
   #socialreddit {
     position: absolute;
-    height: 10vw;
-    width: 10vw;
-    top: 25%;
-    left: 18.5%;
+    height: 175px;
+    width: 175px;
+    top: 143px;
+    left: 117px;
     background-color: #f90;
     border-radius: 100%;
     opacity: 1;
@@ -24,12 +40,13 @@
     transform: scale(100%);
     transition: 0.4s ease;
   }
+
   #sociallinkedin {
     position: absolute;
-    height: 10vw;
-    width: 10vw;
-    top: 25%;
-    right: 18.5%;
+    height: 175px;
+    width: 175px;
+    top: 143px;
+    right: 117px;
     background-color: #f90;
     border-radius: 100%;
     opacity: 1;
@@ -38,20 +55,7 @@
     transition: 0.4s ease;
     text-align: center;
   }
-  #socialinstagram {
-    position: absolute;
-    /* height: width; */
-    height: 10vw;
-    width: 10vw;
-    top: 45%;
-    right: 25%;
-    background-color: #f90;
-    border-radius: 100%;
-    opacity: 1;
-    z-index: 1;
-    transform: scale(100%);
-    transition: 0.4s ease;
-  }
+
   
   #socialtwitter:hover {
     box-shadow: -0px 1px 0px #1679b6, -0px 2px 0px #1679b6, -1px 3px 0px #1679b6,

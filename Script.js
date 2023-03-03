@@ -12,9 +12,9 @@ const aboutbody = document.getElementsByClassName("AboutBody")[0];
 const BGText = document.getElementById("TextClass");
 const clickMe = document.getElementById("AboutMeHint");
 
-let social1X = 8;
-let social1Y = 7;
-let social2X = 10;
+let social1X = 115;
+let social1Y = 122;
+let social2X = 170;
 let social2Y = 0;
 let hovered = false;
 let hoverAnimStart = 0;
@@ -53,19 +53,19 @@ const Scaleintime = {
 
 const twitter = [
   { transform: "translate(0px, 0px) scale(1)" },
-  { transform: `translate(${-social1X}vw,${social1Y}vw) scale(0.7)` },
+  { transform: `translate(${-social1X}px,${social1Y}px) scale(0.7)` },
 ];
 const instagram = [
   { transform: "translate(0px, 0px) scale(1)" },
-  { transform: `translate(${social1X}vw,${social1Y}vw) scale(0.7)` },
+  { transform: `translate(${social1X}px,${social1Y}px) scale(0.7)` },
 ];
 const reddit = [
   { transform: "translate(0px, 0px) scale(1)" },
-  { transform: `translate(${-social2X}vw, ${social2Y}vw) scale(0.7)` },
+  { transform: `translate(${-social2X}px, ${social2Y}px) scale(0.7)` },
 ];
 const linkedin = [
   { transform: "translate(0px, 0px) scale(1)" },
-  { transform: `translate(${social2X}vw, ${social2Y}vw) scale(0.7)` },
+  { transform: `translate(${social2X}px, ${social2Y}px) scale(0.7)` },
 ];
 const ClickOpacity = [{ opacity: "0" }, { opacity: "1" }]
 
