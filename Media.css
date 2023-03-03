@@ -1,64 +1,60 @@
-@font-face{
+@font-face {
   font-family: "DaftPunkfont";
-  src: url("/images/Daft Font.ttf");
+  src: url("https://www.yunethalwis.com/images/Daft Font.ttf");
 }
 
 @media screen and (max-width: 1000px) {
   .container {
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     /*switch row based on width*/
     grid-auto-rows: 300px;
   }
   .w-1 {
-      grid-column: span 1;
+    grid-column: span 1;
   }
   .w-2 {
-      grid-column: span 2;
+    grid-column: span 2;
   }
   .w-3 {
-      grid-column: span 3;
-  }
-  
-  #FormFillWrap{
-    max-width: 550px;
+    grid-column: span 3;
   }
 
+  #FormFillWrap {
+    max-width: 550px;
+  }
 }
 
 @media screen and (max-width: 600px) {
   .container {
-    grid-template-columns: repeat(2,50%);
+    grid-template-columns: repeat(2, 50%);
     /*switch row based on width*/
     grid-auto-rows: 300px;
   }
   .w-1 {
-      grid-column: span 1;
+    grid-column: span 1;
   }
   .w-2 {
-      grid-column: span 1;
+    grid-column: span 1;
   }
   .w-3 {
-      grid-column: span 1;
+    grid-column: span 1;
   }
-  
 }
 
 @media screen and (max-width: 400px) {
   .container {
-    grid-template-columns: repeat(1,100%);
+    grid-template-columns: repeat(1, 100%);
     /*switch row based on width*/
     grid-auto-rows: 300px;
   }
 
-  .InfoContainer{
+  .InfoContainer {
     height: 400px;
   }
 
   .HoverClass {
     width: 415px;
   }
-
-
 
   #ProfileImage img {
     width: 300px;
@@ -93,20 +89,20 @@
   }
 
   .w-1 {
-      grid-column: span 1;
+    grid-column: span 1;
   }
   .w-2 {
-      grid-column: span 1;
+    grid-column: span 1;
   }
   .w-3 {
-      grid-column: span 1;
+    grid-column: span 1;
   }
 
-  #FormFillWrap{
+  #FormFillWrap {
     max-width: 300px;
   }
 
-  #TextClass{
+  #TextClass {
     width: 0;
     height: 0;
     opacity: 0;
