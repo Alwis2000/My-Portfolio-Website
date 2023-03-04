@@ -1,6 +1,6 @@
 @font-face {
   font-family: "DaftPunkfont";
-  src: url("https://www.yunethalwis.com/images/Daft Font.ttf");
+  src: url("/images/DaftFont.ttf");
 }
 
 @media screen and (max-width: 1000px) {
