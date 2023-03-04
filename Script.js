@@ -12,10 +12,7 @@ const aboutbody = document.getElementsByClassName("AboutBody")[0];
 const BGText = document.getElementById("TextClass");
 const clickMe = document.getElementById("AboutMeHint");
 
-let social1X = 115;
-let social1Y = 122;
-let social2X = 170;
-let social2Y = 0;
+let social1X, social1Y, social2X, social2Y;
 let hovered = false;
 let hoverAnimStart = 0;
 let delayHover = null;
@@ -51,25 +48,47 @@ const Scaleintime = {
   easing: "ease",
 };
 
-const twitter = [
-  { transform: "translate(0px, 0px) scale(1)" },
-  { transform: `translate(${-social1X}px,${social1Y}px) scale(0.7)` },
-];
-const instagram = [
-  { transform: "translate(0px, 0px) scale(1)" },
-  { transform: `translate(${social1X}px,${social1Y}px) scale(0.7)` },
-];
-const reddit = [
-  { transform: "translate(0px, 0px) scale(1)" },
-  { transform: `translate(${-social2X}px, ${social2Y}px) scale(0.7)` },
-];
-const linkedin = [
-  { transform: "translate(0px, 0px) scale(1)" },
-  { transform: `translate(${social2X}px, ${social2Y}px) scale(0.7)` },
-];
-const ClickOpacity = [{ opacity: "0" }, { opacity: "1" }]
+let twitter, instagram, reddit, linkedin;
+const ClickOpacity = [{ opacity: "0" }, { opacity: "1" }];
 
 const ScaleOut = [{ transform: "scale(1)" }, { transform: `scale(0.9)` }];
+
+const MaxWidth1 = 1000;
+
+function resize() {
+  console.log("Resized?");
+  if (window.innerWidth < 400) {
+    social1X = 60;
+    social1Y = 60;
+    social2X = 70;
+    social2Y = -100;
+  } else {
+    social1X = 115;
+    social1Y = 122;
+    social2X = 170;
+    social2Y = 0;
+  }
+  twitter = [
+    { transform: "translate(0px, 0px) scale(1)" },
+    { transform: `translate(${-social1X}px,${social1Y}px) scale(0.7)` },
+  ];
+  instagram = [
+    { transform: "translate(0px, 0px) scale(1)" },
+    { transform: `translate(${social1X}px,${social1Y}px) scale(0.7)` },
+  ];
+  reddit = [
+    { transform: "translate(0px, 0px) scale(1)" },
+    { transform: `translate(${-social2X}px, ${social2Y}px) scale(0.7)` },
+  ];
+  linkedin = [
+    { transform: "translate(0px, 0px) scale(1)" },
+    { transform: `translate(${social2X}px, ${social2Y}px) scale(0.7)` },
+  ];
+  NHover();
+}
+
+resize();
+window.addEventListener("resize", resize);
 
 window.addEventListener("scroll", function () {
   // soc.style.opacity = 1 - +window.pageYOffset / 200 + '';
@@ -78,8 +97,11 @@ window.addEventListener("scroll", function () {
   socR.style.scale = 100 - window.pageYOffset / 5 + "%";
   socL.style.scale = 100 - window.pageYOffset / 5 + "%";
   prof.style.scale = 100 - window.pageYOffset / 12 + "%";
-  abouttext.style.paddingTop = 1 + window.pageYOffset / 75 + "%";
-  aboutbody.style.backgroundPositionY = 70 - window.pageYOffset / 50 + "%";
+  if (window.innerWidth > 1000) {
+    abouttext.style.paddingTop = 1 + window.pageYOffset / 75 + "%";
+    aboutbody.style.backgroundPositionY = 70 - window.pageYOffset / 50 + "%";
+    console.log("yes");
+  }
   // prof.style.opacity = 1 - +window.pageYOffset / 300 + '';
   prof.style.blur = 10 - +window.pageYOffset + "px";
   contovr.style.opacity = 0 + window.pageYOffset / 300 + "";
@@ -97,10 +119,10 @@ function Hover() {
   if (hovered) return;
   //we are taking the current time and calculating the time taken from the animation start
   const elapsed = new Date().getTime() - hoverAnimStart;
-  //here we are checking whether the time taken is less than the animation duration 
+  //here we are checking whether the time taken is less than the animation duration
   //to set a delay to the function when triggered again
   if (elapsed < hoverAnimDur) {
-    //here we are adding the necessary delay to complete the animation 
+    //here we are adding the necessary delay to complete the animation
     delayHover = setTimeout(Hover, hoverAnimDur - elapsed + 10);
     return;
   }
@@ -186,7 +208,6 @@ clickedmodal.onclick = function () {
     modalImg.style.scale = 1;
   }
 };
-
 
 const feedback = document.getElementById("FormFill");
 const feedbackStatus = document.getElementById("FormStatus");
