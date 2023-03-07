@@ -108,7 +108,7 @@ window.addEventListener("scroll", function () {
 });
 
 function Hover(real) {
-  console.log(`${real ? 'Real' : 'Fake'} Hovered`);
+  console.log(`${real ? "Real" : "Fake"} Hovered`);
   hovered = true;
   //here we have this check so that we don't restart the animation
   if (animating) return;
@@ -126,7 +126,7 @@ function Hover(real) {
 }
 
 function NHover(real) {
-  console.log(`${real ? 'Real' : 'Fake'} Stopped Hovering`);
+  console.log(`${real ? "Real" : "Fake"} Stopped Hovering`);
   hovered = false;
   if (animating) return;
   animating = true;
@@ -162,14 +162,7 @@ const imgs = document.getElementsByClassName("MyImg");
 const modalImg = document.getElementById("img01");
 const captionText = document.getElementById("Caption");
 
-for (const img of imgs) {
-  img.onclick = function () {
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-    console.log(modalImg);
-  };
-}
+const viewer = new Viewer(document.getElementById("Gallery"), {});
 
 const span = document.getElementsByClassName("Close")[0];
 
@@ -216,8 +209,4 @@ function submitFeedback() {
       feedbackStatus.innerHTML = "response not received";
     });
   console.log("beans");
-}
-
-function DontTrigger() {
-  console.log("Triggered");
 }

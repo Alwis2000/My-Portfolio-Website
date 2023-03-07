@@ -68,3 +68,7 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+.viewer-title{
+  font-size: 30;
+}
