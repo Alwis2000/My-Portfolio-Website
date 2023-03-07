@@ -30,7 +30,7 @@ body {
   position: absolute;
 }
 
-.HoverClass {
+#HoverClass {
   width: 615px;
   height: 100%;
   position: absolute;
@@ -48,6 +48,7 @@ body {
   margin: auto;
   transition: 0.4s ease;
   pointer-events: all;
+  filter: contrast(90%) brightness(120%) hue-rotate(-30deg);
 }
 
 #ProfileWrap {
@@ -56,11 +57,12 @@ body {
 
 #ProfileImage:hover {
   clip-path: circle(46% at center);
+  filter: contrast(100%) brightness(110%) hue-rotate(-20deg);
 }
 
 #ProfileImage img:hover {
   transform: scale(1.025);
-  filter: contrast(130%) brightness(105%);
+
 }
 
 #ProfileImage img {

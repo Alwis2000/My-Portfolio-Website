@@ -16,7 +16,6 @@
   transition: 1s ease;
   transform-origin: center;
   overflow: auto;
-
 }
 
 #ModalContentWrap {
@@ -24,10 +23,12 @@
   margin: auto;
 }
 
+
+
 .ModalContent {
   display: block;
   height: 80%;
-  width: fit-content;
+  /* width: fit-content; */
   margin: auto;
   transform: scale(1);
   transition: 0.2s ease;

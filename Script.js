@@ -11,12 +11,11 @@ const aboutme = document.getElementsByClassName("AboutMe")[0];
 const aboutbody = document.getElementsByClassName("AboutBody")[0];
 const BGText = document.getElementById("TextClass");
 const clickMe = document.getElementById("AboutMeHint");
+const hoverClass = document.getElementById("HoverClass");
 
 let social1X, social1Y, social2X, social2Y;
 let hovered = false;
-let hoverAnimStart = 0;
-let delayHover = null;
-let delayNHover = null;
+let animating = false;
 
 const hoverAnimDur = 400; // milliseconds
 const NormalTime = {
@@ -108,53 +107,37 @@ window.addEventListener("scroll", function () {
   // contact.style.opacity = 0 + (window.pageYOffset-2000) / 300 + '';
 });
 
-function Hover() {
-  console.log("Hovered");
-  // It is possible that the user moved their mouse back to
-  // the profile picture while the unhover animation was queued,
-  // this code is in place such that the queued unhover animation
-  // will be cancelled.
-  clearTimeout(delayNHover);
-  //here we have this check so that we don't restart the animation
-  if (hovered) return;
-  //we are taking the current time and calculating the time taken from the animation start
-  const elapsed = new Date().getTime() - hoverAnimStart;
-  //here we are checking whether the time taken is less than the animation duration
-  //to set a delay to the function when triggered again
-  if (elapsed < hoverAnimDur) {
-    //here we are adding the necessary delay to complete the animation
-    delayHover = setTimeout(Hover, hoverAnimDur - elapsed + 10);
-    return;
-  }
+function Hover(real) {
+  console.log(`${real ? 'Real' : 'Fake'} Hovered`);
   hovered = true;
-  //the current time is set so we can retrigger the function properly
-  hoverAnimStart = new Date().getTime();
+  //here we have this check so that we don't restart the animation
+  if (animating) return;
+  animating = true;
   //the animation data itself
   socT.animate(twitter, NormalTime);
   socI.animate(instagram, NormalTime);
-  socR.animate(reddit, NormalTimeSlower);
-  socL.animate(linkedin, NormalTimeSlower);
   clickMe.animate(ClickOpacity, NormalTime);
+  socR.animate(reddit, NormalTimeSlower);
+  socL.animate(linkedin, NormalTimeSlower).onfinish = () => {
+    animating = false;
+    if (!hovered) NHover(false);
+  };
   // BGText.animate(ScaleOut, NormalTime)
 }
 
-function NHover() {
-  console.log("Stopped Hovering");
-  //This is symmetrical to the other
-  clearTimeout(delayHover);
-  if (!hovered) return;
-  const elapsed = new Date().getTime() - hoverAnimStart;
-  if (elapsed < hoverAnimDur) {
-    delayNHover = setTimeout(NHover, hoverAnimDur - elapsed + 10);
-    return;
-  }
+function NHover(real) {
+  console.log(`${real ? 'Real' : 'Fake'} Stopped Hovering`);
   hovered = false;
-  hoverAnimStart = new Date().getTime();
+  if (animating) return;
+  animating = true;
   socT.animate(twitter, ReverseTime);
   socI.animate(instagram, ReverseTime);
-  socR.animate(reddit, ReverseTime);
-  socL.animate(linkedin, ReverseTime);
   clickMe.animate(ClickOpacity, ReverseTime);
+  socR.animate(reddit, ReverseTime);
+  socL.animate(linkedin, ReverseTime).onfinish = () => {
+    animating = false;
+    if (hovered) Hover(false);
+  };
   // BGText.animate(ScaleOut, ReverseTime)
 }
 
@@ -233,4 +216,8 @@ function submitFeedback() {
       feedbackStatus.innerHTML = "response not received";
     });
   console.log("beans");
+}
+
+function DontTrigger() {
+  console.log("Triggered");
 }
