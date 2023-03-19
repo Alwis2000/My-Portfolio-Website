@@ -18,6 +18,7 @@ body {
   /* flex-wrap: nowrap; */
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .ContainerOverlay {
@@ -182,6 +183,7 @@ body {
   justify-content: center;
   display: flex;
   
+  
 }
 
 .AboutMe.CurrentItem .AboutBody {
@@ -203,6 +205,7 @@ body {
   pointer-events: none;
   white-space: nowrap;
   overflow: hidden;
+
 }
 
 .Credit {

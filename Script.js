@@ -162,28 +162,48 @@ const imgs = document.getElementsByClassName("MyImg");
 const modalImg = document.getElementById("img01");
 const captionText = document.getElementById("Caption");
 
-const viewer = new Viewer(document.getElementById("Gallery"), {});
+const viewer = new Viewer(document.getElementById("Gallery"), {
+  view: () => {
+    const viewerTitle = document.getElementById("viewerTitle0");
+    const observer = new MutationObserver(() => {
+      if (viewerTitle.innerText.trim().length === 0) return;
+      viewerTitle.innerHTML = viewerTitle.innerText;
+      observer.disconnect();
+    });
+    observer.observe(viewerTitle, {
+      characterData: false,
+      childList: true,
+      attributes: false,
+    });
+  },
+  toolbar: {
+    prev: {
+      show: 1,
+      size: "large",
+    },
+    zoomIn: 0,
+    zoomOut: 0,
+    oneToOne: 0,
+    reset: {
+      show: 1,
+      size: "large",
+    },
+    play: {
+      show: 0,
+      size: "large",
+    },
+    next: {
+      show: 1,
+      size: "large",
+    },
+    rotateLeft: 0,
+    rotateRight: 0,
+    flipHorizontal: 0,
+    flipVertical: 0,
+  },
+});
 
 const span = document.getElementsByClassName("Close")[0];
-
-span.onclick = function () {
-  console.log("bullshi");
-  modal.style.display = "none";
-};
-
-const clickedmodal = document.getElementById("ModalContentWrap");
-let clicked;
-
-clickedmodal.onclick = function () {
-  clicked = !clicked;
-  if (clicked) {
-    console.log("scaled");
-    modalImg.style.scale = 2;
-  } else {
-    console.log("unscaled");
-    modalImg.style.scale = 1;
-  }
-};
 
 const feedback = document.getElementById("FormFill");
 const feedbackStatus = document.getElementById("FormStatus");

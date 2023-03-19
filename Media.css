@@ -1,3 +1,7 @@
+body > * {
+  overflow-x: hidden;
+}
+
 @font-face {
   font-family: "DaftPunkfont";
   src: url("/images/DaftFont.ttf");
@@ -61,10 +65,9 @@
   }
   .w-3 {
     grid-column: span 1;
-  }
-}
+  }}
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 430px) {
   .container {
     grid-template-columns: repeat(1, 100%);
     /*switch row based on width*/
@@ -75,11 +78,23 @@
     height: 400px;
   }
 
-  .HoverClass {
-    width: 415px;
+  #HoverClass {
+    width: 390px;
+    /* display: none; */
+  }
+
+  #ProfileImage{
+    background-color: #f90;
+    clip-path: circle(47% at center);
   }
 
   #ProfileImage img {
+    width: 300px;
+    /* border: 10px solid black; */
+    clip-path: circle(43% at center);
+  }
+
+  #AboutMeHint img {
     width: 300px;
   }
 
@@ -88,6 +103,7 @@
     width: 110px;
     top: 210px;
     left: 85px;
+    display: none;
   }
 
   #socialinstagram {
@@ -95,6 +111,7 @@
     width: 110px;
     top: 210px;
     right: 85px;
+    display: none;
   }
 
   #socialreddit {
@@ -102,6 +119,7 @@
     width: 110px;
     top: 120px;
     left: 55px;
+    display: none;
   }
 
   #sociallinkedin {
@@ -109,6 +127,7 @@
     width: 110px;
     top: 120px;
     right: 55px;
+    display: none;
   }
 
   .w-1 {
@@ -135,4 +154,12 @@
     transform: translateY(-360px);
     font-size: 43px;
   }
+  .AboutMeText {
+    padding: 0%;
+    /* padding-top: 1%; */
+    font-size: 16px;
+  }
+
+  
 }
+
