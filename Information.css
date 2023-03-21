@@ -63,7 +63,6 @@ body {
 
 #ProfileImage img:hover {
   transform: scale(1.025);
-
 }
 
 #ProfileImage img {
@@ -102,7 +101,7 @@ body {
   transform: translateY(-480%) scale(1.05);
 }
 
-#TextClass{
+#TextClass {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -126,7 +125,7 @@ body {
   transition: 0.5s ease;
   height: fit-content;
   /* transform: translateY(100+calc(100vw)vw); */
-  transform:translateX(-140px);
+  transform: translateX(-140px);
 }
 
 #GameDevBgText {
@@ -166,7 +165,7 @@ body {
   left: 0;
   right: 0;
   width: 100%;
-  height: 27%;
+  height: 40%;
   top: 60%;
   opacity: 1;
   z-index: 2;
@@ -176,14 +175,12 @@ body {
   background-position: 0% 70%;
   background-size: cover;
   transition: 1s ease;
-  transition:  1s ease, background-position 0s ease;
+  transition: 1s ease, background-position 0s ease;
   box-shadow: -500px 0px 0px #f90, 500px 0px 0px #f90, 0 0 0 rgba(0, 0, 0, 0.14);
   overflow: hidden;
   align-items: center;
   justify-content: center;
   display: flex;
-  
-  
 }
 
 .AboutMe.CurrentItem .AboutBody {
@@ -193,28 +190,36 @@ body {
   box-shadow: 0px 0px 0px #d50, 0px 0px 0px #d50, 0 0 0 rgba(0, 0, 0, 0.14);
   border-radius: 10%;
   overflow: hidden;
+  filter: blur(10px) brightness(50%);
 }
 
 .AboutMeText {
-  padding: 0%;
-  padding-top: 1%;
-  font-size: 20px;
+  padding: 1%;
   /* left: 37%; */
   /* right: 0; */
   /* transform: translateX(37%); */
   pointer-events: none;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   overflow: hidden;
-
 }
 
+#AboutMeHeading {
+  font-size: 50px;
+  line-height: 50px;
+}
+
+#AboutMeBody {
+  font-family: "Sofia Sans Condensed";
+  font-size: 22px;
+  /* line-height: 10px; */
+  width: 640px;
+}
 .Credit {
   background-color: #f90;
   /* height: 5%; */
-  font-size: 25px;
+  font-size: 1.5vw;
   color: rgb(255, 206, 132);
   padding-left: 1%;
-  text-align: left;
 }
 
 ::-webkit-scrollbar {

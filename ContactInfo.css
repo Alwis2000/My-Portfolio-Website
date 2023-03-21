@@ -45,12 +45,12 @@
   color: white;
 }
 
-#FormFillWrap{
+#FormFillWrap {
   max-width: 1000px;
 }
 
 #FormFill {
-  font-family: "Bebas Neue";
+  font-family: "Sofia Sans Condensed";
   font-size: 25px;
   resize: none;
   display: block;
@@ -61,6 +61,7 @@
   outline: none;
   box-shadow: 0 0 80px rgba(0, 0, 0, 0.6);
   max-width: 100%;
+  font-weight: 500;
 }
 
 #FormButton {

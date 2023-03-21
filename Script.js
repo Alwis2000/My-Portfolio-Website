@@ -97,7 +97,7 @@ window.addEventListener("scroll", function () {
   socL.style.scale = 100 - window.pageYOffset / 5 + "%";
   prof.style.scale = 100 - window.pageYOffset / 12 + "%";
   if (window.innerWidth > 1000) {
-    abouttext.style.paddingTop = 1 + window.pageYOffset / 75 + "%";
+    abouttext.style.paddingBottom = 0 + window.pageYOffset / 120 + "%";
     aboutbody.style.backgroundPositionY = 70 - window.pageYOffset / 50 + "%";
     console.log("yes");
   }

@@ -16,11 +16,10 @@ body > * {
     display: none;
   }
 
-  .FeedbackText{
+  .FeedbackText {
     display: none;
   }
 }
-
 
 @media screen and (max-width: 1300px) {
   .container {
@@ -46,14 +45,25 @@ body > * {
     display: none;
   }
 
-  .FeedbackText{
+  .FeedbackText {
     display: none;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .container {
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, 1fr);
+    /*switch row based on width*/
+    grid-auto-rows: 300px;
+  }
+  #FormFillWrap {
+    max-width: 700px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
     /*switch row based on width*/
     grid-auto-rows: 300px;
   }
@@ -65,39 +75,10 @@ body > * {
   }
   .w-3 {
     grid-column: span 1;
-  }}
-
-@media screen and (max-width: 430px) {
-  .container {
-    grid-template-columns: repeat(1, 100%);
-    /*switch row based on width*/
-    grid-auto-rows: 300px;
   }
+}
 
-  .InfoContainer {
-    height: 400px;
-  }
-
-  #HoverClass {
-    width: 390px;
-    /* display: none; */
-  }
-
-  #ProfileImage{
-    background-color: #f90;
-    clip-path: circle(47% at center);
-  }
-
-  #ProfileImage img {
-    width: 300px;
-    /* border: 10px solid black; */
-    clip-path: circle(43% at center);
-  }
-
-  #AboutMeHint img {
-    width: 300px;
-  }
-
+@media screen and (max-width: 700px) {
   #socialtwitter {
     height: 110px;
     width: 110px;
@@ -130,6 +111,75 @@ body > * {
     display: none;
   }
 
+  #ProfileImage {
+    background-color: #f90;
+    clip-path: circle(47% at center);
+  }
+
+  #ProfileImage img {
+    /* border: 10px solid black; */
+    clip-path: circle(43% at center);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    grid-auto-rows: 250px;
+  }
+
+  #AboutMeBody {
+    width: 415px;
+    font-size: 21px;
+  }
+
+  #AboutMeHeading {
+    font-size: 45px;
+  }
+
+  .AboutMe .AboutBody {
+    height: 60%;
+  }
+
+  #FormFillWrap {
+    max-width: 480px;
+  }
+
+  #FormFill {
+    font-size: 20px;
+  }
+
+  .ContactMe {
+    height: 320px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .container {
+    grid-template-columns: repeat(1, 100%);
+    /*switch row based on width*/
+    grid-auto-rows: 300px;
+    padding: 25px;
+    grid-gap: 25px;
+    background-color: rgb(32, 32, 32);
+  }
+
+  .GalleryItem {
+    outline: grey solid 2px;
+  }
+
+  .InfoContainer {
+    height: 400px;
+  }
+
+  #HoverClass {
+    width: 390px;
+    /* display: none; */
+  }
+
+  #AboutMeHint img {
+    width: 300px;
+  }
+
   .w-1 {
     grid-column: span 1;
   }
@@ -140,8 +190,19 @@ body > * {
     grid-column: span 1;
   }
 
+  .h-1 {
+    grid-row: span 1;
+  }
+  .h-2 {
+    grid-row: span 1;
+  }
+
   #FormFillWrap {
     max-width: 300px;
+  }
+
+  #FormFill {
+    font-size: 20px;
   }
 
   #TextClass {
@@ -151,19 +212,44 @@ body > * {
   .NameClass {
     width: 100%;
     color: black;
-    transform: translateY(-360px);
+    transform: translateY(-260px);
     font-size: 43px;
   }
   .AboutMeText {
     padding: 0%;
-    /* padding-top: 1%; */
     font-size: 16px;
   }
 
-  .viewer-title{
+  .AboutMe .AboutBody {
+    height: 65%;
+  }
+
+  .viewer-title {
     font-size: 22px;
     white-space: normal;
   }
-  
-}
+  .Credit {
+    font-size: 4vw;
+  }
 
+  #ProfileImage img {
+    width: 300px;
+  }
+
+  #AboutMeBody {
+    font-size: 20px;
+    width: 340px;
+  }
+
+  #AboutMeHeading {
+    font-size: 40px;
+  }
+
+  .ContactMe {
+    height: 310px;
+  }
+
+  #FormStatus {
+    margin-bottom: 20px;
+  }
+}
