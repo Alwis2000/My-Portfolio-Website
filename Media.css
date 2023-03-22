@@ -17,9 +17,6 @@ body > * {
     display: none;
   }
 
-  .FeedbackText {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 1300px) {
@@ -37,9 +34,32 @@ body > * {
     display: none;
   }
 
-  .FeedbackText {
-    display: none;
+  #FormFill {
+    height: 15vw;
   }
+
+}
+
+@media screen and (max-width: 930px) {
+  .ContactMe {
+    height: 35vw;
+  }
+
+  .FeedbackText{
+    transform: scaleY(1.4);
+  }
+
+  #FormFill {
+    font-size: 2.3vw;
+    height: 20vw;
+  }
+
+  #FormStatus {
+    font-size: 3vw;
+    margin-bottom: 1.5vw;
+  }
+
+
 }
 
 @media screen and (max-width: 800px) {
@@ -75,6 +95,10 @@ body > * {
 }
 
 @media screen and (max-width: 700px) {
+  #AboutMeHint {
+    opacity: 1;
+  }
+
   #socialtwitter {
     height: 110px;
     width: 110px;
@@ -119,6 +143,10 @@ body > * {
 }
 
 @media screen and (max-width: 650px) {
+  .FeedbackText{
+    display: none;
+  }
+
   .container {
     grid-auto-rows: 250px;
   }
@@ -136,14 +164,18 @@ body > * {
     height: 440px;
   }
 
-
-
   #FormFill {
     font-size: 20px;
+    height: 200px;
   }
 
   .ContactMe {
     height: 320px;
+  }
+
+  #FormStatus {
+    font-size: 26px;
+    margin-bottom: 15px;
   }
 }
 
@@ -238,6 +270,7 @@ body > * {
 
   #FormFill {
     font-size: 20px;
+    height: 155px;
   }
 
   #FormButton {

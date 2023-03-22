@@ -96,10 +96,10 @@ window.addEventListener("scroll", function () {
   socR.style.scale = 100 - window.pageYOffset / 5 + "%";
   socL.style.scale = 100 - window.pageYOffset / 5 + "%";
   prof.style.scale = 100 - window.pageYOffset / 12 + "%";
+  clickMe.style.scale = 100 - window.pageYOffset / 12 + "%";
   if (window.innerWidth > 1000) {
     abouttext.style.paddingBottom = 0 + window.pageYOffset / 120 + "%";
     aboutbody.style.backgroundPositionY = 70 - window.pageYOffset / 50 + "%";
-    console.log("yes");
   }
   // prof.style.opacity = 1 - +window.pageYOffset / 300 + '';
   prof.style.blur = 10 - +window.pageYOffset + "px";
@@ -116,7 +116,9 @@ function Hover(real) {
   //the animation data itself
   socT.animate(twitter, NormalTime);
   socI.animate(instagram, NormalTime);
-  clickMe.animate(ClickOpacity, NormalTime);
+  if (window.innerWidth > 700){
+    clickMe.animate(ClickOpacity, NormalTime);
+  }
   socR.animate(reddit, NormalTimeSlower);
   socL.animate(linkedin, NormalTimeSlower).onfinish = () => {
     animating = false;
@@ -132,7 +134,9 @@ function NHover(real) {
   animating = true;
   socT.animate(twitter, ReverseTime);
   socI.animate(instagram, ReverseTime);
-  clickMe.animate(ClickOpacity, ReverseTime);
+  if (window.innerWidth > 700){
+    clickMe.animate(ClickOpacity, ReverseTime);
+  }
   socR.animate(reddit, ReverseTime);
   socL.animate(linkedin, ReverseTime).onfinish = () => {
     animating = false;

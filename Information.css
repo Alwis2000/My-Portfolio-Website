@@ -98,7 +98,7 @@ body {
 }
 
 .NameClass:hover {
-  transform: translateY(-480%) scale(1.05);
+  transform: translateY(-330px) scale(1.05);
 }
 
 #TextClass {
@@ -197,6 +197,7 @@ body {
   padding: 1%;
   pointer-events: none;
   overflow: hidden;
+  position: absolute;
 }
 
 #AboutMeHeading {

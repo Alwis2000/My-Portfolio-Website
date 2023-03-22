@@ -3,16 +3,16 @@
   background-color: rgb(46, 46, 46);
   color: black;
   position: relative;
-  height: 445px;
+  height: 25vw;
   overflow: hidden;
   z-index: 1;
 }
 
 .FeedbackText {
-  font-size: 550px;
+  font-size: 31vw;
   color: rgb(56, 56, 56);
-  padding-top: 27px;
-  transform: translateX(-7px);
+  padding-top: 1.3vw;
+  transform: translateX(-.2vw);
   position: absolute;
   display: flex;
   justify-content: center;
@@ -40,8 +40,8 @@
 }
 
 #FormStatus {
-  font-size: 30px;
-  margin-bottom: 15px;
+  font-size: 2vw;
+  margin-bottom: 1vw;
   color: white;
 }
 
@@ -52,7 +52,7 @@
 #FormFill {
   font-family: "Sofia Sans Condensed";
   font-weight: 600;
-  font-size: 25px;
+  font-size: 1.35vw;
   resize: none;
   display: block;
   border-radius: 10px;
