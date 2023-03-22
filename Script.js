@@ -201,6 +201,9 @@ const viewer = new Viewer(document.getElementById("Gallery"), {
     flipHorizontal: 0,
     flipVertical: 0,
   },
+  title: [1, (image, imageData) => `${image.alt}`],
+  zoomRatio: [0.2],
+  toggleOnDblclick: [false],
 });
 
 const span = document.getElementsByClassName("Close")[0];
