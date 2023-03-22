@@ -6,6 +6,7 @@ body > * {
   font-family: "DaftPunkfont";
   src: url("/images/DaftFont.ttf");
 }
+
 @media screen and (max-width: 1660px) {
   .container {
     /*switch row based on width*/
@@ -26,15 +27,6 @@ body > * {
     grid-template-columns: repeat(3, 1fr);
     /*switch row based on width*/
     grid-auto-rows: 250px;
-  }
-  .w-1 {
-    grid-column: span 1;
-  }
-  .w-2 {
-    grid-column: span 2;
-  }
-  .w-3 {
-    grid-column: span 3;
   }
 
   #FormFillWrap {
@@ -75,6 +67,10 @@ body > * {
   }
   .w-3 {
     grid-column: span 1;
+  }
+
+  #FormFillWrap {
+    max-width: 95vw;
   }
 }
 
@@ -137,12 +133,10 @@ body > * {
   }
 
   .AboutMe .AboutBody {
-    height: 60%;
+    height: 440px;
   }
 
-  #FormFillWrap {
-    max-width: 480px;
-  }
+
 
   #FormFill {
     font-size: 20px;
@@ -168,41 +162,23 @@ body > * {
   }
 
   .InfoContainer {
-    height: 400px;
+    height: 100vw;
   }
 
   #HoverClass {
     width: 390px;
-    /* display: none; */
   }
 
   #AboutMeHint img {
-    width: 300px;
-  }
-
-  .w-1 {
-    grid-column: span 1;
-  }
-  .w-2 {
-    grid-column: span 1;
-  }
-  .w-3 {
-    grid-column: span 1;
+    width: 70vw;
   }
 
   .h-1 {
     grid-row: span 1;
   }
+
   .h-2 {
     grid-row: span 1;
-  }
-
-  #FormFillWrap {
-    max-width: 300px;
-  }
-
-  #FormFill {
-    font-size: 20px;
   }
 
   #TextClass {
@@ -212,33 +188,36 @@ body > * {
   .NameClass {
     width: 100%;
     color: black;
-    transform: translateY(-260px);
+    transform: translateY(-57vw);
     font-size: 43px;
   }
+
   .AboutMeText {
     padding: 0%;
     font-size: 16px;
   }
 
   .AboutMe .AboutBody {
-    height: 65%;
+    height: 480px;
   }
 
   .viewer-title {
     font-size: 22px;
     white-space: normal;
   }
+
   .Credit {
     font-size: 4vw;
   }
 
   #ProfileImage img {
-    width: 300px;
+    width: 70vw;
   }
 
   #AboutMeBody {
     font-size: 20px;
     width: 340px;
+    font-weight: 400;
   }
 
   #AboutMeHeading {
@@ -251,5 +230,26 @@ body > * {
 
   #FormStatus {
     margin-bottom: 20px;
+  }
+
+  #FormFillWrap {
+    max-width: 85vw;
+  }
+
+  #FormFill {
+    font-size: 20px;
+  }
+
+  #FormButton {
+    font-size: 5vw;
+  }
+
+}
+
+@media screen and (max-width: 360px) {
+  #AboutMeBody {
+    width: 250px;
+    font-weight: 300;
+    font-size: 18.5px;
   }
 }

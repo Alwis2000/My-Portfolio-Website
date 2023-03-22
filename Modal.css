@@ -58,15 +58,7 @@
   border-radius: 10px;
 }
 
-/* .viewer-toolbar>ul>li {
-  background-color: rgba(0,0,0,.5);
-  height: 34px;
-  width: 34px;
-} */
-
 .viewer-next:before {
   background-position: -120px 0;
   content: "Next";
-  /* width: 30px; */
-  /* background-size: 500px; */
 }
