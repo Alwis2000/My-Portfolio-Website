@@ -1,18 +1,3 @@
-const prof = document.getElementById("ProfileImage");
-const socT = document.getElementById("SocialTwitter");
-const socI = document.getElementById("SocialInstagram");
-const socR = document.getElementById("SocialReddit");
-const socL = document.getElementById("SocialLinkedin");
-const cont = document.getElementsByClassName("InfoContainer")[0];
-const contovr = document.getElementsByClassName("ContainerOverlay")[0];
-const contact = document.getElementsByClassName("FeedbackText")[0];
-const abouttext = document.getElementsByClassName("AboutMeText")[0];
-const aboutme = document.getElementsByClassName("AboutMe")[0];
-const aboutbody = document.getElementsByClassName("AboutBody")[0];
-const BGText = document.getElementById("TextClass");
-const clickMe = document.getElementById("AboutMeHint");
-const hoverClass = document.getElementById("HoverClass");
-
 let social1X, social1Y, social2X, social2Y;
 let hovered = false;
 let animating = false;
@@ -145,28 +130,7 @@ function NHover(real) {
   // BGText.animate(ScaleOut, ReverseTime)
 }
 
-prof.addEventListener("click", ToggleDisplay);
-
-function ToggleDisplay() {
-  if (aboutme.classList.contains("CurrentItem")) {
-    var CurrentlyDisplayed = document.querySelectorAll(".CurrentItem");
-
-    for (var e = 0; e < CurrentlyDisplayed.length; e++) {
-      CurrentlyDisplayed[e].classList.remove("CurrentItem");
-      console.log("Removed .CurrentItem");
-    }
-  } else {
-    aboutme.classList.add("CurrentItem");
-  }
-}
-
-// modal
-const modal = document.getElementById("MyModal");
-const imgs = document.getElementsByClassName("MyImg");
-const modalImg = document.getElementById("img01");
-const captionText = document.getElementById("Caption");
-
-const viewer = new Viewer(document.getElementById("Gallery"), {
+const viewer = new Viewer(document.getElementById("GalleryWrap"), {
   view: () => {
     const viewerTitle = document.getElementById("viewerTitle0");
     const observer = new MutationObserver(() => {

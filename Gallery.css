@@ -1,13 +1,67 @@
-.Container {
-  position: relative;
+#GalleryWrap {
   background-color: rgb(46, 46, 46);
   padding: 10px;
+}
+
+.ContainerTitle {
+  background-color: rgba(0, 0, 0, 0.295);
+  width: fit-content;
+  padding-right: 10px;
+  padding-left: 25px;
+  font-size: 70px;
+  padding-top: 3px;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 10px;
+  letter-spacing: 0.3em;
+  position: relative;
+  transition: 0.3s ease;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  height: fit-content;
+  position: relative;
+  margin-top: 10px;
+}
+
+.ContainerSubTitle {
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 40px;
+  padding-top: 3px;
+  border-radius: 10px;
+  /* margin: auto; */
+  letter-spacing: 0.1em;
+  position: relative;
+}
+
+.ContainerTitle:hover {
+  letter-spacing: 0.4em;
+}
+
+.Container {
+  position: relative;
+  background-color: rgb(28, 28, 28);
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-auto-rows: 350px;
-  grid-gap: 10px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 300px;
   grid-auto-flow: dense;
   z-index: 2;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(46, 46, 46);
+  padding: 2px;
+  /* overflow: hidden; */
+}
+
+.ContainerDropdown .ContainerWrap{
+  height: 2475px;
+  transition: 2s ease-in-out;
+  overflow: hidden;
+}
+
+.ContainerDropdown.CurrentCont .ContainerWrap{
+  height: 0;
+  
+  
 }
 
 .GalleryItem {
@@ -16,9 +70,8 @@
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.50);
-  transition: 0.2s ease;
-  /* animation: scaleIn 0.3s ease alternate-reverse ; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: 0.2s ease, outline 1ms;
 }
 
 .GalleryItem .image {
@@ -33,7 +86,6 @@
   height: 100%;
   object-fit: cover;
   object-position: 50% 50%;
-  /*centers image while resize*/
   cursor: pointer;
   transition: 0.2s ease;
 }
@@ -44,11 +96,9 @@
 }
 
 .GalleryItem:hover {
-  /* transform: scale(calc(100% + 2%)); */
   z-index: 6;
   outline: #f90 solid 2px;
   --imgincr: 15px;
-  /* animation: scaleOut 0.3s ease forwards; */
 }
 
 .GalleryItem .Text {
@@ -59,10 +109,9 @@
   transform: translate(-50%, -50%);
   width: 100%;
   color: white;
-  font-size: 23px;
+  font-size: 27px;
   pointer-events: none;
   z-index: 4;
-  /*postions depth of element */
   transition: 0.5s ease-in-out;
   text-decoration: none;
 }

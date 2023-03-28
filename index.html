@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="SocialInteractable.css" />
     <link rel="stylesheet" href="Animations.css" />
     <link rel="stylesheet" href="Media.css" />
+    <link rel="stylesheet" href="Tabs.css" />
     <title>Yuneth Alwis' Portfolio</title>
     <meta name="twitter:card" content="summary_large_image" />
     <meta
@@ -46,7 +47,7 @@
     <link rel="icon" type="image/x-icon" href="images/YA.ico" />
   </head>
 
-  <body>
+  <body onload="init()">
     <div class="InfoContainer">
       <div id="TextClass">
         <div id="DigitalArtistBgText">
@@ -164,235 +165,421 @@
       </div>
     </div>
 
-    <div id="Gallery" class="Container">
-      <div class="GalleryContainer h-1 w-3">
-        <div class="GalleryItem">
-          <div class="Image" id="daftclass">
-            <img
-              class="MyImg"
-              id="daft"
-              src="images/Daft Punk.webp"
-              style="font-family: 'DaftPunkfont'"
-              alt="Daft Punk"
-              draggable="false"
-            />
+    <div id="Tabs">
+      <a href="#DGTitle" style="color: white">
+        <div id="DigitalArt">Digital Art</div>
+      </a>
+      <a href="#WIPTitle" style="color: white">
+        <div id="WorkInProgress">WorkInProgress</div>
+      </a>
+      <a href="" style="color: white">
+        <div id="Animations">Coming Soon..</div>
+      </a>
+    </div>
+
+    <div id="GalleryWrap">
+      
+      <div id="DGTitle" class="ContainerTitle">Digital Art</div>
+      <div class="ContainerDropdown CurrentCont">
+        <div class="ContainerWrap">
+        <div class="Container">
+          <div class="GalleryContainer h-1 w-3">
+            <div class="GalleryItem">
+              <div class="Image" id="daftclass">
+                <img
+                  class="MyImg"
+                  id="daft"
+                  src="images/Daft Punk.webp"
+                  style="font-family: 'DaftPunkfont'"
+                  alt="Daft Punk"
+                  draggable="false"
+                />
+              </div>
+
+              <div class="Text">
+                <a style="font-family: 'DaftPunkfont'; font-size: 110%"
+                  >Daft Punk</a
+                >
+              </div>
+            </div>
           </div>
 
-          <div class="Text">
-            <a style="font-family: 'DaftPunkfont'; font-size: 110%"
-              >Daft Punk</a
-            >
+          <div class="GalleryContainer w-2">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Heterotopia Enviroment Eevee.webp"
+                  alt="Heterotopia attempt inspired by one of my friend's university assignments"
+                  draggable="false"
+                />
+              </div>
+              <div class="Text">Heterotopia</div>
+            </div>
+          </div>
+
+          <div class="GalleryContainer w-2 h-2">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Me Fr curly fixed.webp"
+                  alt="Gets Lonely sometimes you know?"
+                  draggable="false"
+                />
+              </div>
+
+              <div class="Text">Cool Visual of me</div>
+            </div>
+          </div>
+
+          <div class="GalleryContainer">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Best JBL I have owned.webp"
+                  alt="JBL TUNE230NC TWS Product Test"
+                  draggable="false"
+                />
+              </div>
+
+              <div class="Text">Product Rendering of My Earphone</div>
+            </div>
+          </div>
+
+          <div class="GalleryContainer">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/My Glass Globe.webp"
+                  alt="Photorealism attempt of my glass globe on my desk"
+                  draggable="false"
+                />
+              </div>
+
+              <div class="Text">'Photorealistic' Glass Globe</div>
+            </div>
+          </div>
+
+          <div class="GalleryContainer w-2">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Crystal Scene better.webp"
+                  alt="Crystal Scene 'inspired'(copied) from my friend's drawing"
+                  draggable="false"
+                />
+              </div>
+
+              <div class="Text">Vim Crystal Scene</div>
+            </div>
+          </div>
+
+          <div class="GalleryContainer h-2">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  id="Delorean"
+                  src="images/DeLorean.webp"
+                  alt="<a href='https://sketchfab.com/3d-models/delorean-back-to-the-future-7bae1ee2b70044ed973b27a828cf0f54' target='_blank' style='color: #FF9900;'>Delorean<a> in some cool lighting scene"
+                  draggable="false"
+                />
+              </div>
+
+              <div class="Text">DeLorean</div>
+            </div>
+          </div>
+
+          <div class="GalleryContainer w-2 h-2">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Vim Isometric.png"
+                  alt="Isometric Scene Inspired by my friend's drawing"
+                  draggable="false"
+                />
+              </div>
+
+              <div class="Text">Isometric Scene</div>
+            </div>
+          </div>
+
+          <div class="GalleryContainer w-3 h-2">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Big chunk Brightened Composited.webp"
+                  alt="Reimagining of a character and world from a game known as 'Muck'"
+                  draggable="false"
+                />
+              </div>
+
+              <div class="Text">Muck RTX <a style="color: #a2ff00">ON</a></div>
+            </div>
+          </div>
+
+          <div class="GalleryContainer h-1 w-2">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Veridis Quo Daft Punk tribute.webp"
+                  alt="Disco Legends"
+                  draggable="false"
+                />
+              </div>
+
+              <div class="Text">Veridis Quo</div>
+            </div>
+          </div>
+
+          <div class="GalleryContainer">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Sci Fi Revisit Fogged.jpg"
+                  alt="Some Random sci-fi scene I came up with"
+                  draggable="false"
+                />
+              </div>
+
+              <div class="Text">Sci-Fi Scene</div>
+            </div>
+          </div>
+
+          <div class="GalleryContainer">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Me ong.webp"
+                  alt="I sometimes wonder what is the point of living"
+                  draggable="false"
+                />
+              </div>
+
+              <div class="Text">Alone?</div>
+            </div>
+          </div>
+
+          <div class="GalleryContainer h-2">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/inf background.webp"
+                  alt="My father requested this for a background and it looks cool so here it is"
+                  draggable="false"
+                />
+              </div>
+
+              <div class="Text">Infinite Render</div>
+            </div>
+          </div>
+
+          <div class="GalleryContainer">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Eye V2.png"
+                  alt="procedural down to the geometry which showcases my node work"
+                  draggable="false"
+                />
+              </div>
+
+              <div class="Text">procedural eye</div>
+            </div>
+          </div>
+
+          <div class="GalleryContainer">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Skwed DG Art Hovered.webp"
+                  alt="Quick recreatiom of my drawing tablet I made"
+                  draggable="false"
+                />
+              </div>
+
+              <div class="Text">Drawing Tablet</div>
+            </div>
+          </div>
+
+          <div class="GalleryContainer h-1 w-3">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/VIm Train.webp"
+                  alt="Another Scene 'inspired'(copied) from my friend's drawing but this time... its a train"
+                  draggable="false"
+                />
+              </div>
+
+              <div class="Text">Vim Train</div>
+            </div>
+          </div>
+        </div>
+        <div class="ContainerSubTitle">2D</div>
+        <div class="Container">
+          <div class="GalleryContainer h-2 w-3">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Surprise... .png"
+                  alt="An Artwork I made for Hex and his book!"
+                  draggable="false"
+                />
+              </div>
+
+              <div class="Text">Blaze for my friend Hex</div>
+            </div>
+          </div>
+          <div class="GalleryContainer h-2 w-2">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Me Runner.png"
+                  alt="Literally Me"
+                  draggable="false"
+                />
+              </div>
+
+              <div class="Text">Bladerunner alwis</div>
+            </div>
+          </div>
+          <div class="GalleryContainer">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Nebula.png"
+                  alt="Did this for fun"
+                  draggable="false"
+                />
+              </div>
+
+              <div class="Text">Nebula</div>
+            </div>
+          </div>
+          <div class="GalleryContainer">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Vanny.png"
+                  alt="An Artwork I made for Hex"
+                  draggable="false"
+                />
+              </div>
+
+              <div class="Text">Vanny for Hex</div>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="GalleryContainer w-2">
-        <div class="GalleryItem">
-          <div class="Image">
-            <img
-              class="MyImg"
-              src="images/Heterotopia Enviroment Eevee.webp"
-              alt="Heterotopia attempt inspired by one of my friend's university assignments"
-              draggable="false"
-            />
-          </div>
-          <div class="Text">Heterotopia</div>
-        </div>
       </div>
+      
 
-      <div class="GalleryContainer w-2 h-2">
-        <div class="GalleryItem">
-          <div class="Image">
-            <img
-              class="MyImg"
-              src="images/Me Fr curly fixed.webp"
-              alt="Gets Lonely sometimes you know?"
-              draggable="false"
-            />
-          </div>
-
-          <div class="Text">Cool Visual of me</div>
-        </div>
+      <div id="WIPTitle" class="ContainerTitle">Work In Progress</div>
+      <div id="DianeTitle" class="ContainerSubTitle">
+        <a style="color: rgb(255, 102, 42)">Diane Foxington</a> blender
+        recreation
       </div>
-
-      <div class="GalleryContainer">
-        <div class="GalleryItem">
-          <div class="Image">
-            <img
-              class="MyImg"
-              src="images/Best JBL I have owned.webp"
-              alt="JBL TUNE230NC TWS Product Test"
-              draggable="false"
-            />
+      <div class="Container">
+        <div class="GalleryContainer w-2">
+          <div class="GalleryItem">
+            <div class="Image">
+              <img
+                class="MyImg"
+                src="images/Work In Progress/Angry mommy.png"
+                alt="Angry Diane Render"
+                draggable="false"
+              />
+            </div>
+            <div class="Text">Angry</div>
           </div>
-
-          <div class="Text">Product Rendering of My Earphone</div>
         </div>
-      </div>
 
-      <div class="GalleryContainer">
-        <div class="GalleryItem">
-          <div class="Image">
-            <img
-              class="MyImg"
-              src="images/My Glass Globe.webp"
-              alt="Photorealism attempt of my glass globe on my desk"
-              draggable="false"
-            />
-          </div>
-
-          <div class="Text">'Photorealistic' Glass Globe</div>
+        <div class="GalleryContainer w-1" id="WIPText">
+          This is where I show my upcoming and to be done projects
         </div>
-      </div>
 
-      <div class="GalleryContainer w-2">
-        <div class="GalleryItem">
-          <div class="Image">
-            <img
-              class="MyImg"
-              src="images/Crystal Scene better.webp"
-              alt="Crystal Scene 'inspired'(copied) from my friend's drawing"
-              draggable="false"
-            />
+        <div class="GalleryContainer">
+          <div class="GalleryItem">
+            <div class="Image">
+              <img
+                class="MyImg"
+                src="images/Work In Progress/even more expressive smile.webp"
+                alt="Attempted to recreate a smile"
+                draggable="false"
+              />
+            </div>
+            <div class="Text">Smiling</div>
           </div>
-
-          <div class="Text">Vim Crystal Scene</div>
         </div>
-      </div>
 
-      <div class="GalleryContainer h-2">
-        <div class="GalleryItem">
-          <div class="Image">
-            <img
-              class="MyImg"
-              id="Delorean"
-              src="images/DeLorean.webp"
-              alt="<a href='https://sketchfab.com/3d-models/delorean-back-to-the-future-7bae1ee2b70044ed973b27a828cf0f54' target='_blank' style='color: #FF9900;'>Delorean<a> in some cool lighting scene"
-              draggable="false"
-            />
+        <div class="GalleryContainer">
+          <div class="GalleryItem">
+            <div class="Image">
+              <img class="MyImg" src="images/Work In Progress/Determined.webp"
+              alt="Determined look on Diane draggable="false" />
+            </div>
+            <div class="Text">Determined</div>
           </div>
-
-          <div class="Text">DeLorean</div>
         </div>
-      </div>
 
-      <div class="GalleryContainer w-2 h-2">
-        <div class="GalleryItem">
-          <div class="Image">
-            <img
-              class="MyImg"
-              src="images/Vim Isometric.png"
-              alt="Isometric Scene Inspired by my friend's drawing"
-              draggable="false"
-            />
+        <div class="GalleryContainer">
+          <div class="GalleryItem">
+            <div class="Image">
+              <img
+                class="MyImg"
+                src="images/Work In Progress/Smile_Happy_Excited rot better.webp"
+                alt="Most challenging one"
+                draggable="false"
+              />
+            </div>
+            <div class="Text">Excited</div>
           </div>
-
-          <div class="Text">Isometric Scene</div>
         </div>
-      </div>
 
-      <div class="GalleryContainer w-3 h-2">
-        <div class="GalleryItem">
-          <div class="Image">
-            <img
-              class="MyImg"
-              src="images/Big chunk Brightened Composited.webp"
-              alt="Reimagining of a character and world from a game known as 'Muck'"
-              draggable="false"
-            />
+        <div class="GalleryContainer">
+          <div class="GalleryItem">
+            <div class="Image">
+              <img
+                class="MyImg"
+                src="images/Work In Progress/Bruh.webp"
+                alt="Bruh"
+                draggable="false"
+              />
+            </div>
+            <div class="Text">Meh</div>
           </div>
-
-          <div class="Text">Muck RTX <a style="color: #a2ff00">ON</a></div>
         </div>
-      </div>
 
-      <div class="GalleryContainer h-1 w-2">
-        <div class="GalleryItem">
-          <div class="Image">
-            <img
-              class="MyImg"
-              src="images/Veridis Quo Daft Punk tribute.webp"
-              alt="Disco Legends"
-              draggable="false"
-            />
+        <div class="GalleryContainer w-2">
+          <div class="GalleryItem">
+            <div class="Image">
+              <img
+                class="MyImg"
+                src="images/Work In Progress/Wha body shot.webp"
+                alt="another challenging attempt"
+                draggable="false"
+              />
+            </div>
+            <div class="Text">Flabbergasted</div>
           </div>
-
-          <div class="Text">Veridis Quo</div>
-        </div>
-      </div>
-
-      <div class="GalleryContainer">
-        <div class="GalleryItem">
-          <div class="Image">
-            <img
-              class="MyImg"
-              src="images/Sci Fi Revisit Fogged.jpg"
-              alt="Some Random sci-fi scene I came up with"
-              draggable="false"
-            />
-          </div>
-
-          <div class="Text">Sci-Fi Scene</div>
-        </div>
-      </div>
-
-      <div class="GalleryContainer">
-        <div class="GalleryItem">
-          <div class="Image">
-            <img
-              class="MyImg"
-              src="images/Me ong.webp"
-              alt="I sometimes wonder what is the point of living"
-              draggable="false"
-            />
-          </div>
-
-          <div class="Text">Alone?</div>
-        </div>
-      </div>
-
-      <div class="GalleryContainer h-2">
-        <div class="GalleryItem">
-          <div class="Image">
-            <img
-              class="MyImg"
-              src="images/inf background.webp"
-              alt="My father requested this for a background and it looks cool so here it is"
-              draggable="false"
-            />
-          </div>
-
-          <div class="Text">Infinite Render</div>
-        </div>
-      </div>
-
-      <div class="GalleryContainer">
-        <div class="GalleryItem">
-          <div class="Image">
-            <img
-              class="MyImg"
-              src="images/Eye V2.png"
-              alt="procedural down to the geometry which showcases my node work"
-              draggable="false"
-            />
-          </div>
-
-          <div class="Text">procedural eye</div>
-        </div>
-      </div>
-
-      <div class="GalleryContainer h-1 w-3">
-        <div class="GalleryItem">
-          <div class="Image">
-            <img
-              class="MyImg"
-              src="images/VIm Train.webp"
-              alt="Another Scene 'inspired'(copied) from my friend's drawing but this time... its a train"
-              draggable="false"
-            />
-          </div>
-
-          <div class="Text">Vim Train</div>
         </div>
       </div>
     </div>
@@ -421,6 +608,10 @@
       >.
     </div>
 
+    <script src="Classes.js"></script>
     <script src="Script.js"></script>
+    <script src="Dropdowns.js"></script>
+    <!-- <script src="Parallax.js"></script> -->
+    <!-- <script src="SmootherScroll.js"></script> -->
   </body>
 </html>

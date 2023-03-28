@@ -1,0 +1,79 @@
+html{
+    scroll-behavior: smooth;
+}
+
+#Tabs{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgb(28, 28, 28);
+    max-height: 300px;
+    text-decoration-style: none;
+}
+
+#Tabs > a > div {
+    width: 100%;
+    height: 100%;
+}
+
+#Tabs > a > div{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    height: 300px;
+    flex-grow: 1;
+    background-color: grey;
+    border-radius: 10px;
+    font-size: 30px;
+    background-size: cover;
+    background-clip: border-box;
+    background-position: center;
+    background-size: cover;
+    width: auto;   
+    transition: 0.2s ease;
+}
+
+#Tabs > a {
+    height: 300px;
+    flex-grow: 1;
+    border-radius: 10px;
+    font-size: 30px;
+    outline: #f90;
+    width: auto;
+    transition: all 0.2s ease, outline 1ms;
+    text-decoration: none;
+}
+
+#Tabs > a:hover {
+    font-size: 36px;
+    outline: #f90 solid 3px;
+}
+
+#Tabs > a >div:hover {
+    font-size: 36px;
+}
+
+#digitalart{
+    background-image: url(images/Skwed\ DG\ Art.webp);
+    
+}
+
+#WorkInProgress{
+    background-image: url(images/Play.webp); 
+}
+
+#Animations{
+    background-image: url(images/Play.webp); 
+}
+
+#digitalart:hover{
+    background-image: url(images/Skwed\ DG\ Art\ Hovered.webp);
+}
+
+#WorkInProgress:hover{
+    background-image: url(images/Played.webp); 
+}
+
+#Animations:hover{
+    background-image: url(images/Played.webp); 
+}
