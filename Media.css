@@ -213,6 +213,33 @@ body > * {
     grid-row: span 1;
   }
 
+  .ContainerDropdown.CurrentCont .ContainerWrap{
+    height: 6615px;
+  }
+
+  .ContainerTitle {
+    font-size: 48px;
+    padding-top: 0;
+    letter-spacing: 0.05em;
+    padding-right: 10px;
+    padding-left: 15px;
+  }
+
+  .ContainerSubTitle {
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 30px;
+    padding: 10px;
+    /* padding-top: 3px; */
+    border-radius: 10px;
+    /* margin: auto; */
+    position: relative;
+    line-height: 30px;
+  }
+
+  .ContainerTitle:hover {
+    letter-spacing: 0.05em;
+  }
+
   #TextClass {
     display: none;
   }
@@ -289,6 +316,16 @@ body > * {
     background-color: rgba(0, 0, 0, 0.514);
     border-radius: 10px;
   }
+
+  #Tabs > a {
+    display: none;
+  }
+
+  #Tabs {
+    gap: 0;
+    padding: 0;
+  }
+ 
 }
 
 @media screen and (max-width: 360px) {

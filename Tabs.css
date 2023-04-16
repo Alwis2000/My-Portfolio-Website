@@ -11,11 +11,6 @@ html{
     text-decoration-style: none;
 }
 
-#Tabs > a > div {
-    width: 100%;
-    height: 100%;
-}
-
 #Tabs > a > div{
     display: flex;
     align-items: center;
