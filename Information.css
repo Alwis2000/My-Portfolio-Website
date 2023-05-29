@@ -60,7 +60,7 @@ body {
 
 #ProfileImage:hover {
   
-  filter: contrast(100%) brightness(110%) hue-rotate(-20deg);
+  filter: contrast(90%) brightness(130%) hue-rotate(-20deg);
 }
 
 #ProfileImage img:hover {

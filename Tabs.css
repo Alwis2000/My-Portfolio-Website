@@ -4,18 +4,19 @@ html{
 
 #Tabs{
     display: flex;
-    gap: 10px;
-    padding: 10px;
+    /* gap: 10px; */
+    padding: 4px;
     background-color: rgb(28, 28, 28);
-    max-height: 300px;
+    max-height: 100px;
     text-decoration-style: none;
+
 }
 
 #Tabs > a > div{
     display: flex;
     align-items: center;
     justify-content: center; 
-    height: 300px;
+    height: 100px;
     flex-grow: 1;
     background-color: grey;
     border-radius: 10px;
@@ -29,19 +30,23 @@ html{
 }
 
 #Tabs > a {
-    height: 300px;
+    height: 100px;
     flex-grow: 1;
-    border-radius: 10px;
+
     font-size: 30px;
     outline: #f90;
     width: auto;
     transition: all 0.2s ease, outline 1ms;
     text-decoration: none;
+    position: relative;
+    z-index: 2;
 }
 
 #Tabs > a:hover {
     font-size: 36px;
-    outline: #f90 solid 3px;
+    outline: #f90 solid 2px;
+    z-index: 3;
+    border-radius: 10px;
 }
 
 #Tabs > a >div:hover {
