@@ -96,6 +96,11 @@
 
 #Diane .GalleryItem:hover {
   box-shadow: red 0 0 30px;
+  outline: rgb(255, 171, 54) dashed 2px;
+}
+
+#Camping{
+  font-size: 200%
 }
 
 .GalleryItem .Text {
@@ -106,7 +111,7 @@
   transform: translate(-50%, -50%);
   width: 100%;
   color: white;
-  font-size: 27px;
+  font-size: 30px;
   pointer-events: none;
   z-index: 4;
   transition: 0.5s ease-in-out;
@@ -118,6 +123,20 @@
   animation: move-up 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
   padding: 1em;
   width: 100%;
+}
+
+.Date{
+  position: absolute;
+  bottom: 1%;
+  right: 0%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  /* font-family: 'Great Vibes'; */
+}
+
+.GalleryItem:hover .Date{
+  opacity: 1;
 }
 
 .w-1 {
