@@ -4,12 +4,11 @@ html{
 
 #Tabs{
     display: flex;
-    /* gap: 10px; */
     padding: 4px;
+    gap: 4px;
     background-color: rgb(28, 28, 28);
     max-height: 100px;
     text-decoration-style: none;
-
 }
 
 #Tabs > a > div{
@@ -18,28 +17,28 @@ html{
     justify-content: center; 
     height: 100px;
     flex-grow: 1;
-    background-color: grey;
-    border-radius: 10px;
+    background-color: rgb(44, 44, 44);
     font-size: 30px;
     background-size: cover;
     background-clip: border-box;
     background-position: center;
     background-size: cover;
-    width: auto;   
     transition: 0.2s ease;
+    margin: auto;
+    border-radius: 5px;
 }
 
 #Tabs > a {
     height: 100px;
     flex-grow: 1;
-
+    width: 33%; 
     font-size: 30px;
     outline: #f90;
-    width: auto;
     transition: all 0.2s ease, outline 1ms;
     text-decoration: none;
     position: relative;
     z-index: 2;
+    border-radius: 5px;
 }
 
 #Tabs > a:hover {
@@ -51,29 +50,5 @@ html{
 
 #Tabs > a >div:hover {
     font-size: 36px;
-}
-
-#digitalart{
-    background-image: url(images/Skwed\ DG\ Art.webp);
-    
-}
-
-#WorkInProgress{
-    background-image: url(images/Play.webp); 
-}
-
-#Animations{
-    background-image: url(images/Play.webp); 
-}
-
-#digitalart:hover{
-    background-image: url(images/Skwed\ DG\ Art\ Hovered.webp);
-}
-
-#WorkInProgress:hover{
-    background-image: url(images/Played.webp); 
-}
-
-#Animations:hover{
-    background-image: url(images/Played.webp); 
+    border-radius: 10px;
 }
