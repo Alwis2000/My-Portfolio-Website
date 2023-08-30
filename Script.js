@@ -53,20 +53,20 @@ function resize() {
     social2Y = 0;
   }
   twitter = [
-    { transform: "translate(0px, 0px) scale(1)" },
-    { transform: `translate(${-social1X}px,${social1Y}px) scale(0.7)` },
+    { transform: "translate(0px, 0px) scale(.5)" },
+    { transform: `translate(${-social1X}px,${social1Y}px) scale(.8)` },
   ];
   instagram = [
-    { transform: "translate(0px, 0px) scale(1)" },
-    { transform: `translate(${social1X}px,${social1Y}px) scale(0.7)` },
+    { transform: "translate(0px, 0px) scale(.5)" },
+    { transform: `translate(${social1X}px,${social1Y}px) scale(.8)` },
   ];
   reddit = [
-    { transform: "translate(0px, 0px) scale(1)" },
-    { transform: `translate(${-social2X}px, ${social2Y}px) scale(0.7)` },
+    { transform: "translate(0px, 0px) scale(.5)" },
+    { transform: `translate(${-social2X}px, ${social2Y}px) scale(.8)` },
   ];
   linkedin = [
-    { transform: "translate(0px, 0px) scale(1)" },
-    { transform: `translate(${social2X}px, ${social2Y}px) scale(0.7)` },
+    { transform: "translate(0px, 0px) scale(.5)" },
+    { transform: `translate(${social2X}px, ${social2Y}px) scale(.8)` },
   ];
   NHover();
 }
@@ -83,8 +83,7 @@ window.addEventListener("scroll", function () {
   prof.style.scale = 100 - window.pageYOffset / 12 + "%";
   clickMe.style.scale = 100 - window.pageYOffset / 12 + "%";
   if (window.innerWidth > 1000) {
-    abouttext.style.paddingBottom = 0 + window.pageYOffset / 120 + "%";
-    aboutbody.style.backgroundPositionY = 70 - window.pageYOffset / 50 + "%";
+    aboutbody.style.backgroundPositionY = 70 - window.pageYOffset / 30 + "%";
   }
   // prof.style.opacity = 1 - +window.pageYOffset / 300 + '';
   prof.style.blur = 10 - +window.pageYOffset + "px";

@@ -18,3 +18,5 @@ const aboutbody = document.getElementsByClassName("AboutBody")[0];
 const contact = document.getElementsByClassName("FeedbackText")[0];
 const contain = document.getElementsByClassName("ContainerDropdown")[0];
 const dgtitle = document.getElementById("DGTitle");
+//Gallery
+const gallimgs = document.getElementsByClassName("image");
