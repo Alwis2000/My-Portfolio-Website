@@ -59,22 +59,22 @@
   
   #socialtwitter:hover {
     box-shadow: -0px 1px 0px #1679b6, -0px 2px 0px #1679b6, -1px 3px 0px #1679b6,
-      -7px 12px 0px rgba(0, 0, 0, 0.2);
+      -7px 12px 5px rgba(0, 0, 0, 0.3);
     background-color: #1da1f2;
   }
   #socialinstagram:hover {
     box-shadow: 0px 1px 0px #242c89, 0px 2px 0px #242c89, 1px 3px 0px #242c89,
-      7px 12px 0px rgba(0, 0, 0, 0.2);
+      7px 12px 5px rgba(0, 0, 0, 0.3);
     background-color: #5865F2;
   }
   #socialreddit:hover {
     box-shadow: 0px 1px 0px #942700, 0px 2px 0px #942700, -1px 3px 0px #942700,
-      -5px 7px 0px rgba(0, 0, 0, 0.2);
+      -10px 5px 5px rgba(0, 0, 0, 0.3);
     background-color: #ff4500;
   }
   #sociallinkedin:hover {
     box-shadow: 0px 1px 0px #06415c, 0px 2px 0px #06415c, 1px 3px 0px #06415c,
-      5px 7px 0px rgba(0, 0, 0, 0.2);
+      10px 05px 5px rgba(0, 0, 0, 0.3);
     background-color: #0e76a8;
   }
   
@@ -100,17 +100,18 @@
   
   #socialtwitter svg:hover {
     transform: scale(0.55);
-    filter: invert();
+    filter: invert() drop-shadow( -10px 12px 2px rgba(0, 0, 0, .3));
   }
   #socialinstagram img:hover {
     transform:  translate(-312.5px, -312.5px) scale(0.13);
-    filter: invert();
+    filter: invert() drop-shadow( 30px 40px 7px rgba(0, 0, 0, .3));
+    
   }
   #socialreddit svg:hover {
     transform: scale(0.55);
-    filter: invert(1);
+    filter: invert(1) drop-shadow( -10px 5px 2px rgba(0, 0, 0, .3));
   }
   #sociallinkedin svg:hover {
     transform: translateY(-0.5vh) scale(0.45);
-    filter: invert(1);
+    filter: invert(1) drop-shadow( 10px 5px 2px rgba(0, 0, 0, .3));
   }

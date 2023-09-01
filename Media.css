@@ -211,11 +211,13 @@ body > * {
   }
 
   .InfoContainer {
-    height: 100vw;
+    height: 120vw;
   }
 
   #HoverClass {
-    width: 390px;
+    width: 350px;
+    height: 400px;
+    /* margin: 100px; */
   }
 
   #AboutMeHint img {
@@ -224,9 +226,9 @@ body > * {
 
 
 
-  .ContainerDropdown.CurrentCont .ContainerWrap {
+  /* .ContainerDropdown.CurrentCont .ContainerWrap {
     height: 6615px;
-  }
+  } */
 
   .ContainerTitle {
     font-size: 48px;
@@ -262,7 +264,7 @@ body > * {
   .NameClass {
     width: 100%;
     color: black;
-    transform: translateY(-57vw);
+    /* transform: translateY(-57vw); */
     font-size: 43px;
   }
 

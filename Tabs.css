@@ -1,7 +1,3 @@
-html{
-    scroll-behavior: smooth;
-}
-
 #Tabs{
     display: flex;
     padding: 4px;
