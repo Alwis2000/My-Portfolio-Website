@@ -1,3 +1,35 @@
+#loader {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  z-index: 100;
+  animation: spin,faded;
+  animation-duration: 1s;
+  animation-fill-mode: none, forwards;
+  animation-iteration-count: infinite, 1 ;
+  animation-delay: 0s, .5s;
+  filter: sepia(1);
+}
+
+#loaderback{
+  width: 100%;
+  height: 100%;
+  /* transform: translateX(100px); */
+  position: fixed;
+  background-color: #f90;
+  z-index: 20;
+  animation: Loader 1s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 #GalleryWrap {
   background-color: rgb(46, 46, 46);
   padding: 10px;

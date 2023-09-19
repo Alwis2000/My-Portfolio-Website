@@ -90,3 +90,23 @@
     background-position:  0px 0px;
   }
 }
+
+@keyframes Loader {
+  0% {
+    translate: 0%;
+  }
+
+  100% {
+    translate: 100%;
+  }
+}
+
+@keyframes faded{
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
