@@ -72,6 +72,7 @@ body {
 
 #ProfileWrap {
   width: fit-content;
+  border-radius: 40%;
 }
 
 #ProfileImage:hover {
@@ -88,6 +89,7 @@ body {
 
 #ProfileImage img:hover {
   transform: scale(1.025);
+  border-radius: 40%;
   
 }
 
@@ -96,6 +98,7 @@ body {
   transform: scale(1);
   transition: 0.5s ease;
   cursor: pointer;
+  border-radius: 40%;
 }
 
 #AboutMeHint {
