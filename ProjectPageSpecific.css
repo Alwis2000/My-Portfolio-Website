@@ -1,0 +1,56 @@
+@keyframes DaftPunkOutline {
+      0% {
+            outline-color: cyan;
+      }
+    
+      33% {
+            outline-color: rgb(255, 107, 255);
+      }
+
+      66% {
+            outline-color: rgb(255, 42, 42);
+      }
+    
+      100% {
+            outline-color: cyan;
+
+      }
+    }
+
+    @keyframes DaftPunkGlow {
+      0% {
+            box-shadow: 0 0 60px cyan;
+      }
+    
+      33% {
+            box-shadow: 0 0 60px purple;
+      }
+
+      66% {
+            box-shadow: 0 0 60px red;
+      }
+    
+      100% {
+            box-shadow: 0 0 60px cyan;
+      }
+    }
+
+    @keyframes ScrollWidth {
+      0% {
+            width: 0px;
+      }
+    
+      100% {
+            width: 20px;
+      }
+    }
+
+@keyframes TextGlow{
+      from {
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073;
+      }
+
+      to{
+            text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6;
+      }
+}

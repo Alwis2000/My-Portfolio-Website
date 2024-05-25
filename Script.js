@@ -33,32 +33,31 @@ const Scaleintime = {
 };
 
 let twitter, instagram, reddit, linkedin;
-const ClickOpacity = [{ opacity: "0" }, { opacity: "1" }];
+// const ClickOpacity = [{ opacity: "0" }, { opacity: "1" }];
 
-const ScaleOut = [{ transform: "scale(1)" }, { transform: `scale(0.9)` }];
+const ScaleOut = [{ transform: "scale(0.5)" }, { transform: `scale(2)` }];
 
 const MaxWidth1 = 1000;
 
 function resize() {
-  console.log("Resized?");
   if (window.innerWidth < 400) {
     social1X = 60;
     social1Y = 60;
     social2X = 70;
     social2Y = -100;
   } else {
-    social1X = 115;
-    social1Y = 122;
-    social2X = 170;
-    social2Y = 0;
+    social1X = 140;
+    social1Y = 142;
+    social2X = 185;
+    social2Y = 110;
   }
   twitter = [
     { transform: "translate(0px, 0px) scale(.5)" },
-    { transform: `translate(${-social1X}px,${social1Y}px) scale(.8)` },
+    { transform: `translate(${-social1X}px,${social1Y}px) scale(.9)` },
   ];
   instagram = [
     { transform: "translate(0px, 0px) scale(.5)" },
-    { transform: `translate(${social1X}px,${social1Y}px) scale(.8)` },
+    { transform: `translate(${social1X}px,${social1Y}px) scale(.9)` },
   ];
   reddit = [
     { transform: "translate(0px, 0px) scale(.5)" },
@@ -100,9 +99,9 @@ function Hover(real) {
   //the animation data itself
   socT.animate(twitter, NormalTime);
   socI.animate(instagram, NormalTime);
-  if (window.innerWidth > 700){
-    clickMe.animate(ClickOpacity, NormalTime);
-  }
+  // if (window.innerWidth > 700){
+  //   clickMe.animate(ClickOpacity, NormalTime);
+  // }
   socR.animate(reddit, NormalTimeSlower);
   socL.animate(linkedin, NormalTimeSlower).onfinish = () => {
     animating = false;
@@ -118,15 +117,14 @@ function NHover(real) {
   animating = true;
   socT.animate(twitter, ReverseTime);
   socI.animate(instagram, ReverseTime);
-  if (window.innerWidth > 700){
-    clickMe.animate(ClickOpacity, ReverseTime);
-  }
+  // if (window.innerWidth > 700){
+  //   clickMe.animate(ClickOpacity, ReverseTime);
+  // }
   socR.animate(reddit, ReverseTime);
   socL.animate(linkedin, ReverseTime).onfinish = () => {
     animating = false;
     if (hovered) Hover(false);
   };
-  // BGText.animate(ScaleOut, ReverseTime)
 }
 
 const viewer = new Viewer(document.getElementById("GalleryWrap"), {
@@ -144,8 +142,9 @@ const viewer = new Viewer(document.getElementById("GalleryWrap"), {
     });
   },
   toolbar: {
+    
     prev: {
-      show: 1,
+      show: 0,
       size: "large",
     },
     zoomIn: 0,
@@ -160,7 +159,7 @@ const viewer = new Viewer(document.getElementById("GalleryWrap"), {
       size: "large",
     },
     next: {
-      show: 1,
+      show: 0,
       size: "large",
     },
     rotateLeft: 0,
@@ -201,14 +200,15 @@ function submitFeedback() {
   console.log("beans");
 }
 
-var myVar;
+// var myVar;
 
-function myFunction() {
-  myVar = setTimeout(showPage, 2000);
-}
+// function myFunction() {
+//   myVar = setTimeout(showPage, 2000);
+// }
 
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("loaderback").style.display = "none";
-  cont.style.display = "Flex";
-}
+// function showPage() {
+//   document.getElementById("loader").style.display = "none";
+//   document.getElementById("loaderback").style.display = "none";
+//   cont.style.display = "Flex";
+// }
+

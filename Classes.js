@@ -8,12 +8,13 @@ const socI = document.getElementById("SocialInstagram");
 const socR = document.getElementById("SocialReddit");
 const socL = document.getElementById("SocialLinkedin");
 const BGText = document.getElementById("TextClass");
-const clickMe = document.getElementById("AboutMeHint");
+const clickMe = document.getElementById("ProfileImage");
 const hoverClass = document.getElementById("HoverClass");
 //aboutme
 const abouttext = document.getElementsByClassName("AboutMeText")[0];
 const aboutme = document.getElementsByClassName("AboutMe")[0];
-const aboutbody = document.getElementsByClassName("AboutBody")[0];
+const aboutBod = document.getElementsByClassName("AboutBody")[0];
+const aboutbody = document.getElementById("AboutImage");
 //feedback
 const contact = document.getElementsByClassName("FeedbackText")[0];
 const contain = document.getElementsByClassName("ContainerDropdown")[0];

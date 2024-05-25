@@ -1,141 +1,124 @@
+:root {
+  --accentColor: hsl(41, 100%, 50%);
+  --backgroundColor: white;
+  --secondaryBackgroundColor: rgb(29, 29, 29);
+  --tertiaryBackgroundColor: #ff9900;
+  --mainFontColor: rgb(53, 4, 0);
+  --generalPadding: 4em;
+  --GradientDark: linear-gradient(90deg , rgb(255, 255, 255) ,var(--backgroundColor), var(--backgroundColor), rgb(255, 255, 255));
+  --mainFontFamily: "Anton";
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding: 20%;
+}
+
+.main{
+  width: 100%;
+  height: 100svh;
+}
+
 body {
-  background-color: #bbb;
-  margin: 0px;
+  background-image: url(images/BackGround.png);
+  /* background-blend-mode: color-bu; */
+  background-color: var(--backgroundColor);
+  background-size: 30%;
+  background-position: 0% 0%;
+  animation: backMove linear 60s infinite;
+  background-attachment: fixed;
+  margin: 0;
   padding: 0;
   text-align: center;
-  font-family: "Bebas Neue";
-  color: white;
+  font-family: var(--mainFontFamily);
+  color: var(--mainFontColor);
   user-select: none;
+  
   /* overflow-x: hidden; */
 }
 
-
 .InfoContainer {
-  background-color: white;
   position: relative;
-  height: 584px;
+  height: 87svh;
   width: 100%;
   display: flex;
-  /* flex-wrap: nowrap; */
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
 
-.ContainerOverlay {
-  background-color: #ffffff;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  z-index: 8;
-  pointer-events: none;
-  position: absolute;
-}
-
 #HoverClass {
-  width: 32%;
-  height: 95%;
+  /* background-image: url(images/Hover\ me.png);
+  background-size: cover; */
+  background-color: var(--backgroundColor);
+  width: 32.5em;
+  height: 32.5em;
   position: absolute;
   z-index: 6;
-  /* opacity: 0; */
   transition: 1s;
   --translate: -10px;
-  animation-name:  Pulsing;
-  animation-duration: 2.5s;
-  animation-timing-function: ease;
-  animation-iteration-count: infinite;
-  border-radius: 10%;
+  /* animation:  Pulsing 2.5s ease infinite; */
+  border-radius: 5%;
   padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: #e4e4e4 2px solid;
 }
 
+#welcomeText{
+  position: absolute;
+  font-family: 'Open Sans';
+  
+  color: var(--mainFontColor);
+  font-weight: 100;
+  font-size: 25px;
+  top: 7.5%;
+}
 
 #ProfileImage {
   position: relative;
-  /* clip-path: circle(44% at center); */
-  transform: translate(0, 15%);
-  
-  display: block;
+  display: flex;
   z-index: 2;
-  width: fit-content;
-  margin: auto;
+  width: 325px;
+  height: 325px;
+  transform-origin: center;
   transition: 0.4s ease;
   pointer-events: all;
-  filter: contrast(90%) brightness(120%) hue-rotate(-30deg);
+  filter: hue-rotate(-20deg);
   animation-name:  Bobbing;
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   border-radius: 50%;
-  outline: #f90 solid 4px;
-  overflow: hidden;
-}
-
-#ProfileWrap {
-  width: fit-content;
-  border-radius: 40%;
-}
-
-#ProfileImage:hover {
-  filter: contrast(90%) brightness(130%) hue-rotate(-20deg);
-  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4);
-  border-radius: 40%;
-  outline: rgb(255, 255, 255) solid 4px;
-  animation-name:  Pulsing, Bobbing;
-  animation-duration: 0s, 5s;
-  animation-timing-function: ease, ease-in-out;
-  animation-iteration-count: infinite;
-  transform: translate(0, 12.5%) scale(1.01);
-}
-
-#ProfileImage img:hover {
-  transform: scale(1.025);
-  border-radius: 40%;
+  outline: var(--accentColor) solid 3px; 
+  background-image:  url(images/Hover.png), url(images/pfp\ 2.jpg);
+  background-size: cover;
   
 }
 
-#ProfileImage img {
-  width: 400px;
-  transform: scale(1);
-  transition: 0.5s ease;
-  cursor: pointer;
-  border-radius: 40%;
+#ProfileImage:hover {
+  background-image:  url(images/ClickME.png), url(images/pfp\ 2.jpg);
+  filter: hue-rotate(-25deg);
+  /* box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4); */
+  border-radius: 45%;
+  
+  animation-play-state: paused;
 }
 
-#AboutMeHint {
-  position: relative;
-  transform: translate(0, -90%) scale(1.05);
-  display: block;
-  z-index: 3;
-  width: fit-content;
-  margin: auto;
-  pointer-events: none;
-  opacity: 0;
-}
-
-#AboutMeHint img {
-  width: 400px;
-  transition: 0.5s ease;
+#ProfileImage img{
+  object-fit: contain;
 }
 
 .NameClass {
   position: absolute;
   width: 100%;
-  color: black;
-  transform: translateY(-100%);
-  /* transform: translateY(-330px); */
-  font-size: 53px;
+  
+  color: var(--mainFontColor);
+  font-family: 'great vibes';
+  font-size: 40px;
   transition: 0.2s ease-in-out;
-  top: 97%;
-}
-
-.NameClass:hover {
-  animation-name:  gradient;
-  animation-duration: 1s;
-  animation-timing-function: ease, ease-in-out;
-  animation-iteration-count: 1;
-  background: linear-gradient(90deg , grey ,#000000, #000000, grey);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  top: 85%;
 }
 
 #TextClass {
@@ -144,108 +127,124 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  /* justify-content: center; */
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  
+  /* font-family: "Anton"; */
+  text-transform: uppercase;
+  font-size: 140px;
+  color: var(--mainFontColor);
 }
 
 #DigitalArtistBgText {
-  /* position: absolute; */
   z-index: 5;
-  color: #a6a6a6;
   line-height: 0px;
-  font-size: 190px;
-  /* top: -1.5%; */
+  font-size: 90%;
   left: 5%;
   transition: 0.5s ease;
   height: fit-content;
-  /* transform: translateY(100+calc(100vw)vw);*/
-  transform: translateX(-140px);
+  transform: translateX(-130px);
 }
 
 #GameDevBgText {
-  height: 100%;
   z-index: 5;
-  color: #a6a6a6;
-  line-height: 0;
-  font-size: 255px;
+  font-size: 120%;
   right: 5%;
   transition: 0.5s ease;
-  height: 300px;
-  transform: translateY(-185px) translateX(150px);
+  transform:  translate(120px, -40px);
 }
 
+#GameDevBgText p{
+  height:20px;
+}
+
+
 #DigitalArtistBgText:hover {
-  color: #f90;
+  color: var(--accentColor);
   text-shadow: -1px 1px 0px #d50, -2px 2px 0px #d50, -3px 3px 0px #d50,
     -4px 4px 0px #d50, -5px 5px 0px #d50, -6px 6px 0px #d50, -7px 7px 0px #d50,
-    -8px 8px 0px #d50, -50px 40px 0px rgba(0, 0, 0, 0.14);
+    -8px 8px 0px #d50;
   translate: 20px -10px;
 }
 
 #GameDevBgText:hover {
-  color: #f90;
+  color: var(--accentColor);
   text-shadow: 1px 1px 0px #d50, 2px 2px 0px #d50, 3px 3px 0px #d50,
     4px 4px 0px #d50, 5px 5px 0px #d50, 6px 6px 0px #d50, 7px 7px 0px #d50,
-    8px 8px 0px #d50, 50px 40px 0px rgba(0, 0, 0, 0.14);
+    8px 8px 0px #d50;
   translate: -20px -10px;
+}
+
+.AboutMe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: whitesmoke;
 }
 
 .AboutMe .AboutBody {
   position: relative;
-  left: 0;
   right: 0;
-  width: 100%;
-  height: 380px;
-  top: 60%;
-  opacity: 1;
-  z-index: 2;
-  background-color: rgb(30, 30, 30);
-  background-image: url("images/Crystal\ Scene\ better.png");
-  background-blend-mode: hard-light;
-  filter: blur(0px) brightness(100%) sepia(.8);
-  background-position: 0% 70%;
-  background-size: cover;
+  height: 600px;
   transition: 1s ease;
-  transition: 1s ease, background-position 0ms;
-  box-shadow: -500px 0px 0px #f90, 500px 0px 0px #f90, 0 0 0 rgba(0, 0, 0, 0.14);
-  overflow: hidden;
+  background-size: cover;
+  width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  display: flex;
+  border-radius: 10px;
+  overflow: hidden; 
 }
 
 .AboutMe.CurrentItem .AboutBody {
-  height: 0;
-  width: 1%;
-  left: 50%;
-  box-shadow: 0px 0px 0px #d50, 0px 0px 0px #d50, 0 0 0 rgba(0, 0, 0, 0.14);
-  border-radius: 10%;
+  height: 0px;
+  
+}
+
+#AboutMeBody {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: large;
+  width: 700px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.315);
+  border-radius: 10px;
+  
+}
+
+#AboutMeWrap{
+  background-color: var(--accentColor);
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 10px;
   overflow: hidden;
-  filter: blur(10px) brightness(50%) sepia(0);
+  padding: 2px; 
 }
 
 .AboutMeText {
-  padding: 1%;
-  pointer-events: none;
-  overflow: hidden;
   position: absolute;
 }
+
+#AboutImage{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url(images/Crystal\ Scene\ better.png);
+  background-size: cover;
+  background-position: center;
+  filter: sepia(.5) brightness(70%);
+  border-radius: 10px; 
+  overflow: hidden;
+}
+
 
 #AboutMeHeading {
   font-size: 50px;
   line-height: 50px;
-}
-
-#AboutMeBody {
-  font-family: "Sofia Sans Condensed";
-  font-weight: 600;
-  font-size: 22px;
-  /* line-height: 10px; */
-  width: 640px;
 }
 
 #WIPText{
@@ -258,15 +257,15 @@ body {
 }
 
 .Credit {
-  background-color: #f90;
-  /* height: 5%; */
-  font-size: 1.5vw;
-  color: rgb(255, 206, 132);
-  padding-left: 1%;
+  background-color: var(--accentColor);
+  width: 100%;
+  font-size: 1vw;
+  color: rgba(255, 255, 255, 0.622);
+  /* padding-left: 1%; */
 }
 
 ::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
   width: 10px;
 }
 
@@ -276,6 +275,31 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #f90;
+  background: var(--accentColor);
   border-radius: 10px;
 }
+
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+

@@ -1,0 +1,143 @@
+:root{
+      --GeneralPadding: 5em;
+}
+
+body {
+      margin: var(--GeneralPadding);
+      background-color: black;
+      padding: 0;
+      font-family: "Bebas Neue";
+      color: white;
+      user-select: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+}
+
+.ProjectHeading{
+      /* padding: auto; */
+      font-size: 500%;
+      font-family: 'DaftPunkfont';
+      z-index: 10;
+      align-items: center;
+      /* translate: 0% -40%; */
+      animation: TextGlow 1s ease infinite alternate;
+      width: 500px;
+      height: 125px;
+      line-height: 125px;
+      position: relative;
+      /* top: 50%; */
+      padding-top: .5em;
+      padding-bottom: .5em;
+      
+}
+
+#Final {
+      animation: DaftPunkGlow 5s ease infinite, DaftPunkOutline 5s ease infinite;
+}
+
+.Container{
+      position: relative;
+      background-color: black;
+      display: flex;
+      padding: 25px;
+      border-radius: 10px ;
+      outline: 2px solid purple;
+      animation: DaftPunkOutline 5s ease infinite;
+}      
+
+#FinalText{
+      margin-right: 0;
+      margin-bottom: 0;
+      outline: 2px solid gray;
+      animation: DaftPunkOutline 5s ease infinite;
+}
+
+.ProjectText{
+      font-family: "Open Sans";
+      font-weight: 300;
+      text-align: left;
+      font-size: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      text-justify: inter-word;
+      text-wrap: balance;
+      padding: 20px;
+      border-radius: 10px;
+      
+}
+
+.ProjectText span{
+      font-size: 200%;
+      font-family: Bebas Neue;
+}
+
+#FinalText span{
+      font-size: 300%;
+}
+
+
+.PageImage img{
+      /* width: fit-content; */
+      justify-content: right;
+      display: flex;
+      height: 44em; 
+      border-radius: 10px;
+}
+
+.Container2{     
+      margin: 10px;
+      border-radius: 10px;
+      outline: 2px solid gray;
+}
+
+.ProcessWrap{
+      display: flex;
+}
+
+.ProcessImage img{
+      height: 27.5em; 
+      margin: 10px;
+      border-radius: 10px;
+}
+
+
+#BackButton{
+      margin: 1.25em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 40%;
+      width: 3em;
+      height: 3em;
+      /* background-color: black; */
+      color: black;
+      position: fixed;
+      top: 0;
+      left: 0;
+}
+
+#BackButton img{
+      width:40px;
+      filter:contrast(100) invert(1);
+      transform: rotate(-90deg) scaleX(.75);
+}
+
+::-webkit-scrollbar {
+      width: 20px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+      border-radius: 10px;
+      
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      
+      background-color: rgb(0, 48, 48);
+      box-shadow: inset 0 0 5px cyan;
+      border-radius: 10px;
+    }

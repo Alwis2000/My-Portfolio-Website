@@ -10,6 +10,7 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script> 
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.3/viewer.min.css"
@@ -18,9 +19,12 @@
       referrerpolicy="no-referrer"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Great+Vibes&family=Sofia+Sans+Condensed:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Great+Vibes&family=Sofia+Sans+Condensed:wght@300;400;600&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Information.css" />
     <link rel="stylesheet" href="Gallery.css" />
     <link rel="stylesheet" href="ContactInfo.css" />
@@ -29,6 +33,7 @@
     <link rel="stylesheet" href="Animations.css" />
     <link rel="stylesheet" href="Media.css" />
     <link rel="stylesheet" href="Tabs.css" />
+    <link rel="stylesheet" href="Transitions.css" />
     <title>Yuneth Alwis' Portfolio</title>
     <meta name="twitter:card" content="summary_large_image" />
     <meta
@@ -42,564 +47,554 @@
     />
     <meta
       property="og:description"
-      content="Welcome to the alwis portfolio, where I make stuff and show the cool things i could do!"
+      content="Welcome to my portfolio, where I make stuff and show the cool things i could do!"
     />
     <meta content="#FF9900" data-react-helmet="true" name="theme-color" />
     <link rel="icon" type="image/x-icon" href="images/YA.ico" />
+    <style>
+      .module{
+        --accentColor: #ffae00;
+        --backgroundColor: #703436;
+        --secondaryBackgroundColor: #381a1b;
+        --mainFontColor: #ffddd3;
+        --generalPadding: 4em;
+      }
+    </style>
   </head>
 
 
-  <body onload="myFunction()">
-    <div id="loaderback">
-      <div id="loader">
-        <img src="images/YA.ico" alt="">
-      </div>
-    </div>
-    
-
-
-    <div class="InfoContainer">
-      <div id="TextClass">
-        <div id="DigitalArtistBgText">
-          <p>Digital</p>
-          <p>artist</p>
-        </div>
-        <div id="GameDevBgText">
-          <p>Game</p>
-          <p>
-            <span
-              style="
-                font-size: 50%;
-                display: block;
-                transform: translateY(-83px);
-              "
-              >Developer</span
-            >
-          </p>
-          <p>
-            <span
-              style="
-                font-size: 20%;
-                display: block;
-                transform: translateY(-250px) translateX(100px);
-                filter: brightness(110%);
-              "
-              >Well Upcoming...</span
-            >
-          </p>
+  <body onload="Loader()">
+    <div class="main">
+      <div class="transition transition-3 is_active">
+        <div id="loader">
+          <img src="images/YA.ico">
         </div>
       </div>
-
-      <div class="ContainerOverlay"></div>
-
-      <div
-        id="HoverClass"
-        onmouseenter="Hover(true)"
-        onmouseleave="NHover(true)"
-      >
-        <div id="SocialTwitter">
-          <a href="https://twitter.com/AlwisYuneth" target="_blank"
-            ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <path
-                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
-              /></svg
-          ></a>
-        </div>
-
-        <div id="SocialInstagram">
-          <a href="https://discord.gg/nzFchxebWY" target="_blank"
-            ><img src="images/Discord.svg"
-          /></a>
-        </div>
-
-        <div id="SocialReddit">
-          <a href="https://www.reddit.com/user/19-4yr_old" target="_blank"
-            ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <path
-                d="M440.3 203.5c-15 0-28.2 6.2-37.9 15.9-35.7-24.7-83.8-40.6-137.1-42.3L293 52.3l88.2 19.8c0 21.6 17.6 39.2 39.2 39.2 22 0 39.7-18.1 39.7-39.7s-17.6-39.7-39.7-39.7c-15.4 0-28.7 9.3-35.3 22l-97.4-21.6c-4.9-1.3-9.7 2.2-11 7.1L246.3 177c-52.9 2.2-100.5 18.1-136.3 42.8-9.7-10.1-23.4-16.3-38.4-16.3-55.6 0-73.8 74.6-22.9 100.1-1.8 7.9-2.6 16.3-2.6 24.7 0 83.8 94.4 151.7 210.3 151.7 116.4 0 210.8-67.9 210.8-151.7 0-8.4-.9-17.2-3.1-25.1 49.9-25.6 31.5-99.7-23.8-99.7zM129.4 308.9c0-22 17.6-39.7 39.7-39.7 21.6 0 39.2 17.6 39.2 39.7 0 21.6-17.6 39.2-39.2 39.2-22 .1-39.7-17.6-39.7-39.2zm214.3 93.5c-36.4 36.4-139.1 36.4-175.5 0-4-3.5-4-9.7 0-13.7 3.5-3.5 9.7-3.5 13.2 0 27.8 28.5 120 29 149 0 3.5-3.5 9.7-3.5 13.2 0 4.1 4 4.1 10.2.1 13.7zm-.8-54.2c-21.6 0-39.2-17.6-39.2-39.2 0-22 17.6-39.7 39.2-39.7 22 0 39.7 17.6 39.7 39.7-.1 21.5-17.7 39.2-39.7 39.2z"
-              /></svg
-          ></a>
-        </div>
-
-        <div id="SocialLinkedin">
-          <div class="linkedin-wrap">
-            <a
-              href="https://www.linkedin.com/in/yuneth-alwis-2a5b85231/"
-              target="_blank"
-              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                <path
-                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-                /></svg
-            ></a>
+      
+      <div class="InfoContainer">
+        <div id="TextClass">
+          <div id="DigitalArtistBgText">
+            <p>Digital</p>
+            <p>artist</p>
           </div>
-        </div>
-
-        <div id="ProfileImage">
-          <div id="ProfileWrap">
-            <img src="images/pfp 2.jpg" />
-          </div>
-        </div>
-        <div id="AboutMeHint">
-          <img src="images/Click.png" />
-        </div>
-
-        <div class="NameClass">
-          Yuneth
-          <span style="font-family: 'Great Vibes'; font-size: 90%">Alwis</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="AboutMe CurrentItem">
-      <div class="AboutBody">
-        <div class="AboutMeText" style="text-align: center">
-          <div id="AboutMeHeading">About Me</div>
-          <div id="AboutMeBody">
-            <p>I aspire to be a ‘Creator’ in many mediums</p>
-
+          <div id="GameDevBgText">
+            <p>Game</p>
             <p>
-              The digital medium is the most accessible for right now so i'll be
-              focusing on creating those for a while since i need to find a way
-              of satifying my needs of creating.
-            </p>
-
-            <p>
-              Learnt Blender and UE during the pandemic as a way of wasting
-              time, from which I learnt how to make CG Creations and games, and
-              I got to love making them.
-            </p>
-            <p>Anyways, I hope you like what you see here in my portfolio!</p>
-          </div>
-          <!-- style ="font-family: 'Roboto Condensed'; font-size: 90%" -->
-        </div>
-      </div>
-    </div>
-
-    <div id="GalleryWrap">
-      <div id="DGTitle" class="ContainerTitle">Digital Art</div>
-      <div class="Container">
-        <div class="GalleryContainer h-1 w-2">
-          <div class="GalleryItem">
-            <div class="Image" id="daftclass">
-              <img
-                class="MyImg"
-                id="daft"
-                src="images/Daft Punk.png"
-                style="font-family: 'DaftPunkfont'"
-                alt="Daft Punk"
-                draggable="false"
-              />
-            </div>
-
-            <div class="Text">
-              <a style="font-family: 'DaftPunkfont'; font-size: 110%"
-                >Daft Punk</a
+              <span
+                style="font-size: 52.5%;"
+                >Developer</span
               >
-            </div>
-            <div class="Date">19/12/2022</div>
+            </p>
+            <p style="font-size: 20%; translate: 85px -90px;">
+              Well upcoming...
+            </p>
           </div>
         </div>
-
-        <div class="GalleryContainer w-2">
-          <div class="GalleryItem">
-            <div class="Image">
-              <img
-                class="MyImg"
-                src="images/Camping_.png"
-                alt="Made this artwork of cuddle team leader camping"
-                draggable="false"
-              />
-            </div>
-            <div class="Text" style="font-family: 'fortnitefont'; letter-spacing: 1px;" id="Camping">Camping</div>
-            <div class="Date">27/05/2023</div>
-          </div>
+  
+        <div class="ContainerOverlay"></div>
+  
+        <div
+          id="HoverClass"
+          onmouseenter="Hover(true)"
+          onmouseleave="NHover(true)"
+        >
+        <div id="welcomeText">
+          Welcome to the portfolio of 
+        
         </div>
-
-        <div class="GalleryContainer">
-          <div class="GalleryItem">
-            <div class="Image">
-              <img
-                class="MyImg"
-                src="images/My Glass Globe.webp"
-                alt="Photorealism attempt of my glass globe on my desk"
-                draggable="false"
-              />
-            </div>
-
-            <div class="Text">'Photorealistic' Glass Globe</div>
-            <div class="Date">07/01/2023</div>
+          <div id="SocialTwitter">
+            <a href="https://twitter.com/AlwisYuneth" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                  d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                /></svg>
+              </a>
           </div>
-        </div>
-
-        <div class="GalleryContainer w-1 h-1">
-          <div class="GalleryItem">
-            <div class="Image">
-              <img
-                class="MyImg"
-                src="images/Me Fr curly.png"
-                alt="Gets Lonely sometimes you know?"
-                draggable="false"
-              />
-            </div>
-
-            <div class="Text">Cool Visual of me</div>
-            <div class="Date">06/02/2023</div>
+  
+          <div id="SocialInstagram">
+            <a href="https://discord.gg/nzFchxebWY" target="_blank"
+              ><img src="images/Discord.svg"
+            /></a>
           </div>
-        </div>
-
-        <div class="GalleryContainer">
-          <div class="GalleryItem">
-            <div class="Image">
-              <img
-                class="MyImg"
-                src="images/Best JBL I have owned.webp"
-                alt="JBL TUNE230NC TWS Product Test"
-                draggable="false"
-              />
-            </div>
-
-            <div class="Text">Product Rendering of My Earphone</div>
-            <div class="Date">03/04/2022</div>
+  
+          <div id="SocialReddit">
+            <a href="https://www.reddit.com/user/19-4yr_old" target="_blank"
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                  d="M440.3 203.5c-15 0-28.2 6.2-37.9 15.9-35.7-24.7-83.8-40.6-137.1-42.3L293 52.3l88.2 19.8c0 21.6 17.6 39.2 39.2 39.2 22 0 39.7-18.1 39.7-39.7s-17.6-39.7-39.7-39.7c-15.4 0-28.7 9.3-35.3 22l-97.4-21.6c-4.9-1.3-9.7 2.2-11 7.1L246.3 177c-52.9 2.2-100.5 18.1-136.3 42.8-9.7-10.1-23.4-16.3-38.4-16.3-55.6 0-73.8 74.6-22.9 100.1-1.8 7.9-2.6 16.3-2.6 24.7 0 83.8 94.4 151.7 210.3 151.7 116.4 0 210.8-67.9 210.8-151.7 0-8.4-.9-17.2-3.1-25.1 49.9-25.6 31.5-99.7-23.8-99.7zM129.4 308.9c0-22 17.6-39.7 39.7-39.7 21.6 0 39.2 17.6 39.2 39.7 0 21.6-17.6 39.2-39.2 39.2-22 .1-39.7-17.6-39.7-39.2zm214.3 93.5c-36.4 36.4-139.1 36.4-175.5 0-4-3.5-4-9.7 0-13.7 3.5-3.5 9.7-3.5 13.2 0 27.8 28.5 120 29 149 0 3.5-3.5 9.7-3.5 13.2 0 4.1 4 4.1 10.2.1 13.7zm-.8-54.2c-21.6 0-39.2-17.6-39.2-39.2 0-22 17.6-39.7 39.2-39.7 22 0 39.7 17.6 39.7 39.7-.1 21.5-17.7 39.2-39.7 39.2z"
+                ></path>
+                </svg></a>
           </div>
-        </div>
-
-        <div class="GalleryContainer w-2">
-          <div class="GalleryItem">
-            <div class="Image">
-              <img
-                class="MyImg"
-                src="images/Crystal Scene better.png"
-                alt="Crystal Scene 'inspired'(copied) from my friend's drawing"
-                draggable="false"
-              />
+  
+          <div id="SocialLinkedin">
+            <div class="linkedin-wrap">
+              <a
+                href="https://www.linkedin.com/in/yuneth-alwis-2a5b85231/"
+                target="_blank"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path
+                    d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                  />
+                </svg></a>
             </div>
-
-            <div class="Text">Vim Crystal Scene</div>
-            <div class="Date">13/12/2023</div>
           </div>
-        </div>
-
-        <div class="GalleryContainer h-1">
-          <div class="GalleryItem">
-            <div class="Image">
-              <img
-                class="MyImg"
-                id="Delorean"
-                src="images/DeLorean.webp"
-                alt="<a href='https://sketchfab.com/3d-models/delorean-back-to-the-future-7bae1ee2b70044ed973b27a828cf0f54' target='_blank' style='color: #FF9900;'>Delorean<a> in some cool lighting scene"
-                draggable="false"
-              />
-            </div>
-
-            <div class="Text">DeLorean</div>
-            <div class="Date">27/08/2022</div>
+  
+          <div id="ProfileImage">
           </div>
-        </div>
-
-        <div class="GalleryContainer w-2 h-2">
-          <div class="GalleryItem">
-            <div class="Image">
-              <img
-                class="MyImg"
-                src="images/Vim Isometric.png"
-                alt="Isometric Scene Inspired by my friend's drawing"
-                draggable="false"
-              />
-            </div>
-
-            <div class="Text">Isometric Scene</div>
-            <div class="Date">07/10/2022</div>
-          </div>
-        </div>
-
-        <div class="GalleryContainer w-2 h-1">
-          <div class="GalleryItem">
-            <div class="Image">
-              <img
-                class="MyImg"
-                src="images/Big chunk Brightened Composited.webp"
-                alt="Reimagining of a character and world from a game known as 'Muck'"
-                draggable="false"
-              />
-            </div>
-
-            <div class="Text">
-              Muck RTX <a style="color: #a2ff00">ON</a>
-            </div>
-            <div class="Date">11/08/2021</div>
-          </div>
-        </div>
-
-        <div class="GalleryContainer h-1 w-2">
-          <div class="GalleryItem">
-            <div class="Image">
-              <img
-                class="MyImg"
-                src="images/Veridis Quo Daft Punk tribute.png"
-                alt="Disco Legends"
-                draggable="false"
-              />
-            </div>
-
-            <div class="Text">Veridis Quo</div>
-            <div class="Date">18/12/2022</div>
-          </div>
-        </div>
-        <div class="GalleryContainer">
-          <div class="GalleryItem">
-            <div class="Image">
-              <img
-                class="MyImg"
-                src="images/Me ong.webp"
-                alt="I sometimes wonder what is the point of living"
-                draggable="false"
-              />
-            </div>
-
-            <div class="Text">Alone?</div>
-            <div class="Date">02/02/2023</div>
-          </div>
-        </div>
-
-        <div class="GalleryContainer h-2">
-          <div class="GalleryItem">
-            <div class="Image">
-              <img
-                class="MyImg"
-                src="images/inf background.webp"
-                alt="My father requested this for a background and it looks cool so here it is"
-                draggable="false"
-              />
-            </div>
-
-            <div class="Text">Infinite Render</div>
-          </div>
-        </div>
-
-        <div class="GalleryContainer">
-          <div class="GalleryItem">
-            <div class="Image">
-              <img
-                class="MyImg"
-                src="images/Eye V2.png"
-                alt="procedural down to the geometry which showcases my node work"
-                draggable="false"
-              />
-            </div>
-
-            <div class="Text">procedural eye</div>
-            <div class="Date">27/10/2022</div>
-          </div>
-        </div>
-
-        <div class="GalleryContainer">
-          <div class="GalleryItem">
-            <div class="Image">
-              <img
-                class="MyImg"
-                src="images/Skwed DG Art Hovered.webp"
-                alt="Quick recreatiom of my drawing tablet I made"
-                draggable="false"
-              />
-            </div>
-
-            <div class="Text">Drawing Tablet</div>
-            <div class="Date">25/03/2023</div>
+  
+          <div class="NameClass">
+            Yuneth
+            <span style="font-size: 90%;">Alwis</span>
           </div>
         </div>
       </div>
-
-      <div class="ContainerSubTitle">2D</div>
-      <div class="Container">
-        <div class="GalleryContainer h-2 w-3">
-          <div class="GalleryItem">
-            <div class="Image">
-              <img
-                class="MyImg"
-                src="images/Surprise... .png"
-                alt="An Artwork I made for Hex and his book!"
-                draggable="false"
-              />
+  
+      <div class="AboutMe CurrentItem">
+        <div id="AboutMeWrap">       
+          <div class="AboutBody" id="AboutHere">
+            <div id= "AboutImage"></div>
+            <div class="AboutMeText" style="text-align: center">
+              <div id="AboutMeHeading">About Me</div>
+              
+                <div id="AboutMeBody">
+                  <p>I am an aspiring ‘creator’, hoping to reach multiple mediums of creations! I currently focus on the 2D and 3D mediums now, with a little bit of game dev on the side.</p>
+      
+                  <p>
+                    Ever since I was a child, I have always dreamt of making creations, whether it be to help people or just to put what I have to offer to this vast world. I have to thank Dreamworks, Pixar and Paramount for really inspiring my youngself to really show the capabilities of what a person can do.
+                  </p>
+  
+                  <p>
+                    The reason I have this website to showcase what I have made so far is because of my philosophy that anyone can do it regardless of "natural" talent. What I hope to achieve is to inspire anyone seeing my work, that anyone can achieve anything as long as you have the will to! considering I Learnt Blender and UE during the pandemic as a way of wasting time, from which I learnt how to make CG Creations and games, and I got to love making them.
+                  </p>
+      
+                  <p>
+                    Special Thanks to Tom Roosendaal and the team behind Blender as without it, I never would have reached to where I am without the incredible program they created.
+                  </p>
+                  <p>Anyways, I hope you like what you see here in my portfolio!</p>
+                </div>
+              
+              
+              <!-- style ="font-family: 'Roboto Condensed'; font-size: 90%" -->
             </div>
-
-            <div class="Text">Blaze for my friend Hex</div>
-          </div>
-        </div>
-        <div class="GalleryContainer h-2 w-2">
-          <div class="GalleryItem">
-            <div class="Image">
-              <img
-                class="MyImg"
-                src="images/Me Runner.png"
-                alt="Literally Me"
-                draggable="false"
-              />
-            </div>
-
-            <div class="Text">Bladerunner alwis</div>
-          </div>
-        </div>
-        <div class="GalleryContainer">
-          <div class="GalleryItem">
-            <div class="Image">
-              <img
-                class="MyImg"
-                src="images/Nebula.png"
-                alt="Did this for fun"
-                draggable="false"
-              />
-            </div>
-
-            <div class="Text">Nebula</div>
-          </div>
-        </div>
-        <div class="GalleryContainer">
-          <div class="GalleryItem">
-            <div class="Image">
-              <img
-                class="MyImg"
-                src="images/Vanny.png"
-                alt="An Artwork I made for Hex"
-                draggable="false"
-              />
-            </div>
-
-            <div class="Text">Vanny for Hex</div>
-          </div>
-        </div>
-
-        <div class="GalleryContainer">
-          <div class="GalleryItem">
-            <div class="Image">
-              <img
-                class="MyImg"
-                src="images/Jenna.png"
-                alt="An OC of my friend Hex, inspired by his artwork"
-                draggable="false"
-              />
-            </div>
-
-            <div class="Text">Jenna the Fox</div>
           </div>
         </div>
       </div>
-
-      <div id="WIPTitle" class="ContainerTitle">Upcoming Projects</div>
-      <div id="DianeTitle" class="ContainerSubTitle">
-        <a style="color: rgb(255, 102, 42)">Diane Foxington</a> blender
-        recreation
+  
+      <div id="GalleryWrap">
+        <div id="DGTitle" class="ContainerTitle">ArtWorks</div>
+        <div class="Container">
+          <div class="GalleryContainer h-1 w-2">
+            <div class="GalleryItem">
+                <div class="Image" id="daftclass">
+                  <img
+                    class="MyImg"
+                    id="daft"
+                    src="images/Daft Punk.png"
+                    style="font-family: 'DaftPunkfont'"
+                    alt="Daft Punk"
+                    draggable="false"
+                  />
+                </div>
+              
+  
+                <div class="Text"><span style="font-family: 'DaftPunkfont'; font-size: 110%">Daft Punk</span></div>
+                <div class="Date">19/12/2022</div>
+              </a>
+            </div>
+          </div>
+  
+          <div class="GalleryContainer w-2">
+            <div class="GalleryItem">
+                <div class="Image">
+                  <img
+                    class="MyImg"
+                    src="images/Camping_.png"
+                    alt="Made this artwork of cuddle team leader camping"
+                    draggable="false"
+                  />
+                </div>
+              <div class="Text" style="font-family: 'fortnitefont'; letter-spacing: 1px;" id="Camping">Camping</div>
+              <div class="Date">27/05/2023</div>
+            </div>
+          </div>
+  
+          <div class="GalleryContainer">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/My Glass Globe.webp"
+                  alt="Photorealism attempt of my glass globe on my desk"
+                  draggable="false"
+                />
+              </div>
+  
+              <div class="Text">'Photorealistic' Glass Globe</div>
+              <div class="Date">07/01/2023</div>
+            </div>
+          </div>
+  
+          <div class="GalleryContainer w-1 h-1">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Me Fr curly.png"
+                  alt="Gets Lonely sometimes you know?"
+                  draggable="false"
+                />
+              </div>
+  
+              <div class="Text">Cool Visual of me</div>
+              <div class="Date">06/02/2023</div>
+            </div>
+          </div>
+  
+          <div class="GalleryContainer">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Best JBL I have owned.webp"
+                  alt="JBL TUNE230NC TWS Product Test"
+                  draggable="false"
+                />
+              </div>
+  
+              <div class="Text">Product Rendering of My Earphone</div>
+              <div class="Date">03/04/2022</div>
+            </div>
+          </div>
+  
+          <div class="GalleryContainer w-2">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Crystal Scene better.png"
+                  alt="Crystal Scene 'inspired'(copied) from my friend's drawing"
+                  draggable="false"
+                />
+              </div>
+  
+              <div class="Text">Vim Crystal Scene</div>
+              <div class="Date">13/12/2023</div>
+            </div>
+          </div>
+  
+          <div class="GalleryContainer h-2">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  id="Delorean"
+                  src="images/DeLorean.webp"
+                  alt="<a href='https://sketchfab.com/3d-models/delorean-back-to-the-future-7bae1ee2b70044ed973b27a828cf0f54' target='_blank' style='color: #FF9900;'>Delorean<a> in some cool lighting scene"
+                  draggable="false"
+                />
+              </div>
+  
+              <div class="Text">DeLorean</div>
+              <div class="Date">27/08/2022</div>
+            </div>
+          </div>
+  
+          <div class="GalleryContainer w-1 h-1">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Vim Isometric.png"
+                  alt="Isometric Scene Inspired by my friend's drawing"
+                  draggable="false"
+                />
+              </div>
+  
+              <div class="Text">Isometric Scene</div>
+              <div class="Date">07/10/2022</div>
+            </div>
+          </div>
+  
+          <div class="GalleryContainer w-2 h-1">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Big chunk Brightened Composited.webp"
+                  alt="Reimagining of a character and world from a game known as 'Muck'"
+                  draggable="false"
+                />
+              </div>
+  
+              <div class="Text">
+                Muck RTX <a style="color: #a2ff00">ON</a>
+              </div>
+              <div class="Date">11/08/2021</div>
+            </div>
+          </div>
+  
+          <div class="GalleryContainer h-1 w-2">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Veridis Quo Daft Punk tribute.png"
+                  alt="Disco Legends"
+                  draggable="false"
+                />
+              </div>
+  
+              <div class="Text">Veridis Quo</div>
+              <div class="Date">18/12/2022</div>
+            </div>
+          </div>
+          <div class="GalleryContainer">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Me ong.webp"
+                  alt="I sometimes wonder what is the point of living"
+                  draggable="false"
+                />
+              </div>
+  
+              <div class="Text">Alone?</div>
+              <div class="Date">02/02/2023</div>
+            </div>
+          </div>
+  
+          <div class="GalleryContainer h-2">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/inf background.webp"
+                  alt="My father requested this for a background and it looks cool so here it is"
+                  draggable="false"
+                />
+              </div>
+  
+              <div class="Text">Infinite Render</div>
+            </div>
+          </div>
+  
+          <div class="GalleryContainer">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Eye V2.png"
+                  alt="procedural down to the geometry which showcases my node work"
+                  draggable="false"
+                />
+              </div>
+  
+              <div class="Text">procedural eye</div>
+              <div class="Date">27/10/2022</div>
+            </div>
+          </div>
+  
+          <div class="GalleryContainer">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Skwed DG Art Hovered.webp"
+                  alt="Quick recreatiom of my drawing tablet I made"
+                  draggable="false"
+                />
+              </div>
+  
+              <div class="Text">Drawing Tablet</div>
+              <div class="Date">25/03/2023</div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="ContainerSubTitle">2D</div>
+        <div class="Container">
+          <div class="GalleryContainer h-1 w-2">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Surprise... .png"
+                  alt="An Artwork I made for Hex and his book!"
+                  draggable="false"
+                />
+              </div>
+  
+              <div class="Text">Blaze</div>
+            </div>
+          </div>
+          <div class="GalleryContainer h-2 w-1">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Lethal Apparatus 13022024.png"
+                  alt="Literally Me"
+                  draggable="false"
+                />
+              </div>
+  
+              <div class="Text">Lethal Apparatus</div>
+            </div>
+          </div>
+          <div class="GalleryContainer">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Me Runner.png"
+                  alt="Literally Me"
+                  draggable="false"
+                />
+              </div>
+  
+              <div class="Text">Bladerunner alwis</div>
+            </div>
+          </div>
+          
+          <div class="GalleryContainer">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Nebula.png"
+                  alt="Did this for fun"
+                  draggable="false"
+                />
+              </div>
+  
+              <div class="Text">Nebula</div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- <div id="WIPTitle" class="ContainerTitle">Upcoming Projects</div> -->
+        <!-- <div id="DianeTitle" class="ContainerSubTitle">
+          <a style="color: rgb(255, 102, 42)">Diane Foxington</a> blender
+          recreation
+        </div>
+        <div class="Container" id="Diane">
+          <div class="GalleryContainer w-2">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Work In Progress/Angry mommy.png"
+                  alt="Angry Diane Render"
+                  draggable="false"
+                />
+              </div>
+              <div class="Text">Angry</div>
+            </div>
+          </div>
+  
+          <div class="GalleryContainer">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Work In Progress/even more expressive smile.webp"
+                  alt="Attempted to recreate a smile"
+                  draggable="false"
+                />
+              </div>
+              <div class="Text">Smiling</div>
+            </div>
+          </div>
+  
+          <div class="GalleryContainer">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img class="MyImg" src="images/Work In Progress/Determined.webp"
+                alt="Determined look on Diane draggable="false" />
+              </div>
+              <div class="Text">Determined</div>
+            </div>
+          </div>
+  
+          <div class="GalleryContainer">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Work In Progress/Smile_Happy_Excited rot better.webp"
+                  alt="Most challenging one"
+                  draggable="false"
+                />
+              </div>
+              <div class="Text">Excited</div>
+            </div>
+          </div>
+  
+          <div class="GalleryContainer">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Work In Progress/Bruh.webp"
+                  alt="Bruh"
+                  draggable="false"
+                />
+              </div>
+              <div class="Text">Meh</div>
+            </div>
+          </div>
+  
+          <div class="GalleryContainer w-2">
+            <div class="GalleryItem">
+              <div class="Image">
+                <img
+                  class="MyImg"
+                  src="images/Work In Progress/Wha body shot.webp"
+                  alt="another challenging attempt"
+                  draggable="false"
+                />
+              </div>
+              <div class="Text">Flabbergasted</div>
+            </div>
+          </div>
+        </div> -->
+      </div> 
+  
+      <div class="ContactMe">
+        <div class="FeedbackText">FEEDBACK</div>
+        <div id="FormFix">
+          <div id="FormCenter">
+            <div id="FormStatus">Have any Feedback?</div>
+            <div id="FormFillWrap">
+              <textarea id="FormFill"></textarea>
+            </div>
+            <button id="FormButton" onclick="submitFeedback()">Submit</button>
+          </div>
+        </div>
       </div>
-      <div class="Container" id="Diane">
-        <div class="GalleryContainer w-2">
-          <div class="GalleryItem">
-            <div class="Image">
-              <img
-                class="MyImg"
-                src="images/Work In Progress/Angry mommy.png"
-                alt="Angry Diane Render"
-                draggable="false"
-              />
-            </div>
-            <div class="Text">Angry</div>
-          </div>
-        </div>
-
-        <div class="GalleryContainer">
-          <div class="GalleryItem">
-            <div class="Image">
-              <img
-                class="MyImg"
-                src="images/Work In Progress/even more expressive smile.webp"
-                alt="Attempted to recreate a smile"
-                draggable="false"
-              />
-            </div>
-            <div class="Text">Smiling</div>
-          </div>
-        </div>
-
-        <div class="GalleryContainer">
-          <div class="GalleryItem">
-            <div class="Image">
-              <img class="MyImg" src="images/Work In Progress/Determined.webp"
-              alt="Determined look on Diane draggable="false" />
-            </div>
-            <div class="Text">Determined</div>
-          </div>
-        </div>
-
-        <div class="GalleryContainer">
-          <div class="GalleryItem">
-            <div class="Image">
-              <img
-                class="MyImg"
-                src="images/Work In Progress/Smile_Happy_Excited rot better.webp"
-                alt="Most challenging one"
-                draggable="false"
-              />
-            </div>
-            <div class="Text">Excited</div>
-          </div>
-        </div>
-
-        <div class="GalleryContainer">
-          <div class="GalleryItem">
-            <div class="Image">
-              <img
-                class="MyImg"
-                src="images/Work In Progress/Bruh.webp"
-                alt="Bruh"
-                draggable="false"
-              />
-            </div>
-            <div class="Text">Meh</div>
-          </div>
-        </div>
-
-        <div class="GalleryContainer w-2">
-          <div class="GalleryItem">
-            <div class="Image">
-              <img
-                class="MyImg"
-                src="images/Work In Progress/Wha body shot.webp"
-                alt="another challenging attempt"
-                draggable="false"
-              />
-            </div>
-            <div class="Text">Flabbergasted</div>
-          </div>
-        </div>
+  
+      <div class="Credit">
+        My Very First Website made by myself along with the help of online
+        resources and help of
+        <a
+          style="color: inherit"
+          href="https://twitter.com/VimHax"
+          target="_blank"
+          >VimHax</a>
       </div>
     </div>
 
-    <div class="ContactMe">
-      <div class="FeedbackText">FEEDBACK</div>
-      <div id="FormFix">
-        <div id="FormCenter">
-          <div id="FormStatus">Enter Feedback</div>
-          <div id="FormFillWrap">
-            <textarea id="FormFill" rows="6" cols="85"></textarea>
-          </div>
-          <button id="FormButton" onclick="submitFeedback()">Submit</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="Credit">
-      My Very First Website made by myself along with the help of online
-      resources and help of
-      <a
-        style="color: inherit"
-        href="https://twitter.com/VimHax"
-        target="_blank"
-        >VimHax</a
-      >.
-    </div>
-    <!-- <script src="SmootherScroll.js"></script> -->
     <script src="Classes.js"></script>
-    <script src="Script.js"></script>
     <script src="Dropdowns.js"></script>
-    <!-- <script src="Parallax.js"></script> -->
+    <script src="node_modules/smooth-scrollbar/dist/smooth-scrollbar.js"></script>
+    <script src="node_modules/smooth-scrollbar/scrolling/scroll-into-view.js"></script>
+    <script src="node_modules/smooth-scrollbar/dist/plugins/overscroll.js"></script>
+    <script src="SmootherScroll.js"></script>
+
+    <script src="Script.js"></script>
+    <script src="Transitions.js" defer></script>
+    
 
   </body>
 </html>

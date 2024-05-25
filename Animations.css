@@ -1,10 +1,10 @@
 @keyframes move-up {
-  0% {
+  /* 0% {
     top: 100%;
-  }
+  } */
 
-  50% {
-    top: 65%;
+  0% {
+    top: 75%;
   }
 
   100% {
@@ -55,15 +55,15 @@
 
 @keyframes Bobbing {
   0% {
-    translate: 00px;
+    translate: 0px 5px;
   }
 
   50% {
-    translate: 0 -10px;
+    translate: 0 -5px;
   }
 
   100% {
-    translate: 00px;
+    translate: 0px 5px;
   }
 }
 
@@ -91,16 +91,6 @@
   }
 }
 
-@keyframes Loader {
-  0% {
-    translate: 0%;
-  }
-
-  100% {
-    translate: 100%;
-  }
-}
-
 @keyframes faded{
   0% {
     opacity: 1;
@@ -109,4 +99,21 @@
   100% {
     opacity: 0;
   }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(90deg); }
+  50% { transform: rotate(180deg); }
+  75% { transform: rotate(270deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fade {
+  to {opacity: 0;}
+}
+
+@keyframes backMove{
+  0% {background-position: 0% 0%;}
+  100% {background-position: 100vh 100vh;}
 }

@@ -1,14 +1,14 @@
-// https://stackoverflow.com/a/47206289
+var Scrollbar = window.Scrollbar;
 
-const lenis = new Lenis()
-
-lenis.on('scroll', (e) => {
-  console.log(e)
-})
-
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
+const options = {
+  plugins:{
+    overscroll: true,
+  },
+  'damping' : 0.05,
+  'renderByPixels' : false
 }
 
-requestAnimationFrame(raf)
+Scrollbar.use(window.OverscrollPlugin);
+Scrollbar.init(document.querySelector('.main'), options);
+
+//YxN
