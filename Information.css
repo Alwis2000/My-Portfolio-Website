@@ -23,8 +23,8 @@ body {
   background-image: url(images/BackGround.png);
   /* background-blend-mode: color-bu; */
   background-color: var(--backgroundColor);
-  background-size: 30%;
-  background-position: 0% 0%;
+  background-size: 30em;
+  
   animation: backMove linear 60s infinite;
   background-attachment: fixed;
   margin: 0;
@@ -51,15 +51,15 @@ body {
   /* background-image: url(images/Hover\ me.png);
   background-size: cover; */
   background-color: var(--backgroundColor);
-  width: 32.5em;
-  height: 32.5em;
+  width: 32.5vw;
+  height: 32.5vw;
   position: absolute;
   z-index: 6;
   transition: 1s;
   --translate: -10px;
   /* animation:  Pulsing 2.5s ease infinite; */
   border-radius: 5%;
-  padding: 0px;
+  /* padding: 0px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -207,7 +207,7 @@ body {
   font-family: "Open Sans";
   font-weight: 300;
   font-size: large;
-  width: 700px;
+  width: 50vw;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.315);
   border-radius: 10px;
@@ -227,6 +227,8 @@ body {
 
 .AboutMeText {
   position: absolute;
+  text-align: "center";
+  font-family: 'great vibes';
 }
 
 #AboutImage{
@@ -244,7 +246,8 @@ body {
 
 #AboutMeHeading {
   font-size: 50px;
-  line-height: 50px;
+  font-weight: 600;
+  margin-bottom: 1vw;
 }
 
 #WIPText{
