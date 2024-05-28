@@ -21,7 +21,7 @@ body > * {
 } */
 @media (hover: none) {
   #ProfileImage{
-    background-image:  url(images/ClickME.png), url(images/pfp\ 2.jpg);
+    background-image:  url(images/ClickME.png), url(images/pfp\ 2.webp);
   }
 
   .GalleryItem .Text {
@@ -29,7 +29,7 @@ body > * {
     top: 90%;
     white-space: nowrap;
     width: fit-content;
-    font-size: 20px;
+    font-size: 15px;
     padding: 5px;
     padding-left: 7.5px;
     padding-right: 7.5px;
@@ -180,11 +180,6 @@ body > * {
     margin-block: 7svh;
   }
 
-  .GalleryItem{
-    /* height: 30vh; */
-    /* margin-block: 2.5vh */
-  }
-
   .viewer-title {
     font-size: 15px;
     white-space: normal;
@@ -233,5 +228,14 @@ body > * {
   .Credit {
     font-size: 3vw;
     font-family: 'sofia sans condensed'
+  }
+
+  .viewer-toolbar > ul {
+    height: 30px;
+  }
+
+  .viewer-toolbar>ul>.viewer-large {
+    /* height: 30px; */
+    width: 30px;
   }
 }

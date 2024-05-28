@@ -62,3 +62,38 @@
   background-position: -120px 0;
   content: "Next";
 }
+
+.viewer-list {
+  height: 80px;
+}
+.viewer-list > li {
+  height: 80px;
+  width: 100px;
+}
+.viewer-toolbar > ul {
+  height: 50px;
+}
+
+.viewer-toolbar>ul>.viewer-large {
+  height: 100%;
+  width: 50px;
+}
+
+.viewer-reset {
+  background-position: center;
+  background-image: url(images/Reset.png);
+  background-size: cover;
+  content: "Reset";
+}
+
+.viewer-close:before, .viewer-flip-horizontal:before, .viewer-flip-vertical:before, .viewer-fullscreen-exit:before, .viewer-fullscreen:before, .viewer-next:before, .viewer-one-to-one:before, .viewer-play:before, .viewer-prev:before, .viewer-reset:before, .viewer-rotate-left:before, .viewer-rotate-right:before, .viewer-zoom-in:before, .viewer-zoom-out:before {
+  background-image: url(images/Reset.png);
+  background-repeat: no-repeat;
+  
+  color: transparent;
+  display: block;
+  font-size: 0;
+  height: 50px;
+  line-height: 0;
+  width: 50px;
+}
