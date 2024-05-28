@@ -68,8 +68,8 @@ body {
       animation-fill-mode: forwards;
       animation-iteration-count: infinite;
       animation-delay: 0s;
+      scale: 60%;
       filter: invert(var(--invertLogo));
-      box-shadow: 0 0 100px rgb(0, 0, 0);
 }
 
 :-webkit-scrollbar {

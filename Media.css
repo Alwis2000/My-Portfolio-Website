@@ -89,18 +89,11 @@ body > * {
   #FormFillWrap {
     max-width: 700px;
   }
-}
-
-
-@media screen and (max-width: 750px) {
-
-  
 
   #AboutMeBody {
     width: 75vw;
-    font-size: medium;
+    font-size: 2vw;
   }
-
 }
 
 @media screen and (max-width: 650px) {
@@ -114,13 +107,13 @@ body > * {
   #welcomeText{
 
     font-weight: 100;
-    font-size: 20px;
+    font-size: 5vw;
     top: 5.5%;
   }
 
   #HoverClass {
-    width: 350px;
-    height: 400px;
+    width: 90vw;
+    height: 90vw;
     /* margin: 100px; */
   }
 
@@ -129,13 +122,22 @@ body > * {
     height: 60vw;
   }
 
+  .NameClass{
+    font-size: 9vw;
+  }
+
   #AboutMeHeading {
-    font-size: 30px;
+    font-size: 8vw;
     
   }
 
+  #AboutMeBody {
+    width: 75vw;
+    font-size: 4vw;
+  }
+
   .AboutMe .AboutBody {
-    height: 800px;
+    height: 100vh;
   }
 
   .container {
@@ -158,8 +160,9 @@ body > * {
   }
 
   .viewer-title {
-    font-size: 22px;
+    font-size: 15px;
     white-space: normal;
+
   }
 
 
@@ -191,6 +194,8 @@ body > * {
     width: 70vw;
     height: 155px;
   }
+
+  
 
   #FormButton {
     width: fit-content;
