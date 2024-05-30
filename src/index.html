@@ -18,13 +18,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Great+Vibes&family=Sofia+Sans+Condensed:wght@300;400;600&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Great+Vibes&family=Noto+Sans:ital,wdth,wght@0,87.5,100..900;1,87.5,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Main.css"/>
     <link rel="stylesheet" href="Information.css" />
     <link rel="stylesheet" href="Gallery.css"/>
@@ -64,13 +60,13 @@
 
 
   <body onload="Loader()">
-    <div class="main">
-      <div class="transition transition-3 is_active">
+    <div class="transition transition-3 is_active">
         <div id="loader">
           <img src="images/YA.ico">
         </div>
       </div>
-      
+
+    <div class="main">
       <div class="InfoContainer">
         <div id="TextClass">
           <div id="DigitalArtistBgText">
@@ -138,10 +134,10 @@
                 </svg></a>
             </div>
           </div>
-  
-          <div id="ProfileImage">
-          </div>
-
+          <a id="Exclude" href="#AboutHere">
+            <div id="ProfileImage">
+            </div>
+          </a>
           <div class="NameClass">
             Yuneth
             <span style="font-size: 90%;">Alwis</span>
@@ -152,29 +148,24 @@
       <div class="AboutMe CurrentItem">
         <div id="AboutMeWrap">       
           <div class="AboutBody" id="AboutHere">
-            <div id= "AboutImage"></div>
             <div class="AboutMeText">
               <div id="AboutMeHeading">About Me</div>
-              
-                <div id="AboutMeBody">
-                  <p>I am an aspiring ‘creator’, hoping to reach multiple mediums of creations! I currently focus on the 2D and 3D mediums now, with a little bit of game dev on the side.</p>
-      
-                  <p>
-                    Ever since I was a child, I have always dreamt of making creations, whether it be to help people or just to put what I have to offer to this vast world. I have to thank Dreamworks, Pixar and Paramount for really inspiring my youngself to really show the capabilities of what a person can do.
-                  </p>
-  
-                  <p>
-                    The reason I have this website to showcase what I have made so far is because of my philosophy that anyone can do it regardless of "natural" talent. What I hope to achieve is to inspire anyone seeing my work, that anyone can achieve anything as long as you have the will to! considering I Learnt Blender and UE during the pandemic as a way of wasting time, from which I learnt how to make CG Creations and games, and I got to love making them.
-                  </p>
-      
-                  <p>
-                    Special Thanks to Tom Roosendaal and the team behind Blender as without it, I never would have reached to where I am without the incredible program they created.
-                  </p>
-                  <p>Anyways, I hope you like what you see here in my portfolio!</p>
-                </div>
-              
-              
-              <!-- style ="font-family: 'Roboto Condensed'; font-size: 90%" -->
+              <div id="AboutMeBody">
+                <p>I am an aspiring ‘creator’, hoping to reach multiple mediums of creations! I currently focus on the 2D and 3D mediums now, with a little bit of game dev on the side.</p>
+    
+                <p>
+                  Ever since I was a child, I have always dreamt of making creations, whether it be to help people or just to put what I have to offer to this vast world. I have to thank Dreamworks, Pixar and Paramount for really inspiring my youngself to really show the capabilities of what a person can do.
+                </p>
+
+                <p>
+                  The reason I have this website to showcase what I have made so far is because of my philosophy that anyone can do it regardless of "natural" talent. What I hope to achieve is to inspire anyone seeing my work, that anyone can achieve anything as long as you have the will to! considering I Learnt Blender and UE during the pandemic as a way of wasting time, from which I learnt how to make CG Creations and games, and I got to love making them.
+                </p>
+    
+                <p>
+                  Special Thanks to Tom Roosendaal and the team behind Blender as without it, I never would have reached to where I am without the incredible program they created.
+                </p>
+                <p>Anyways, I hope you like what you see here in my portfolio!</p>
+              </div>
             </div>
           </div>
         </div>
@@ -588,9 +579,7 @@
     <script src="Classes.js"></script>
     <script src="Script.js"></script>
     <script src="Dropdowns.js"></script>
-    <script src="smooth-scrollbar.js"></script>
-    <script src="plugins/overscroll.js"></script>
-    <script src="SmootherScroll.js"></script>
+    <script type="module" src="SmootherScroll.js"></script>
     <script src="Transitions.js" defer></script>
   </body>
 </html>

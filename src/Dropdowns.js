@@ -18,22 +18,26 @@ function ToggleDisplay() {
 let Scrollable = true;
 let HashAdded = document.querySelector("#AboutHere");
 
+function changeURL () { 
+  history.replaceState()("", document.title, window.location.pathname + window.location.search);
+  console.log("yes");
+}
+
 function ToggleSmoothScroll() {
   console.log(Scrollable);
   if (Scrollable) {
-    HashAdded.setAttribute('id', 'AboutHere');
+    document.getElementById("Exclude").href = "#AboutHere";   
     Scrollable = false;
   } else {
-    
-    HashAdded.removeAttribute('id');
-    
+    document.getElementById("Exclude").href = "#main"; 
     Scrollable = true;
-    // setTimeout(heightChange, 1000);
   }
   console.log(document.querySelector("#AboutHere"));
+  
 }
 
 prof.addEventListener("click", () => {
   ToggleDisplay();
   ToggleSmoothScroll();
 });
+

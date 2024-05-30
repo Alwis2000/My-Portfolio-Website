@@ -170,7 +170,7 @@ function submitFeedback() {
   console.log(feedback.value);
   feedbackStatus.innerHTML = "sending feedback";
   fetch(
-    `https://docs.google.com/forms/d/e/1FAIpQLSf7x_6sWhFNFuHPvO4hW5yxx788PpVLbbSzWcoixIffAQjQjw/formResponse?&entry.1498250176=${feedback.value}&submit=SUBMIT`,
+    `https://docs.google.com/forms/d/e/C6jcyY8BAAA.CiKTIDeK9Y2MQnUm5EDbhw.mFwwHcshNytfx7yKRE0URg/formResponse?&entry.1498250176=${feedback.value}&submit=SUBMIT`,
     {
       method: "POST",
       mode: "no-cors",
@@ -201,3 +201,5 @@ function submitFeedback() {
 //   cont.style.display = "Flex";
 // }
 
+// https://docs.google.com/forms/u/0/d/e/1FAIpQLSf7x_6sWhFNFuHPvO4hW5yxx788PpVLbbSzWcoixIffAQjQjw/naLogImpressions?token=pvDfyY8BAAA.CiKTIDeK9Y2MQnUm5EDbhw.aLS-jI5gBTn-L3woc3HTxA
+// docs.google.com/forms/d/e/1FAIpQLSf7x_6sWhFNFuHPvO4hW5yxx788PpVLbbSzWcoixIffAQjQjw/viewform

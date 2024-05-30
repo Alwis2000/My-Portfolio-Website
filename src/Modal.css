@@ -43,9 +43,10 @@
 }
 
 .viewer-title {
-  font-size: 30px;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 25px;
+  color: white;
 }
-
 .viewer-backdrop {
   background-color: rgba(0, 0, 0, 0.9);
 }
@@ -58,11 +59,6 @@
   border-radius: 10px;
 }
 
-.viewer-next:before {
-  background-position: -120px 0;
-  content: "Next";
-}
-
 .viewer-list {
   height: 80px;
 }
@@ -72,11 +68,13 @@
 }
 .viewer-toolbar > ul {
   height: 50px;
+  overflow: visible;
 }
 
 .viewer-toolbar>ul>.viewer-large {
   height: 100%;
   width: 50px;
+  overflow: visible;
 }
 
 .viewer-reset {
@@ -84,7 +82,20 @@
   background-image: url(images/Reset.png);
   background-size: cover;
   content: "Reset";
+  overflow: visible;
 }
+
+.viewer-reset:hover {
+  outline: #f90 1px solid;
+
+}
+
+.viewer-reset:focus {
+  animation: fullSpin 0.4s ease-out;
+  outline: white 2px solid !important;
+  box-shadow: #f90 0 0 10px !important;
+}
+
 
 .viewer-close:before, .viewer-flip-horizontal:before, .viewer-flip-vertical:before, .viewer-fullscreen-exit:before, .viewer-fullscreen:before, .viewer-next:before, .viewer-one-to-one:before, .viewer-play:before, .viewer-prev:before, .viewer-reset:before, .viewer-rotate-left:before, .viewer-rotate-right:before, .viewer-zoom-in:before, .viewer-zoom-out:before {
   background-image: url(images/Reset.png);

@@ -1,6 +1,6 @@
 function Loader() {
       const transition_el = document.querySelector('.transition');
-      const anchors = document.querySelectorAll("a:not(.exclude)");
+      const anchors = document.querySelectorAll("a:not(#Exclude)");
       console.log(anchors);
     
       setTimeout(() => {
