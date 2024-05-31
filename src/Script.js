@@ -22,6 +22,7 @@ const dgtitle = document.getElementById("DGTitle");
 const gallimgs = document.getElementsByClassName("image");
 
 
+
 let social1X, social1Y, social2X, social2Y;
 let hovered = false;
 let animating = false;
@@ -139,6 +140,9 @@ function NHover(real) {
     if (hovered) Hover(false);
   };
 }
+
+hoverClass.addEventListener('onmouseenter', Hover(true));
+hoverClass.addEventListener('onmouseleave', NHover(true));
 
 const viewer = new Viewer(document.getElementById("GalleryWrap"), {
   view: () => {

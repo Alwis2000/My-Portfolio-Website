@@ -1,3 +1,5 @@
+document.body.onload(Loader());
+
 function Loader() {
   const transition_el = document.querySelector('.transition');
   const anchors = document.querySelectorAll("a:not(#Exclude)");
