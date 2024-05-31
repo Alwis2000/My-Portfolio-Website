@@ -1,11 +1,8 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "targets": {
-    "main": false
-  },
   "scripts": {
-    "start": "parcel src/index.html --no-cache",
+    "start": "parcel src/index.html",
     "build": "parcel build src/index.html --no-cache"
   },
   "keywords": [],
