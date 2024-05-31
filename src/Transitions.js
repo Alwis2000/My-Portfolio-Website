@@ -1,4 +1,4 @@
-document.body.onload(Loader());
+document.addEventListener('DOMContentLoaded', Loader);
 
 function Loader() {
   const transition_el = document.querySelector('.transition');

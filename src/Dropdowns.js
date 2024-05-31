@@ -1,3 +1,5 @@
+import { aboutme, prof } from "./Script.js";
+
 function ToggleDisplay() {
   if (aboutme.classList.contains("CurrentItem")) {
     var CurrentlyDisplayed = document.querySelectorAll(".CurrentItem");
@@ -16,12 +18,6 @@ function ToggleDisplay() {
 
 
 let Scrollable = true;
-let HashAdded = document.querySelector("#AboutHere");
-
-function changeURL () { 
-  history.replaceState()("", document.title, window.location.pathname + window.location.search);
-  console.log("yes");
-}
 
 function ToggleSmoothScroll() {
   console.log(Scrollable);
@@ -33,7 +29,6 @@ function ToggleSmoothScroll() {
     Scrollable = true;
   }
   console.log(document.querySelector("#AboutHere"));
-  
 }
 
 prof.addEventListener("click", () => {

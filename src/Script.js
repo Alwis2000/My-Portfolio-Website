@@ -2,7 +2,7 @@
 const cont = document.getElementsByClassName("InfoContainer")[0];
 const contovr = document.getElementsByClassName("ContainerOverlay")[0];
 //quirky
-const prof = document.getElementById("ProfileImage");
+export const prof = document.getElementById("ProfileImage");
 const socT = document.getElementById("socialTwitter");
 const socD = document.getElementById("socialDiscord");
 const socR = document.getElementById("socialReddit");
@@ -11,7 +11,7 @@ const BGText = document.getElementById("TextClass");
 const hoverClass = document.getElementById("HoverClass");
 //aboutme
 const abouttext = document.getElementsByClassName("AboutMeText")[0];
-const aboutme = document.getElementsByClassName("AboutMe")[0];
+export const aboutme = document.getElementsByClassName("AboutMe")[0];
 const aboutBod = document.getElementsByClassName("AboutBody")[0];
 const aboutbody = document.getElementById("AboutImage");
 //feedback
@@ -26,6 +26,8 @@ const gallimgs = document.getElementsByClassName("image");
 let social1X, social1Y, social2X, social2Y;
 let hovered = false;
 let animating = false;
+
+
 
 const hoverAnimDur = 400; // milliseconds
 const NormalTime = {
@@ -58,11 +60,13 @@ const Scaleintime = {
 };
 
 let twitter, instagram, reddit, linkedin;
+
+
 // const ClickOpacity = [{ opacity: "0" }, { opacity: "1" }];
 
-const ScaleOut = [{ transform: "scale(0.5)" }, { transform: `scale(2)` }];
+// const ScaleOut = [{ transform: "scale(0.5)" }, { transform: `scale(2)` }];
 
-const MaxWidth1 = 1000;
+// const MaxWidth1 = 1000;
 
 function resize() {
   if (window.innerWidth < 400) {
@@ -97,20 +101,9 @@ function resize() {
 
 resize();
 window.addEventListener("resize", resize);
-
-window.addEventListener("scroll", function () {
-  // soc.style.opacity = 1 - +window.pageYOffset / 200 + '';
-  prof.style.scale = 100 - window.scrollY / 12 + "%";
-  if (window.innerWidth > 1000) {
-    aboutbody.style.backgroundPositionY = 70 - window.scrollY / 30 + "%";
-  }
-  // prof.style.opacity = 1 - +window.pageYOffset / 300 + '';
-  prof.style.blur = 10 - +window.scrollY + "px";
-  contovr.style.opacity = 0 + window.scrollY / 300 + "";
-  // contact.style.opacity = 0 + (window.pageYOffset-2000) / 300 + '';
-});
-
-function Hover(real) {
+document.getElementById("ProfileImage").addEventListener('mouseenter', () => Hover(true))
+document.getElementById("ProfileImage").addEventListener('mouseleave', () => NHover(true))
+export function Hover(real) {
   console.log(`${real ? "Real" : "Fake"} Hovered`);
   hovered = true;
   //here we have this check so that we don't restart the animation
@@ -127,7 +120,7 @@ function Hover(real) {
   console.log(socL);
 }
 
-function NHover(real) {
+export function NHover(real) {
   console.log(`${real ? "Real" : "Fake"} Stopped Hovering`);
   hovered = false;
   if (animating) return;
@@ -141,8 +134,7 @@ function NHover(real) {
   };
 }
 
-hoverClass.addEventListener('onmouseenter', Hover(true));
-hoverClass.addEventListener('onmouseleave', NHover(true));
+
 
 const viewer = new Viewer(document.getElementById("GalleryWrap"), {
   view: () => {
@@ -189,8 +181,6 @@ const viewer = new Viewer(document.getElementById("GalleryWrap"), {
   toggleOnDblclick: [false],
 });
 
-const span = document.getElementsByClassName("Close")[0];
-
 const feedback = document.getElementById("FormFill");
 const feedbackStatus = document.getElementById("FormStatus");
 
@@ -216,18 +206,3 @@ function submitFeedback() {
     });
   console.log("beans");
 }
-
-// var myVar;
-
-// function myFunction() {
-//   myVar = setTimeout(showPage, 2000);
-// }
-
-// function showPage() {
-//   document.getElementById("loader").style.display = "none";
-//   document.getElementById("loaderback").style.display = "none";
-//   cont.style.display = "Flex";
-// }
-
-// https://docs.google.com/forms/u/0/d/e/1FAIpQLSf7x_6sWhFNFuHPvO4hW5yxx788PpVLbbSzWcoixIffAQjQjw/naLogImpressions?token=pvDfyY8BAAA.CiKTIDeK9Y2MQnUm5EDbhw.aLS-jI5gBTn-L3woc3HTxA
-// docs.google.com/forms/d/e/1FAIpQLSf7x_6sWhFNFuHPvO4hW5yxx788PpVLbbSzWcoixIffAQjQjw/viewform
