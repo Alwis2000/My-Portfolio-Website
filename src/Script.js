@@ -101,8 +101,8 @@ function resize() {
 
 resize();
 window.addEventListener("resize", resize);
-document.getElementById("ProfileImage").addEventListener('mouseenter', () => Hover(true))
-document.getElementById("ProfileImage").addEventListener('mouseleave', () => NHover(true))
+document.getElementById("HoverClass").addEventListener('mouseenter', () => Hover(true))
+document.getElementById("HoverClass").addEventListener('mouseleave', () => NHover(true))
 export function Hover(real) {
   console.log(`${real ? "Real" : "Fake"} Hovered`);
   hovered = true;
