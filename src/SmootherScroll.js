@@ -32,8 +32,6 @@ class AnchorPlugin extends ScrollbarPlugin {
       return;
     }    
 
-    
-
     // reset scrollTop
     scrollbar.containerEl.scrollTop = 0;
 
@@ -71,31 +69,31 @@ const options = {
 
 scrollbar.use(AnchorPlugin);      
 scrollbar.use(OverscrollPlugin)     
-scrollbar.init(document.querySelector('.main'), options);
 
 
 
 
 
 
-// function myFunction(Hoverable) {
-//   if (Hoverable.matches) { // If media query matches
-//     console.log("naur")
-//   } else {
-//     Scrollbar.init(document.querySelector('.main'), options);
-//   }
-// }
 
-// // Create a MediaQueryList object
-// var Hoverable = window.matchMedia("(hover: none)")
+function myFunction(Hoverable) {
+  if (Hoverable.matches) { // If media query matches
+    console.log("naur")
+  } else {
+    scrollbar.init(document.querySelector('.main'), options);
+  }
+}
 
-// // Call listener function at run time
-// myFunction(Hoverable);
+// Create a MediaQueryList object
+var Hoverable = window.matchMedia("(hover: none)")
 
-// // Attach listener function on state changes
-// Hoverable.addEventListener("change", function() {
-//   myFunction(Hoverable);
-// });
+// Call listener function at run time
+myFunction(Hoverable);
+
+// Attach listener function on state changes
+Hoverable.addEventListener("change", function() {
+  myFunction(Hoverable);
+});
 
 
 

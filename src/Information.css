@@ -260,7 +260,7 @@
 }
 
 #FormFill {
-  font-family: "Open Sans";
+  font-family: 'Noto Sans', sans-serif;
   font-weight: 600;
   font-size: 1.35vw;
   resize: none;

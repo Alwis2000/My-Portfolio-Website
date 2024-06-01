@@ -26,13 +26,12 @@ body > * {
 
   .GalleryItem .Text {
     opacity: 1;
-    top: 90%;
+    /* top: 10%; */
     white-space: nowrap;
     width: fit-content;
     font-size: 15px;
     padding: 5px;
-    padding-left: 7.5px;
-    padding-right: 7.5px;
+    padding-inline: 7.5px;
     background-color: rgba(0, 0, 0, 0.514);
     border-radius: 10px;
   }
@@ -60,6 +59,9 @@ body > * {
   #FormFill {
     height: 15vw;
   }
+  .AboutMe .AboutBody {
+    max-height: 1000px;
+  }
 }
 
 @media screen and (max-width: 930px) {
@@ -82,6 +84,8 @@ body > * {
     font-size: 3vw;
     margin-bottom: 1.5vw;
   }
+  
+
 }
 
 @media screen and (max-width: 800px) {
@@ -94,6 +98,7 @@ body > * {
     width: 75vw;
     font-size: 2vw;
   }
+  
 }
 
 @media screen and (max-width: 650px) {
@@ -157,12 +162,11 @@ body > * {
   }
 
   #AboutMeBody {
-    width: 75vw;
     font-size: 4vw;
   }
 
   .AboutMe .AboutBody {
-    height: 950px;
+    max-height: 950px;
   }
 
   .container {
@@ -215,9 +219,6 @@ body > * {
     width: 70vw;
     height: 155px;
   }
-
-  
-
   #FormButton {
     width: fit-content;
     height: fit-content;
@@ -226,8 +227,7 @@ body > * {
     font-size: 5vw;
   }
   .Credit {
-    font-size: 3vw;
-    font-family: 'sofia sans condensed'
+    font-size: 2.5vw;
   }
 
   .viewer-toolbar > ul {

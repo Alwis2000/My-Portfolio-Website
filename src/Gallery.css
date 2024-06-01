@@ -8,20 +8,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); */
   box-shadow: inset 0px 0px 10px rgb(255, 255, 255);
 }
 
 .ContainerTitle {
   width: fit-content;
   font-size: 70px;
-  /* margin: auto; */
   letter-spacing: 0.1em;
   margin: 5vw;
   padding-inline: 0;
   position: relative;
   transition: 0.3s ease;
-  cursor: pointer;
   color: var(--mainFontColor);
   text-transform: uppercase;
   transform-origin: center;
@@ -30,8 +27,6 @@
 .ContainerTitle:hover {
   letter-spacing: 0.2em;
   padding-left: 0.2em;
-  /* background-color: white; */
-  /* box-shadow: 0 0 100px rgba(0, 0, 0, 0.2); */
 }
 
 .ContainerSubTitle {
@@ -45,9 +40,7 @@
 }
 
 .Container {
-  /* padding: 10px; */
   position: relative;
-  /* background-image: url(images/BackGround\ Dark.png); */
   background-size: 60%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -58,7 +51,6 @@
   border-radius: 5px;
   margin: 5vw;
   margin-top: 0;
-  
 }
 
 
@@ -81,7 +73,6 @@
   cursor: pointer;
   transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   filter: brightness(100%) saturate(1);
-  /* border-radius: 5px; */
 }
 
 .GalleryItem:hover .image img {
@@ -96,7 +87,6 @@
   height: calc(100% + 20px);
   --imgincr: 15px;
   border-radius: 15px;
-  
 }
 
 #Diane .GalleryItem:hover {
@@ -106,7 +96,6 @@
 
 
 .GalleryItem .Text {
-  
   opacity: 0;
   position: absolute;
   bottom: 20%;
@@ -126,9 +115,6 @@
 .GalleryItem:hover .Text {
   opacity: 1;
   bottom: 50%;
-  /* animation: move-up 0.75s cubic-bezier(0.075, 0.82, 0.165, 1); */
-  /* padding: 1em; */
-  /* width: 100%; */
 }
 
 .Date{

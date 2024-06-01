@@ -27,8 +27,6 @@ let social1X, social1Y, social2X, social2Y;
 let hovered = false;
 let animating = false;
 
-
-
 const hoverAnimDur = 400; // milliseconds
 const NormalTime = {
   duration: 300,
@@ -60,13 +58,6 @@ const Scaleintime = {
 };
 
 let twitter, instagram, reddit, linkedin;
-
-
-// const ClickOpacity = [{ opacity: "0" }, { opacity: "1" }];
-
-// const ScaleOut = [{ transform: "scale(0.5)" }, { transform: `scale(2)` }];
-
-// const MaxWidth1 = 1000;
 
 function resize() {
   if (window.innerWidth < 400) {
