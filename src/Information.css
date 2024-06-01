@@ -173,7 +173,7 @@
   align-items: center;
   justify-content: center;
   padding: 20%;
-  background-image: url(images/Crystal\ Scene\ better.png);
+  background-image: url(images/Crystal\ Scene\ better.jpg);
   background-size: cover;
   background-position: center;
   height: 100%;
@@ -181,13 +181,14 @@
 
 }
 #AboutMeHeading {
-  font-family: 'great vibes';
-  font-size: 50px;
+  font-family: 'great vibes', cursive;
+  font-size: 60px;
   font-weight: 600;
 }
 #AboutMeBody {
-  padding: 20px;
-  border-radius: 10px;
+  padding-inline: 17px;
+  padding-block: 5px;
+  border-radius: 30px;
   font-family: 'Noto Sans', sans-serif;
   font-weight: 300;
   font-size: 18px;
