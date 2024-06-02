@@ -1,7 +1,7 @@
 #GalleryWrap {
   background-color: var(--backgroundColor);
   outline: #e4e4e4 2px solid;
-  border-radius: 10px;
+  border-radius: 30px;
   margin: 5vw;
   margin-block:13svh;
   display: flex;

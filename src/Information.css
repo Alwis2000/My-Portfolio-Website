@@ -151,7 +151,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden; 
-  border-radius: 8px;
+  border-radius: 29px;
 }
 
 .AboutMe.CurrentItem .AboutBody {
@@ -160,7 +160,7 @@
 }
 
 #AboutMeWrap{
-  border-radius: 10px;
+  border-radius: 30px;
   background-color: var(--accentColor);
   width: 90%;
   padding: 2px; 

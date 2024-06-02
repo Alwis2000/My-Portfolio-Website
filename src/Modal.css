@@ -60,11 +60,12 @@
 }
 
 .viewer-list {
-  height: 80px;
+  height: 8vh;
 }
 .viewer-list > li {
-  height: 80px;
-  width: 100px;
+  height: 8vh;
+  width: 80px;
+  
 }
 .viewer-toolbar > ul {
   height: 50px;
@@ -107,4 +108,24 @@
   height: 50px;
   line-height: 0;
   width: 50px;
+}
+
+.viewer-loading:after {
+  /* position: absolute; */
+  /* left: 50%;  */
+  /* top: 50vh; */
+  /* translate: -50% -50%; */
+  z-index: 100;
+  animation: spin;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  scale: 120%;
+  /* filter: invert(var(--invertLogo)); */
+  background-image: url(images/YA.ico);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  border: none;
 }

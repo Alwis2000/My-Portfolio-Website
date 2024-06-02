@@ -12,6 +12,10 @@ body > * {
   src: url("customFonts/fortnite.otf");
 }
 
+@font-face {
+  font-family: "DuolingoFont";
+  src: url("customFonts/Feather\ Bold.ttf");
+}
 
 /* @media screen and (max-width: 1660px) {
   .container {
