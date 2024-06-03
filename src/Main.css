@@ -1,12 +1,16 @@
 :root {
       --accentColor: hsl(41, 100%, 50%);
       --backgroundColor: whitesmoke;
+      --backgroundColor2: whiteva;
       --secondaryBackgroundColor: rgb(29, 29, 29);
       --tertiaryBackgroundColor: #ff9900;
-      --mainFontColor: rgb(53, 4, 0);
+      --mainFontColor: #350400;
       --generalPadding: 4em;
       --GradientDark: linear-gradient(90deg , rgb(255, 255, 255) ,var(--backgroundColor), var(--backgroundColor), rgb(255, 255, 255));
       --mainFontFamily: "Anton";
+      --outline: #e4e4e4 2px solid;
+      --transitionBack: white;
+      --invertLogo: 1;
 }
 
 html{
@@ -25,7 +29,7 @@ html{
 body {
       background-image: url(images/BackGround.webp);
       /* background-blend-mode: color-bu; */
-      background-color: white;
+      background-color: var(--backgroundColor2);
       background-size: 30em;
 
       animation: backMove linear 60s infinite;

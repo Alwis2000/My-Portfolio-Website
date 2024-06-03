@@ -34,21 +34,21 @@
 
   
 #socialtwitter:hover {
-  box-shadow: -0px 1px 0px #1679b6, -0px 2px 0px #1679b6, -1px 3px 0px #1679b6;
+  
   background-color: #1da1f2;
 
   /* padding: 10px; */
 }
 #socialDiscord:hover {
-  box-shadow: 0px 1px 0px #242c89, 0px 2px 0px #242c89, 1px 3px 0px #242c89;
+  
   background-color: #5865F2;
 }
 #socialreddit:hover {
-  box-shadow: 0px 1px 0px #942700, 0px 2px 0px #942700, -1px 3px 0px #942700;
+  
   background-color: #ff4500;
 }
 #sociallinkedin:hover {
-  box-shadow: 0px 1px 0px #06415c, 0px 2px 0px #06415c, 1px 3px 0px #06415c;
+  
   background-color: #0e76a8;
 }
   

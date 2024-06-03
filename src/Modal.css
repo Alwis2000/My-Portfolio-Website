@@ -60,10 +60,10 @@
 }
 
 .viewer-list {
-  height: 8vh;
+  height: 100%;
 }
 .viewer-list > li {
-  height: 8vh;
+  height: 80px;
   width: 80px;
   
 }
@@ -123,7 +123,7 @@
   animation-delay: 0s;
   scale: 120%;
   /* filter: invert(var(--invertLogo)); */
-  background-image: url(images/YA.ico);
+  background-image: url(images/YA\ logo.svg);
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 0;
