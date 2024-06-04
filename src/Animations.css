@@ -1,14 +1,9 @@
 @keyframes move-up {
-  /* 0% {
-    top: 100%;
-  } */
-
   0% {
-    top: 75%;
+    translate:  0 200px;
   }
-
   100% {
-    top: 50%;
+    translate: 0 0 ;
   }
 }
 
@@ -27,15 +22,6 @@
   }
   to {
     opacity: 1;
-  }
-}
-
-@keyframes scaleOut {
-  from {
-  }
-  to {
-    height: calc(100% + (var(--imgincr)));
-    transform: translate(calc(var(--imgincr) / -2), calc(var(--imgincr) / -2));
   }
 }
 
@@ -69,11 +55,7 @@
 
 @keyframes Scalein {
   0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(var(--Scaleout));
+    transform: scale(0.5);
   }
 
   100% {

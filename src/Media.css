@@ -1,6 +1,6 @@
-body > * {
+/* body > * {
   overflow-x: hidden;
-}
+} */
 
 
 
@@ -29,23 +29,22 @@ body > * {
 @media (prefers-color-scheme: dark) {
   :root {
     --accentColor: #0dc;
-    --backgroundColor: rgb(27, 32, 37);
-    --backgroundColor2: rgb(11, 19, 23);
+    --backgroundColor: rgb(17, 25, 28);
+    --backgroundColor2: rgb(8, 16, 20);
     --secondaryBackgroundColor: rgb(29, 29, 29);
     --tertiaryBackgroundColor: #0dc;
-    --mainFontColor: #f5ffff;
+    --mainFontColor: #d6dfdf;
     --mainFontFamily: "Anton";
-    --outline: rgb(54, 57, 60) 2px solid;
+    --outline: rgb(44, 57, 60) 2px solid;
     --transitionBack: rgb(11, 19, 23);
-      --invertLogo: 0;
+    --invertLogo: 0;
+    --pfp: url(/src/images/pfp\ 1.jpg);
   }
   #ProfileImage{
     filter: brightness(90%)  hue-rotate(0deg);
-    background-image:  url(images/Hover.png), url(images/Pfp\ 1.png);
   }
   
   #ProfileImage:hover {
-    background-image:  url(images/ClickME.png), url(images/Pfp\ 1.png);
     filter: brightness(90%) hue-rotate(0deg);
     /* box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4); */
   }
@@ -57,7 +56,7 @@ body > * {
 
 @media (hover: none) {
   #ProfileImage{
-    background-image:  url(images/ClickME.png), url(images/pfp\ 2.webp);
+    background-image:  url(images/ClickME.png), var(--pfp);
   }
 
   .GalleryItem .Text {

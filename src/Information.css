@@ -1,7 +1,7 @@
 .InfoContainer {
   position: relative;
   height: 87svh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +13,7 @@
   height: 61svh;
   position: absolute;
   z-index: 6;
-  transition: 1s;
+  /* transition: 1s; */
   --translate: -10px;
   /* animation:  Pulsing 2.5s ease infinite; */
   border-radius: 5%;
@@ -52,12 +52,12 @@
   animation-iteration-count: infinite;
   border-radius: 50%;
   outline: var(--accentColor) solid 3px; 
-  background-image:  url(images/Hover.png), url(images/pfp\ 2.webp);
+  background-image:  url(images/Hover.png), var(--pfp);
   background-size: cover;
 }
 
 #ProfileImage:hover {
-  background-image:  url(images/ClickME.png), url(images/pfp\ 2.webp);
+  background-image:  url(images/ClickME.png), var(--pfp);
   filter: hue-rotate(-25deg);
   /* box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4); */
   border-radius: 45%;
@@ -93,6 +93,7 @@
   font-size: 140px;
   color: var(--mainFontColor);
   --shadow: #d50;
+  
 }
 
 #DigitalArtistBgText {
@@ -163,7 +164,7 @@
 #AboutMeWrap{
   border-radius: 30px;
   background-color: var(--accentColor);
-  width: 90%;
+  width: 90vw;
   padding: 2px; 
 }
 
@@ -178,7 +179,7 @@
   background-size: cover;
   background-position: center;
   height: 100%;
-  width: 100%;
+  /* width: 100%; */
 
 }
 #AboutMeHeading {
@@ -195,7 +196,7 @@
   font-size: 18px;
   width: 100%;
   height: fit-content;
-  background-color: rgba(0, 0, 0, 0.315);
+  background-color: rgba(0, 20, 50, 0.315);
   outline: #7b92de33 2px inset;
   backdrop-filter: blur(20px) grayscale(0.5);
   /* text-align: justify;

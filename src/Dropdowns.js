@@ -25,7 +25,7 @@ function ToggleSmoothScroll() {
     document.getElementById("Exclude").href = "#AboutHere";   
     Scrollable = false;
   } else {
-    document.getElementById("Exclude").href = "#main"; 
+    document.getElementById("Exclude").href = "#"; 
     Scrollable = true;
   }
   console.log(document.querySelector("#AboutHere"));
