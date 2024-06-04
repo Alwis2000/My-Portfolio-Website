@@ -126,7 +126,7 @@ const options = {
 scrollbar.use(AnchorPlugin);
 scrollbar.use(OverscrollPlugin);     
 scrollbar.use(DisableScrollPlugin);    
-scrollbar.addListener((s) => {console.log(s)});
+// scrollbar.addListener((s) => {console.log(s)});
 
 
 
