@@ -46,10 +46,7 @@
   transition: 0.4s ease;
   pointer-events: all;
   filter: hue-rotate(-20deg);
-  animation-name:  Bobbing;
-  animation-duration: 5s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+  animation: Bobbing 2.5s ease-in-out infinite alternate;
   border-radius: 50%;
   outline: var(--accentColor) solid 3px; 
   background-image:  url(images/Hover.png), var(--pfp);
@@ -298,15 +295,21 @@
 }
 
 #FormButton:hover {
-  color: white;
+  /* color: white; */
   cursor: pointer;
-  background-color: red;
-  --thicknessColor: #ffffff;
+  background-color: white;
+  --thicknessColor: #4d5f65;
   box-shadow: 0px 2px 0px var(--thicknessColor), 0px 4px 0px var(--thicknessColor), 0px 6px 0px var(--thicknessColor),
-    0px 10px 30px red;
+    0px 10px 30px var(--accentColor);
   translate: 0 -6px;
 }
 
+#FormButton:disabled {
+  background-color: gray;
+  box-shadow: 0 0 0;
+  translate: 0 0;
+  cursor: default;
+}
 
 .Credit {
   background-color: var(--accentColor);

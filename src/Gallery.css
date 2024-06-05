@@ -73,6 +73,12 @@
   animation-range: entry 0% cover 40% ;
 }
 
+.image  {
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .GalleryItem .image img {
   width: 100%;
   height: 100%;

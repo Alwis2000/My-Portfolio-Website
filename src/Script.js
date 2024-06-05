@@ -174,12 +174,35 @@ const viewer = new Viewer(document.getElementById("GalleryWrap"), {
 
 const feedback = document.getElementById("FormFill");
 const feedbackStatus = document.getElementById("FormStatus");
+const feedbackButton = document.getElementById("FormButton");
+let spamtext = '';
+
+feedbackButton.addEventListener("click", submitFeedback);
+
+function enableButton() {
+  feedbackButton.removeAttribute("disabled");
+  feedbackButton.innerHTML = "Submit";
+};
+
+
+function disableButton() {
+  feedbackButton.setAttribute("disabled", null);
+  if (feedback.value != '') {
+    feedbackButton.innerHTML = "Submitted";
+  }
+};
 
 function submitFeedback() {
+  if (feedback.value == spamtext) {
+    console.log("spam");
+  }
+  
   console.log(feedback.value);
-  feedbackStatus.innerHTML = "sending feedback";
+  feedbackStatus.innerHTML = "Sending feedback...";
+  
+
   fetch(
-    `https://docs.google.com/forms/d/e/C6jcyY8BAAA.CiKTIDeK9Y2MQnUm5EDbhw.mFwwHcshNytfx7yKRE0URg/formResponse?&entry.1498250176=${feedback.value}&submit=SUBMIT`,
+    `https://docs.google.com/forms/u/0/d/e/1FAIpQLSf7x_6sWhFNFuHPvO4hW5yxx788PpVLbbSzWcoixIffAQjQjw/formResponse?&entry.1863945483=${feedback.value}&submit=SUBMIT`,
     {
       method: "POST",
       mode: "no-cors",
@@ -189,11 +212,25 @@ function submitFeedback() {
   )
     .then((res) => {
       console.log(res);
-      feedbackStatus.innerHTML = "received response";
+      feedbackStatus.innerHTML = "Thank you for the feedback!";
+      spamtext = feedback.value;
     })
     .catch((err) => {
       console.log(err);
-      feedbackStatus.innerHTML = "response not received";
+      feedbackStatus.innerHTML = "Response not received.";
     });
-  console.log("beans");
+  disableButton();
+  
 }
+
+feedback.addEventListener('input',() => {
+  if (feedback.value == spamtext) {
+    console.log("spam");
+    disableButton();
+   } else {
+    enableButton();
+    console.log("NotSpam");
+   }
+  }
+)
+

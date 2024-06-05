@@ -44,12 +44,8 @@
     translate: 0px 5px;
   }
 
-  50% {
-    translate: 0 -5px;
-  }
-
   100% {
-    translate: 0px 5px;
+    translate: 0 -5px;
   }
 }
 
