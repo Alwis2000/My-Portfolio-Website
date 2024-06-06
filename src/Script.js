@@ -189,13 +189,12 @@ function disableButton() {
   feedbackButton.setAttribute("disabled", null);
   if (feedback.value != '') {
     feedbackButton.innerHTML = "Submitted";
+    feedbackStatus.innerHTML = "Thank you for the feedback!";
   }
 };
 
 function submitFeedback() {
-  if (feedback.value == spamtext) {
-    console.log("spam");
-  }
+  
   
   console.log(feedback.value);
   feedbackStatus.innerHTML = "Sending feedback...";
@@ -225,12 +224,20 @@ function submitFeedback() {
 
 feedback.addEventListener('input',() => {
   if (feedback.value == spamtext) {
-    console.log("spam");
     disableButton();
-   } else {
+
+  } else {
     enableButton();
-    console.log("NotSpam");
-   }
+    feedbackStatus.innerHTML = "Not Sent";
+  };
+  if (feedback.value == 'June 11th') {
+    feedbackStatus.innerHTML = "I love you Nesi <3";
+  };
+
+  if (feedback.value == 'April 28th') {
+    feedbackStatus.innerHTML = "WHAT ARE YOU CHECKING FOR???? >:C";
   }
-)
+
+  } 
+);
 
