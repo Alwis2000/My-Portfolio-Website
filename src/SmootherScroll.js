@@ -78,7 +78,7 @@ class AnchorPlugin extends ScrollbarPlugin {
       const heightoffset = heightvar - 100;
       console.log(heightvar);
 
-      scrollbar.scrollTo(0, heightoffset, 1500, {
+      scrollbar.scrollTo(0, heightoffset, 1200, {
         callback: () => console.log('done!'),
         easing: easing.easeInOutCubic,
       });
@@ -148,7 +148,7 @@ function myFunction(Hoverable) {
 
 
 // Create a MediaQueryList object
-var Hoverable = window.matchMedia("(hover: none)")
+var Hoverable = window.matchMedia("(hover: none) and (max-width: 650px)")
 
 // Call listener function at run time
 myFunction(Hoverable);

@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -60,13 +60,15 @@
 
 
   <body >
-    <div class="transition transition-3 is_active">
-        <div id="loader">
-          <img src="images/YA logo.svg" loading="eager">
-        </div>
-      </div>
 
+    <div class="transition transition-3 is_active">
+      <div id="loader">
+        <img src="images/YA logo.svg" loading="eager">
+      </div>
+    </div>
+    <button data-theme-toggle id="themeToggle"><img id="themeIcon" src="./images/sun.svg" ></button>    
     <div  id="smooth" class="main">
+      
       <div class="InfoContainer">
         <div id="TextClass">
           <div id="DigitalArtistBgText">
@@ -189,7 +191,7 @@
                 </div>
               
   
-                <div class="Text" style="font-family: 'DaftPunkfont'; font-size: 200%">Daft Punk</div>
+                <div class="Text" style="font-family: 'DaftPunkfont';">Daft Punk</div>
                 <div class="Date">19/12/2022</div>
               </a>
             </div>
@@ -279,7 +281,7 @@
                 />
               </div>
   
-              <div class="Text">Alone?</div>
+              <div class="Text">Alone?<p>(not anymore)</p></div>
               <div class="Date">02/02/2023</div>
             </div>
           </div>
@@ -315,7 +317,7 @@
                 />
               </div>
   
-              <div class="Text" style="font-family: 'DaftPunkfont'; font-size: 200%">Veridis Quo</div>
+              <div class="Text" style="font-family: 'DaftPunkfont'; ">Veridis Quo</div>
               <div class="Date">18/12/2022</div>
             </div>
           </div>
@@ -631,13 +633,13 @@
       </div> 
   
       <div class="ContactMe">
-        <!-- <div class="FeedbackText">FEEDBACK</div> -->
+        <div class="FeedbackText">FEEDBACK</div>
         <div id="FormFix">
             Send me some feedback!
           <div id="FormCenter">
             
             <div id="FormFillWrap">
-              <textarea id="FormFill"></textarea>
+              <textarea id="FormFill" placeholder="Type here!"></textarea>
             </div>
             
             <button id="FormButton" disabled="null">Submit</button>
@@ -658,6 +660,8 @@
       </div>
     </div>
     <script type="module" src="Script.js"></script>
+    <script type="module" src="Themes.js"></script>
+    <script src="Parallax.js"></script>
     <script type="module" src="Dropdowns.js"></script>
     <script type="module" src="SmootherScroll.js"></script>
   </body>

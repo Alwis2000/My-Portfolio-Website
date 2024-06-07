@@ -21,7 +21,7 @@ const dgtitle = document.getElementById("DGTitle");
 //Gallery
 const gallimgs = document.getElementsByClassName("image");
 
-
+// get theme on page load
 
 let social1X, social1Y, social2X, social2Y;
 let hovered = false;
@@ -235,7 +235,7 @@ feedback.addEventListener('input',() => {
   };
 
   if (feedback.value == 'April 28th') {
-    feedbackStatus.innerHTML = "WHAT ARE YOU CHECKING FOR???? >:C";
+    feedbackStatus.innerHTML = "WHAT ARE YOU CHECKING FOR...? ;)";
   }
 
   } 

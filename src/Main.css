@@ -1,4 +1,5 @@
-:root {
+
+[data-theme="light"]{
       /*colors*/
       --accentColor: #ff9900;
       --tertiaryBackgroundColor: #ff9900;
@@ -14,32 +15,49 @@
       --outline: #e4e4e4 2px solid;
 
       /* profile */
-      --pfp: url(/src/images/pfp\ 2.webp);
+      --pfp: url(/src/images/pfp\ 2.jpg);
 
       /* loader */
       --invertLogo: 1;
       --transitionBack: white;
 }
 
+[data-theme="dark"] {
+      /* --accentColor: #0dc; */
+      --accentColor: #ff9900;
+      --tertiaryBackgroundColor: #ff9900;
+      --backgroundColor: rgb(17, 25, 28);
+      --backgroundColor2: rgb(8, 16, 20);
+      --secondaryBackgroundColor: rgb(29, 29, 29);
+      /* --tertiaryBackgroundColor: #0dc; */
+      --mainFontColor: #d6dfdf;
+      --mainFontFamily: "Anton";
+      --outline: rgb(44, 57, 60) 2px solid;
+      --transitionBack: rgb(11, 19, 23);
+      --invertLogo: 0;
+      --pfp: url(/src/images/pfp\ 1.jpg);
+}
+
 html{
       scroll-behavior: smooth;
-      scroll-padding: 20%;
+      scroll-padding: 15%;
       overflow-x: hidden;
 }
 
 #smooth{
       width: 100vw;
-      height: 100%;
+      height: 100svh;
       scroll-behavior: smooth;
-      scroll-padding: 20%;
-      
+      scroll-padding: 10%;
+      translate: var(--x);
+      transition: 0.2s ease-out;
 }
 
 body {
       background-image: url(images/BackGround.webp);
-      /* background-blend-mode: color-bu; */
       background-color: var(--backgroundColor2);
-      background-size: 30em;
+      
+      background-size: 35rem;
       animation: backMove linear 60s infinite;
       background-attachment: fixed;
       margin: 0;
@@ -48,8 +66,44 @@ body {
       font-family: var(--mainFontFamily);
       color: var(--mainFontColor);
       user-select: none;
-      width: 100vw;
-      height: 100vh;
+      /* width: 100vw; */
+      /* height: 100vh; */
+      transition: 0.2s ease-out;
+}
+
+#themeToggle{
+      position: fixed;
+      /* position: absolute; */
+      left: 0;
+      /* top: 90.25svh; */
+      bottom: 2.75svh;
+      width: 50px;
+      height: 50px;
+      margin: 1%;
+      z-index: 5;
+      padding: 0;
+      /* border: solid 5px var(--accentColor); */
+      border: none;
+      background-color: var(--accentColor);
+      border-radius: 10px;
+
+      cursor: pointer;
+}
+
+#themeToggle img{
+      object-fit: cover;
+      width: 80%;
+      height: 80%;
+}
+
+#themeToggle:focus img{
+      /* width: 90%;
+      height: 90%; */
+      animation: fullSpin 1.5s ease;
+}
+
+#themeToggle:active img{
+      animation: none;
 }
 
 .scrollbar-track {

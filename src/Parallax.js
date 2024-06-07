@@ -1,102 +1,39 @@
+document.addEventListener("mousemove", parallax);
 
 
-let mousePos = { x: undefined, y: undefined };
 
-for (let gallimg of gallimgs) {
-  let gallrect = gallimg.getBoundingClientRect();
-  let deeltaY = (gallrect.y + gallrect.height/2);
-  let deeltaX = (gallrect.x + gallrect.width/2);
-  gallimg.onmousemove = transformPanel;
-  gallimg.onmouseenter = handleMouseEnter;
-  gallimg.onmouseleave = handleMouseLeave;
-
-  let mouseX, mouseY;
-
-  let transformAmount = 1;
-
-  function transformPanel(mouseEvent) {
-    mouseX = mouseEvent.pageX;
-    mouseY = mouseEvent.pageY;
-
-    const centerX = gallimg.offsetLeft + gallimg.clientWidth / 2;
-    const centerY = gallimg.offsetTop + gallimg.clientHeight / 2;
-
-    const percentX = (mouseX - deeltaX) / (gallimg.clientWidth / 2);
-    const percentY = -((mouseY - deeltaY) / (gallimg.clientHeight / 2));
-
-    gallimg.style.transform = "perspective(400px) rotateY(" + percentX * transformAmount + "deg) rotateX(" + percentY *transformAmount + "deg)";
-  }
-
-  function handleMouseEnter() {
-    setTimeout(() => {
-        gallimg.style.transition = "";
-    }, 100);
-    gallimg.style.transition = "transform 0.1s";
-  }
-
-  function handleMouseLeave() {
-    gallimg.style.transition = "transform 0.1s";
-    setTimeout(() => {
-        gallimg.style.transition = "";
-    }, 100);
-
-    gallimg.style.transform = "perspective(400px) rotateY(0deg) rotateX(0deg)";
+function myFunction(Hoverable) {
+  if (Hoverable.matches) { // If media query matches
+    console.log("naurParallax");
+    document.removeEventListener("mousemove");
+  } else {
+    
   }
 }
 
-// window.addEventListener('mousemove', (event) => {
-//   for (let gallimg of gallimgs) {
-//     gallimg.style.transform = "" ;
-//     let gallrect = gallimg.getBoundingClientRect();
-//     let deeltaY = (gallrect.y + gallrect.height/2);
-//     let deeltaX = (gallrect.x + gallrect.width/2);
 
-//     let mousePosX = (event.clientX - window.innerWidth/2);
-//     let mousePosY = (event.clientY - window.innerHeight/2);
+// Create a MediaQueryList object
+var Hoverable = window.matchMedia("(hover: none) and (max-width: 650px)")
 
 
-    
+myFunction(Hoverable);
 
-    
-
-//     function transformPanel(mouseEvent) {
-//         mouseX = mouseEvent.pageX;
-//         mouseY = mouseEvent.pageY;
-
-//         const centerX = gallimg.offsetLeft + gallimg.clientWidth / 2;
-//         const centerY = gallimg.offsetTop + gallimg.clientHeight / 2;
-
-//         const percentX = (mouseX - centerX) / (gallimg.clientWidth / 2);
-//         const percentY = -((mouseY - centerY) / (gallimg.clientHeight / 2));
-
-//         gallimg.style.transform = "perspective(400px) rotateY(" + percentX * transformAmount + "deg) rotateX(" + percentY * transformAmount + "deg)";
-//     }
-
-//     function handleMouseEnter() {
-//         setTimeout(() => {
-//             gallimg.style.transition = "";
-//         }, 100);
-//         gallimg.style.transition = "transform 0.1s";
-//     }
-
-//     function handleMouseLeave() {
-//         gallimg.style.transition = "transform 0.1s";
-//         setTimeout(() => {
-//             gallimg.style.transition = "";
-//         }, 100);
-
-//         gallimg.style.transform = "perspective(400px) rotateY(0deg) rotateX(0deg)";
-//     } 
-//     // console.log(mousePosX);
-//     // gallimg.style.transform = `translate(${mousePosX*0.1}px, ${mousePosY*0.1}px)`;
-    
-//     // gallimg.style.filter = `saturate(${1-Math.abs(deeltaa**0.5)*0.1})`;
-//   } 
-// });
+Hoverable.addEventListener("change", function() {
+  myFunction(Hoverable);
+});
 
 
-// alt+up cool
-
-// gallimg.style.transform = `translateY(${(gallrect.y / 10) * -1}px)`;
-
-
+function parallax(e) {
+  let w = window.innerWidth/2;
+  let h = window.innerHeight/2;
+  let mouseX = e.clientX;
+  let mouseY = e.clientY;
+  let depth1 = `${(mouseX - w) * -0.0005}% ${(mouseY - h) * -0.00075}%`;
+  let depth2 = `${(mouseX - w) * -0.00025}% ${(mouseY - h) * -0.0005}%`;
+  // let x = `${_depth2}, ${_depth1}`;
+  
+  // document.getElementById("Home").style.backgroundPosition = x;
+  document.body.style.setProperty("--x", `${depth1}`);
+  document.body.style.setProperty("--y", `${depth2}`);
+  console.log(depth2,depth1);
+};

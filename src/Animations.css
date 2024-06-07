@@ -1,9 +1,13 @@
 @keyframes move-up {
   0% {
     translate:  0 200px;
+    scale: .75;
+    opacity: .5;
   }
   100% {
     translate: 0 0 ;
+    scale: 1;
+    opacity: 1;
   }
 }
 
@@ -41,11 +45,11 @@
 
 @keyframes Bobbing {
   0% {
-    translate: 0px 5px;
+    transform: translateY(0);
   }
 
   100% {
-    translate: 0 -5px;
+    transform: translateY(-5px);
   }
 }
 
@@ -92,11 +96,14 @@
 }
 
 @keyframes backMove{
-  0% {background-position: 0% 0%;}
-  100% {background-position: 100vh 100vh;}
+  0% {/*background-position: var(--x) var(--y)*/
+  }
+  100% {/*background-position: calc(100vh + var(--x)) calc(100vh + var(--y));*/
+    background-position: 100vh 100vh;}
 }
 
 @keyframes fullSpin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% { rotate: 0deg; scale: 1;}
+  60% {scale: 0.75;}
+  100% {rotate: 720deg; scale: 1;}
 }

@@ -1,50 +1,6 @@
-.ModalContent {
-  display: block;
-  height: 80%;
-  /* width: fit-content; */
-  margin: auto;
-  transform: scale(1);
-  transition: 0.2s ease;
-  border-radius: 10px;
-}
-
-#Caption {
-  margin: auto;
-  display: block;
-  font-size: 160%;
-  max-width: 800px;
-  text-align: center;
-  color: #ccc;
-  padding: 25px 0;
-}
-
-.ModalContent,
-#caption {
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-.Close {
-  position: absolute;
-  top: 15px;
-  right: 50px;
-  color: #f1f1f1;
-  font-size: 60px;
-  font-weight: bold;
-  transition: 0.3s;
-  height: fit-content;
-}
-
-.Close:hover,
-.Close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 .viewer-title {
   font-family: 'Noto Sans', sans-serif;
-  font-size: 25px;
+  font-size: 1rem;
   color: white;
 }
 .viewer-backdrop {
