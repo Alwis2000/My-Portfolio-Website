@@ -172,5 +172,19 @@ const viewer = new Viewer(document.getElementById("GalleryWrap"), {
   toggleOnDblclick: [false],
 });
 
+const infButton = document.querySelector("#infoToggle");
+const infBubble = document.querySelector(".infoBubble");
 
+infButton.addEventListener('click',showMessage)
+let isVisible = false
+function showMessage() {
+  if (isVisible == false) {
+    isVisible = true
+    infBubble.classList.remove("classClose");
+  } else {
+    isVisible = false
+    infBubble.classList.add("classClose");
+  }
+  
+}
 

@@ -346,12 +346,15 @@
 }
 
 .Credit {
+  position: relative;
+  top: 500%;
   background-color: var(--accentColor);
   width: 100%;
   font-size: 1rem;
   font-family: "noto sans";
   font-weight: 600;
   color: rgba(255, 255, 255, 0.622);
+  display: none;
   /* padding-left: 1%; */
 }
 

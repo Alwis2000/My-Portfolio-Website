@@ -48,10 +48,10 @@
   /* text-decoration: underline ; */
 }
 
-/* .ContainerTitle:hover {
+.ContainerTitle:focus-visible {
   letter-spacing: 0.2em;
   padding-left: 0.2em;
-} */
+}
 
 .ContainerSubTitle {
   width: 75px;
