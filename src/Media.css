@@ -46,6 +46,9 @@
   .socials{
     display: none;
   }
+  #cursor{
+    display: none;
+  }
 }
 
 

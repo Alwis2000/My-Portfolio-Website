@@ -76,7 +76,7 @@ class AnchorPlugin extends ScrollbarPlugin {
     function height(){
       const heightvar = document.getElementById("AboutMeWrap").offsetTop;
       const heightoffset = heightvar - 100;
-      console.log(heightvar);
+      // console.log(heightvar);
 
       scrollbar.scrollTo(0, heightoffset, 1200, {
         callback: () => console.log('done!'),
@@ -133,7 +133,7 @@ scrollbar.use(DisableScrollPlugin);
 
 function myFunction(Hoverable) {
   if (Hoverable.matches) { // If media query matches
-    console.log("naur")
+    // console.log("naur")
   } else {
     scrollbar.init(document.querySelector('#smooth'), options);
     

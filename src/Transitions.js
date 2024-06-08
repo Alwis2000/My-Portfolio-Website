@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', Loader);
+document.addEventListener('DOMContentLoaded', ()=>{setTimeout(Loader, 1000)});
+// document.onload(Loader());
 
 function Loader() {
   const transition_el = document.querySelector('.transition');

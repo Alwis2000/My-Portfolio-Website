@@ -41,23 +41,22 @@
   z-index: 2;
   width: 37.5svh;
   height: 37.5svh;
-  transition: 0.4s ease;
+  transition: 0.4s ease-out;
   pointer-events: all;
   /* filter: hue-rotate(-20deg); */
   animation: Bobbing 2.5s ease-in-out infinite alternate;
   border-radius: 50%;
-  outline: var(--accentColor) solid 3px; 
+  /* outline: var(--accentColor) solid 3px;  */
+  outline: var(--outlineGlow) ; 
   background-image:  url(images/Hover.png), var(--pfp);
   background-size: cover;
-  
-}
+  translate: var(--y);
+  cursor: none;
+} 
 
 #ProfileImage:hover {
   background-image:  url(images/ClickME.png), var(--pfp);
-  /* filter: hue-rotate(-25deg); */
-  /* box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4); */
   border-radius: 45%;
-  
   animation-play-state: paused;
 }
 
@@ -69,7 +68,7 @@
   position: absolute;
   width: 100%;
   color: var(--mainFontColor);
-  font-family: 'great vibes';
+  font-family: var(--secondaryFont);
   font-size: 2.5rem;
   transition: 0.2s ease-in-out;
   top: 85%;
@@ -89,7 +88,6 @@
   font-size: 140px;
   color: var(--mainFontColor);
   --shadow: #d50;
-  
 }
 
 #DigitalArtistBgText {
@@ -141,7 +139,7 @@
 .AboutMe .AboutBody {
   position: relative;
   right: 0;
-  max-height: 600px; 
+  max-height: 39em; 
   transition: 1s ease;
   background-size: cover;
   width: 100%;
@@ -162,6 +160,7 @@
   background-color: var(--accentColor);
   width: 90vw;
   padding: 2px; 
+  
 }
 
 .AboutMeText {
@@ -171,17 +170,18 @@
   align-items: center;
   justify-content: center;
   padding: 20%;
-  background-image: url(images/Crystal\ Scene\ better.jpg);
+  
   background-size: cover;
   background-position: center;
   height: 100%;
+  translate: var(--y);
   /* width: 100%; */
 
 }
 #AboutMeHeading {
-  font-family: 'great vibes', cursive;
+  font-family: var(--secondaryFont);
   font-size: 4rem;
-  font-weight: 600;
+  font-weight: 100;
 }
 #AboutMeBody {
   padding-inline: 17px;
@@ -196,8 +196,14 @@
   background-color: rgba(0, 20, 50, 0.315);
   outline: #7b92de33 2px inset;
   backdrop-filter: blur(20px) grayscale(0.5);
+  
   /* text-align: justify;
   text-justify: inter-word; */
+}
+
+#AboutHere{
+  background-image: url(images/Crystal\ Scene\ better.jpg);
+  background-size: cover;
 }
 
 .ContactMe {
@@ -205,9 +211,9 @@
   box-shadow: inset 0px 0px 10px var(--backgroundColor2);
   position: relative;
   /* width: 100%; */
-  height: 40vw;
+  height: 50vh;
   margin: 5vw;
-  overflow: hidden;
+  /* overflow: hidden; */
   z-index: 0;
   outline: var(--outline);
   border-radius: 30px;
@@ -222,16 +228,19 @@
   /* z-index: 5; */
   /* gap: 10%; */
   width: 100%;
+  height: 100%;
   /* height: 70%; */
   text-transform: uppercase;
-  margin-top: 2.5%;
+  /* margin-top: 2.5%; */
 }
 
 .FeedbackText {
   
   font-size: 22vw;
-  color: rgba(0, 0, 0, 0.05);
-  transform: translate(-.2vh, -.3vw);
+  /* color: rgba(0, 0, 0, 0.05); */
+  color: inherit;
+  opacity: 0.04;
+  /* transform: translate(-.2vh, -.3vw); */
   position: absolute;
   display: flex;
   justify-content: center;
@@ -252,7 +261,6 @@
   align-items: center;
   justify-content: center;
   /* padding-top: 2.5%; */
-  font-size: 3rem;
 }
 
 
@@ -261,15 +269,17 @@
   font-family: 'Noto sans', sans-serif;
   font-size: 1rem;
   opacity: 0.5;
-  margin: 1em;
-  margin-top: 0.5em;
+  /* margin: 1em;
+  margin-top: 0.5em; */
+  margin-bottom: 1.5%;
 }
 
-#FormFillWrap {
-  max-width: 1000px;
-}
+/* #FormFillWrap {
+  
+} */
 
 #FormFill {
+  
   font-family: 'Noto Sans', sans-serif;
   color: var(--mainFontColor);
   font-weight: 600;
@@ -281,26 +291,29 @@
   padding-top: 0.7em;
   border: var(--outline);
   outline: none;
-  
-  width: 50vw;
-  font-weight: 600;
-  height: 35vh;
+  margin-top: 20%;
+  width: 40vw;
+  /* font-weight: 600; */
+  height: 20vh;
   background-color: var(--backgroundColor2);
   transition: 0.2s ease;
 }
 
 #FormFill:focus{
-  box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 80px var(--shadowGlow);
+  border: var(--outlineGlow);
 }
 
 #FormButton {
   background-color: var(--accentColor);
-  width: 20%;
+  width: fit-content;
   height: fit-content;
-  color: var(--backgroundColor2);
+  color: black;
   /* margin: auto; */
   /* margin-top: 20px; */
-  font-family: inherit;
+  font-family: 'Noto Sans';
+  font-weight: 700;
+  letter-spacing: -1px;
   font-size: 1.5rem;
   transition: 0.1s ease;
   transition: 0.2s ease;
@@ -308,12 +321,16 @@
   border-radius: 30px;
   padding-top: 2px;
   border: none;
-  margin-top: 2.5%;
+  /* margin-top: 2.5%; */
+  cursor: none;
+  padding: 0.5em;
+  padding-inline: 1em;
+  
 }
 
 #FormButton:hover {
   /* color: white; */
-  cursor: pointer;
+  /* cursor: pointer; */
   background-color: white;
   --thicknessColor: #4d5f65;
   box-shadow: 0px 2px 0px var(--thicknessColor), 0px 4px 0px var(--thicknessColor), 0px 6px 0px var(--thicknessColor),
@@ -325,7 +342,7 @@
   background-color: gray;
   box-shadow: 0 0 0;
   translate: 0 0;
-  cursor: default;
+  /* cursor: default; */
 }
 
 .Credit {

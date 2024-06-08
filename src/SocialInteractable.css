@@ -1,14 +1,14 @@
 
 
 .socials{
-  background-color: var(--tertiaryBackgroundColor);
+  background-color: var(--accentColor);
   position: absolute;
   height: 175px;
   width: 175px;
   border-radius: 100%;
   z-index: 1;
   /* display: none; */
-  
+  cursor: none;
 }
 
 .socials:hover {
@@ -60,20 +60,24 @@
   transform: translateY(0.4vh) scale(0.5);
   transition: 0.2s ease-in-out;
   color: #ffffff;
+  cursor: none;
 }
 #socialreddit svg {
   transform: scale(0.5);
   transition: 0.2s ease-in-out;
   color: #ffffff;
+  cursor: none;
 }
 #sociallinkedin svg {
   transform: translateY(-0.5vh) scale(0.4);
   transition: 0.2s ease-in-out;
   color: #ffffff;
+  cursor: none;
 }
 #socialDiscord img {
   transform:  translate(-312.5px, -312.5px) scale(0.12) ;
   transition: 0.2s ease-in-out;
+  cursor: none;
 }
 
 #socialtwitter svg:hover {

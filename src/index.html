@@ -1,4 +1,4 @@
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,7 +10,7 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script> 
-    <script type="module" src="Transitions.js"></script>
+    <script type="module" src="Transitions.js" defer></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.3/viewer.min.css"
@@ -18,9 +18,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Great+Vibes&family=Noto+Sans:ital,wdth,wght@0,87.5,100..900;1,87.5,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Main.css"/>
     <link rel="stylesheet" href="Information.css" />
     <link rel="stylesheet" href="Gallery.css"/>
@@ -28,7 +28,6 @@
     <link rel="stylesheet" href="SocialInteractable.css" />
     <link rel="stylesheet" href="Animations.css" />
     <link rel="stylesheet" href="Media.css" />
-    <link rel="stylesheet" href="Tabs.css" />
     <link rel="stylesheet" href="Transitions.css" />
     <title>Yuneth Alwis' Portfolio</title>
     <meta name="twitter:card" content="summary_large_image" />
@@ -59,8 +58,8 @@
   </head>
 
 
-  <body >
-
+  <body>
+    <div id="cursor"><svg fill="#ff9900" version="1.1" id="Capa_1"  width="32px" height="32px" viewBox="-53.3 -53.3 373.10 373.10" xml:space="preserve" transform="matrix(-1, 0, 0, 1, 0, 0)rotate(0)"><g stroke-linecap="round" stroke-linejoin="round"> <g> <g> <path d="M150.036,266.494c-0.264,0-0.517-0.006-0.792-0.018c-6.102-0.337-11.332-4.474-13.046-10.347l-26.067-89.027 l-95.203-18.867c-6.014-1.194-10.614-6.059-11.476-12.123c-0.858-6.062,2.201-12.016,7.65-14.832L242.143,1.617 C247.5-1.175,254.057-0.29,258.518,3.8c4.474,4.101,5.885,10.55,3.562,16.146l-98.743,237.655 C161.097,263.018,155.836,266.494,150.036,266.494z"></path> </g> </g> </g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M150.036,266.494c-0.264,0-0.517-0.006-0.792-0.018c-6.102-0.337-11.332-4.474-13.046-10.347l-26.067-89.027 l-95.203-18.867c-6.014-1.194-10.614-6.059-11.476-12.123c-0.858-6.062,2.201-12.016,7.65-14.832L242.143,1.617 C247.5-1.175,254.057-0.29,258.518,3.8c4.474,4.101,5.885,10.55,3.562,16.146l-98.743,237.655 C161.097,263.018,155.836,266.494,150.036,266.494z"></path> </g> </g> </g></svg></div>
     <div class="transition transition-3 is_active">
       <div id="loader">
         <img src="images/YA logo.svg" loading="eager">
@@ -88,14 +87,9 @@
             </p>
           </div>
         </div>
-  
-        <div class="ContainerOverlay"></div>
         
 
-        <div id="HoverClass"
-          
-        
-          >
+        <div id="HoverClass">
           <div id="welcomeText">
             Welcome to the portfolio of 
           
@@ -137,7 +131,7 @@
             </div>
           </div>
           <a id="Exclude" href="#Main">
-            <div id="ProfileImage">
+            <div id="ProfileImage" >
             </div>
           </a>
           <div class="NameClass">
@@ -174,7 +168,9 @@
       </div>
   
       <div id="GalleryWrap">
-        <div id="DGTitle" class="ContainerTitle">Artworks</div>
+        <div class="titleWrap">
+          <div id="DGTitle" class="ContainerTitle">Artworks</div>
+        </div>
         <div class="Container">
           <div class="GalleryContainer h-2 w-4">
             <div class="GalleryItem">
@@ -633,19 +629,18 @@
       </div> 
   
       <div class="ContactMe">
+        <div class="titleWrap">
+          <div class="ContainerTitle">Feedback</div>
+        </div>
         <div class="FeedbackText">FEEDBACK</div>
         <div id="FormFix">
-            Send me some feedback!
           <div id="FormCenter">
-            
             <div id="FormFillWrap">
               <textarea id="FormFill" placeholder="Type here!"></textarea>
             </div>
-            
             <button id="FormButton" disabled="null">Submit</button>
-            
+            <div id="FormStatus">not sent</div>
           </div>
-          <div id="FormStatus">not sent</div>
         </div>
       </div>
   
@@ -662,6 +657,7 @@
     <script type="module" src="Script.js"></script>
     <script type="module" src="Themes.js"></script>
     <script src="Parallax.js"></script>
+    <script src="FeedbackForm.js"></script>
     <script type="module" src="Dropdowns.js"></script>
     <script type="module" src="SmootherScroll.js"></script>
   </body>

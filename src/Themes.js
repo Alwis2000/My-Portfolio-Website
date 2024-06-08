@@ -21,56 +21,39 @@ function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark })
       document.querySelector("html").setAttribute("data-theme", theme);
     }
     
-    
-    /**
-    * On page load:
-    */
-    
-    /**
-    * 1. Grab what we need from the DOM and system settings on page load
-    */
     const button = document.querySelector("[data-theme-toggle]");
     const localStorageTheme = localStorage.getItem("theme");
     const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
-    
-    /**
-    * 2. Work out the current site settings
-    */
+    const themePic = document.getElementById('themeIcon');
+  
+
     let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
-    
-    /**
-    * 3. Update the theme setting and button text accoridng to current settings
-    */
+
     updateButton({ buttonEl: button, isDark: currentThemeSetting === "dark" });
     updateThemeOnHtmlEl({ theme: currentThemeSetting });
-    
-    /**
-    * 4. Add an event listener to toggle the theme
-    */
+
+
+
     button.addEventListener("click", (event) => {
       const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
     
       localStorage.setItem("theme", newTheme);
-      setTimeout(() => updateButton({isDark: newTheme === "dark" }), 250);
+      setTimeout(() => updateButton({isDark: newTheme === "dark" }), 450);
       // updateButton({ buttonEl: button, isDark: newTheme === "dark" });
       updateThemeOnHtmlEl({ theme: newTheme });
     
       currentThemeSetting = newTheme;
     });
 
-    const themePic = document.getElementById('themeIcon');
-  
+    
     import sun from "./images/sun.svg";
     import moon from "./images/moon.svg";
 
     
 
-    function updateButton({ themePic, isDark }) {
-      console.log(themePic);
+    function updateButton({isDark }) {
+      // console.log(themePic);
       const newCta = isDark ? moon : sun;
-      // // use an aria-label if you are omitting text on the button
-      // // and using a sun/moon icon, for example
-      themeIcon.setAttribute("src", newCta);
-      // buttonEl.innerText = newCta;
+      themePic.setAttribute("src", newCta);
     }
     

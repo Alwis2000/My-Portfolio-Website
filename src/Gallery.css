@@ -3,31 +3,55 @@
   outline: var(--outline);
   border-radius: 30px;
   margin: 5vw;
-  margin-block:13svh;
+  margin-block:24svh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  
   align-items: center;
   box-shadow: inset 0px 0px 10px var(--backgroundColor2);
+  
+}
+
+.titleWrap{
+  height: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
 }
 
 .ContainerTitle {
+  
   width: fit-content;
   font-size: 5.5rem;
-  letter-spacing: 0.1em;
-  margin: 5vw;
-  padding-inline: 0;
+  /* letter-spacing: 0.1em; */
+  /* margin: 5vw; */
+  padding: 0.5em;
+  padding-block: 0.2em;
   position: relative;
+  z-index: 8;
+  /* top: 18%;
+  left: 50%; */
+  translate: 0 -60%;
   transition: 0.3s ease;
   color: var(--mainFontColor);
-  text-transform: uppercase;
+  font-family: var(--secondaryFont);
+  font-weight: 600;
+  /* text-transform: uppercase; */
   transform-origin: center;
+  background-color: var(--backgroundColor
+  );
+  box-shadow: 0 0 80px var(--shadowGlow);
+  outline: var(--outlineGlow);
+  border-radius: 30px;
+  /* text-decoration: underline ; */
 }
 
-.ContainerTitle:hover {
+/* .ContainerTitle:hover {
   letter-spacing: 0.2em;
   padding-left: 0.2em;
-}
+} */
 
 .ContainerSubTitle {
   width: 75px;
@@ -45,18 +69,18 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(1);
-  outline: var(--outline);
+  /* outline: var(--outline); */
   padding: 20px;
   /* translate: var(--y); */
   grid-auto-rows: 240px;
   grid-auto-flow: dense;
-  box-shadow: inset 0px 0px 10px var(--backgroundColor2);
+  /* box-shadow: inset 0px 0px 10px var(--backgroundColor2); */
   /* grid-auto-flow: row; */
   z-index: 2;
   gap: 20px;
   border-radius: 20px;
-  margin: 5vw;
-  margin-top: 0;
+  /* margin: 20px; */
+  margin-top: 60px;
 }
 
 
@@ -85,13 +109,13 @@
   height: 100%;
   object-fit: cover;
   /* object-position: center; */
-  cursor: pointer;
+  /* cursor: pointer; */
   transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   filter: brightness(100%) saturate(1);
 }
 
 .GalleryItem:hover .image img {
-  filter: brightness(80%) saturate(0.5) blur(2px);
+  filter: brightness(60%) saturate(0.5) blur(2px);
 }
 
 
@@ -123,7 +147,7 @@
   z-index: 4;
   transition: opacity 0.5s ease, bottom 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
   text-decoration: none;
-  cursor: pointer;
+  /* cursor: pointer; */
   pointer-events: none;
 }
 

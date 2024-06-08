@@ -4,10 +4,10 @@ document.addEventListener("mousemove", parallax);
 
 function myFunction(Hoverable) {
   if (Hoverable.matches) { // If media query matches
-    console.log("naurParallax");
-    document.removeEventListener("mousemove");
+    // console.log("naurParallax");
+    document.removeEventListener("mousemove", parallax);
   } else {
-    
+    document.addEventListener("mousemove", parallax);
   }
 }
 
@@ -29,11 +29,13 @@ function parallax(e) {
   let mouseX = e.clientX;
   let mouseY = e.clientY;
   let depth1 = `${(mouseX - w) * -0.0005}% ${(mouseY - h) * -0.00075}%`;
-  let depth2 = `${(mouseX - w) * -0.00025}% ${(mouseY - h) * -0.0005}%`;
+  let depth2 = `${(mouseX - w) * -0.0003}% ${(mouseY - h) * -0.0003}%`;
+  let depth3 = `${(mouseX)}px ${(mouseY)}px`;
   // let x = `${_depth2}, ${_depth1}`;
   
   // document.getElementById("Home").style.backgroundPosition = x;
-  document.body.style.setProperty("--x", `${depth1}`);
-  document.body.style.setProperty("--y", `${depth2}`);
-  console.log(depth2,depth1);
+  document.getElementById("smooth").style.setProperty("--x", `${depth1}`);
+  // document.body.style.setProperty("--x", `${depth1}`);
+  document.getElementById("smooth").style.setProperty("--y", `${depth2}`);
+  document.getElementById("cursor").style.setProperty("--z", `${depth3}`);
 };
