@@ -91,8 +91,12 @@ function resize() {
 
 resize();
 window.addEventListener("resize", resize);
-document.getElementById("HoverClass").addEventListener('mouseenter', () => Hover(true))
-document.getElementById("HoverClass").addEventListener('mouseleave', () => NHover(true))
+document
+  .getElementById("HoverClass")
+  .addEventListener("mouseenter", () => Hover(true));
+document
+  .getElementById("HoverClass")
+  .addEventListener("mouseleave", () => NHover(true));
 export function Hover(real) {
   // console.log(`${real ? "Real" : "Fake"} Hovered`);
   hovered = true;
@@ -124,8 +128,6 @@ export function NHover(real) {
   };
 }
 
-
-
 const viewer = new Viewer(document.getElementById("GalleryWrap"), {
   view: () => {
     const viewerTitle = document.getElementById("viewerTitle0");
@@ -141,7 +143,6 @@ const viewer = new Viewer(document.getElementById("GalleryWrap"), {
     });
   },
   toolbar: {
-    
     prev: {
       show: 0,
       size: "large",
@@ -174,18 +175,16 @@ const viewer = new Viewer(document.getElementById("GalleryWrap"), {
 const infButton = document.querySelector("#infoToggle");
 const infBubble = document.querySelector(".infoBubble");
 
-infButton.addEventListener( "mouseover" ,showMessage);
-infButton.addEventListener( "mouseleave" ,showMessage);
+infButton.addEventListener("mouseover", showMessage);
+infButton.addEventListener("mouseleave", showMessage);
 let isVisible = false;
-
 
 function showMessage() {
   if (isVisible == false) {
-    isVisible = true
+    isVisible = true;
     infBubble.classList.remove("classClose");
   } else {
-    isVisible = false
+    isVisible = false;
     infBubble.classList.add("classClose");
   }
 }
-

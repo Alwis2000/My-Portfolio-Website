@@ -14,7 +14,7 @@
   position: relative;
   z-index: 6;
   /* transition: 1s; */
-  
+
   /* animation:  Pulsing 2.5s ease infinite; */
   border-radius: 5%;
   /* padding: 0px; */
@@ -22,10 +22,10 @@
   justify-content: center;
   align-items: center;
   outline: var(--outline);
-  
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.075);
 }
 
-#welcomeText{
+#welcomeText {
   position: absolute;
   font-family: 'Noto Sans', sans-serif;
   color: var(--mainFontColor);
@@ -35,8 +35,7 @@
   top: 7.5%;
 }
 
-#ProfileImage{
-  
+#ProfileImage {
   position: relative;
   z-index: 2;
   width: 37.5svh;
@@ -46,21 +45,22 @@
   /* filter: hue-rotate(-20deg); */
   animation: Bobbing 2.5s ease-in-out infinite alternate;
   border-radius: 50%;
-  /* outline: var(--accentColor) solid 3px;  */
-  outline: var(--outlineGlow) ; 
-  background-image:  url(images/Hover.png), var(--pfp);
+  /* outline: var(--accentColor) solid 3px; */
+  outline: var(--outlineGlow);
+  box-shadow: 0 0 40px var(--shadowGlow);
+  background-image: url(images/Hover.png), var(--pfp);
   background-size: cover;
   translate: var(--y);
   cursor: none;
-} 
+}
 
 #ProfileImage:hover {
-  background-image:  url(images/ClickME.png), var(--pfp);
+  background-image: url(images/ClickME.png), var(--pfp);
   border-radius: 45%;
   animation-play-state: paused;
 }
 
-#ProfileImage img{
+#ProfileImage img {
   object-fit: contain;
 }
 
@@ -105,27 +105,28 @@
   font-size: 120%;
   right: 5%;
   transition: 0.5s ease;
-  transform:  translate(120px, -40px);
+  transform: translate(120px, -40px);
 }
 
-#GameDevBgText p{
-  height:20px;
+#GameDevBgText p {
+  height: 20px;
 }
-
 
 #DigitalArtistBgText:hover {
   color: var(--accentColor);
-  text-shadow: -1px 1px 0px var(--shadow), -2px 2px 0px var(--shadow), -3px 3px 0px var(--shadow),
-    -4px 4px 0px var(--shadow), -5px 5px 0px var(--shadow), -6px 6px 0px var(--shadow), -7px 7px 0px var(--shadow),
-    -8px 8px 0px var(--shadow);
+  text-shadow: -1px 1px 0px var(--shadow), -2px 2px 0px var(--shadow),
+    -3px 3px 0px var(--shadow), -4px 4px 0px var(--shadow),
+    -5px 5px 0px var(--shadow), -6px 6px 0px var(--shadow),
+    -7px 7px 0px var(--shadow), -8px 8px 0px var(--shadow);
   translate: 20px -10px;
 }
 
 #GameDevBgText:hover {
   color: var(--accentColor);
-  text-shadow: 1px 1px 0px var(--shadow), 2px 2px 0px var(--shadow), 3px 3px 0px var(--shadow),
-    4px 4px 0px var(--shadow), 5px 5px 0px var(--shadow), 6px 6px 0px var(--shadow), 7px 7px 0px var(--shadow),
-    8px 8px 0px var(--shadow);
+  text-shadow: 1px 1px 0px var(--shadow), 2px 2px 0px var(--shadow),
+    3px 3px 0px var(--shadow), 4px 4px 0px var(--shadow),
+    5px 5px 0px var(--shadow), 6px 6px 0px var(--shadow),
+    7px 7px 0px var(--shadow), 8px 8px 0px var(--shadow);
   translate: -20px -10px;
 }
 
@@ -134,7 +135,6 @@
   align-items: center;
   justify-content: center;
   color: whitesmoke;
-  
 }
 
 .AboutMe.CurrentItem .AboutBody {
@@ -149,7 +149,7 @@
   border-radius: 29px;
 }
 
-#AboutMeWrap{
+#AboutMeWrap {
   border-radius: 30px;
   background-color: var(--accentColor);
   width: 90vw;
@@ -167,22 +167,23 @@
   background-size: cover;
   background-position: center;
   padding-block: 3em;
-  padding-inline: 3em;
+  padding-inline: 10em;
   /* height: 100%; */
   translate: var(--y);
   transition: padding 0.5s;
   /* width: 80%; */
 }
 
-.AboutMe.CurrentItem .AboutMeText{
+.AboutMe.CurrentItem .AboutMeText {
   padding-block: 0;
 }
 
 #AboutMeHeading {
   font-family: var(--secondaryFont);
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 100;
-  overflow: hidden;
+  text-wrap: nowrap;
+  /* overflow: hidden; */
 }
 #AboutMeBody {
   overflow: hidden;
@@ -198,12 +199,12 @@
   background-color: rgba(0, 20, 50, 0.315);
   outline: #7b92de33 2px inset;
   backdrop-filter: blur(20px) grayscale(0.5);
-  
+
   /* text-align: justify;
   text-justify: inter-word; */
 }
 
-#AboutHere{
+#AboutHere {
   background-image: url(images/Crystal\ Scene\ better.jpg);
   background-size: cover;
   background-position: center;
@@ -238,7 +239,6 @@
 }
 
 .FeedbackText {
-  
   font-size: 22vw;
   /* color: rgba(0, 0, 0, 0.05); */
   color: inherit;
@@ -266,8 +266,6 @@
   /* padding-top: 2.5%; */
 }
 
-
-
 #FormStatus {
   font-family: 'Noto sans', sans-serif;
   font-size: 1rem;
@@ -282,7 +280,6 @@
 } */
 
 #FormFill {
-  
   font-family: 'Noto Sans', sans-serif;
   color: var(--mainFontColor);
   font-weight: 600;
@@ -302,8 +299,9 @@
   transition: 0.2s ease;
 }
 
-#FormFill:focus{
+#FormFill:focus {
   box-shadow: 0 0 80px var(--shadowGlow);
+  animation: flickerLight 0.2s forwards;
   border: var(--outlineGlow);
 }
 
@@ -328,7 +326,6 @@
   cursor: none;
   padding: 0.5em;
   padding-inline: 1em;
-  
 }
 
 #FormButton:hover {
@@ -336,7 +333,8 @@
   /* cursor: pointer; */
   background-color: white;
   --thicknessColor: #4d5f65;
-  box-shadow: 0px 2px 0px var(--thicknessColor), 0px 4px 0px var(--thicknessColor), 0px 6px 0px var(--thicknessColor),
+  box-shadow: 0px 2px 0px var(--thicknessColor),
+    0px 4px 0px var(--thicknessColor), 0px 6px 0px var(--thicknessColor),
     0px 10px 30px var(--accentColor);
   translate: 0 -6px;
 }
@@ -345,34 +343,17 @@
   background-color: gray;
   box-shadow: 0 0 0;
   translate: 0 0;
-  /* cursor: default; */
-}
-
-.Credit {
-  position: relative;
-  top: 500%;
-  background-color: var(--accentColor);
-  width: 100%;
-  font-size: 1rem;
-  font-family: "noto sans";
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.622);
-  display: none;
-  /* padding-left: 1%; */
 }
 
 ::-webkit-scrollbar {
   display: none;
-  /* width: 3px; */
 }
 
 ::-webkit-scrollbar-track {
-
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  /* background: var(--accentColor); */
   border-radius: 10px;
 }
 
@@ -399,4 +380,3 @@ a:active {
   background-color: transparent;
   text-decoration: none;
 }
-

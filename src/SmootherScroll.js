@@ -1,25 +1,22 @@
-import scrollbar from 'smooth-scrollbar';
-import OverscrollPlugin from 'smooth-scrollbar/plugins/overscroll';
-import { ScrollbarPlugin } from 'smooth-scrollbar';
-import easing from './easing';
+import scrollbar from "smooth-scrollbar";
+import OverscrollPlugin from "smooth-scrollbar/plugins/overscroll";
+import { ScrollbarPlugin } from "smooth-scrollbar";
+import easing from "./easing";
 
-
-
-import { Scrollbar } from 'smooth-scrollbar/scrollbar'; // NOTICE: not the default entry
-
+import { Scrollbar } from "smooth-scrollbar/scrollbar"; // NOTICE: not the default entry
 
 const setMomentum = Scrollbar.prototype.setMomentum;
 
 //fix Random X movement
-Scrollbar.prototype.setMomentum = function(x, y) {
-    setMomentum.call(this, 0, y);
-}
+Scrollbar.prototype.setMomentum = function (x, y) {
+  setMomentum.call(this, 0, y);
+};
 
 class DisableScrollPlugin extends ScrollbarPlugin {
-  static pluginName = 'disableScroll';
+  static pluginName = "disableScroll";
 
   static defaultOptions = {
-    direction: '',
+    direction: "",
   };
 
   transformDelta(delta) {
@@ -31,10 +28,8 @@ class DisableScrollPlugin extends ScrollbarPlugin {
   }
 }
 
-
-
 class AnchorPlugin extends ScrollbarPlugin {
-  static pluginName = 'anchor';
+  static pluginName = "anchor";
 
   onHashChange = () => {
     this.jumpToHash(window.location.hash);
@@ -43,13 +38,13 @@ class AnchorPlugin extends ScrollbarPlugin {
   onClick = (event) => {
     const { target } = event;
 
-    if (target.tagName !== 'A') {
+    if (target.tagName !== "A") {
       return;
     }
 
-    const hash = target.getAttribute('href');
+    const hash = target.getAttribute("href");
 
-    if (!hash || hash.charAt(0) !== '#') {
+    if (!hash || hash.charAt(0) !== "#") {
       return;
     }
 
@@ -61,7 +56,7 @@ class AnchorPlugin extends ScrollbarPlugin {
 
     if (!hash) {
       return;
-    }    
+    }
 
     // reset scrollTop
     scrollbar.containerEl.scrollTop = 0;
@@ -73,70 +68,58 @@ class AnchorPlugin extends ScrollbarPlugin {
     // });
     height();
 
-    function height(){
+    function height() {
       const heightvar = document.getElementById("AboutMeWrap").offsetTop;
       const heightoffset = heightvar - 100;
       // console.log(heightvar);
 
       scrollbar.scrollTo(0, heightoffset, 1200, {
-        callback: () => console.log('done!'),
+        callback: () => console.log("done!"),
         easing: easing.easeInOutCubic,
       });
     }
-
-
-    
-    
   };
 
   onInit() {
     this.jumpToHash(window.location.hash);
 
-    window.addEventListener('hashchange', this.onHashChange);
+    window.addEventListener("hashchange", this.onHashChange);
 
-    this.scrollbar.contentEl.addEventListener('click', this.onClick);
+    this.scrollbar.contentEl.addEventListener("click", this.onClick);
   }
 
   onDestory() {
-    window.removeEventListener('hashchange', this.onHashChange);
+    window.removeEventListener("hashchange", this.onHashChange);
 
-    this.scrollbar.contentEl.removeEventListener('click', this.onClick);
+    this.scrollbar.contentEl.removeEventListener("click", this.onClick);
   }
 }
 
-
 // load the plugin
-
 
 const options = {
   plugins: {
     overscroll: true,
     anchor: true,
     disableScroll: {
-      direction: 'x',
+      direction: "x",
     },
   },
-  'damping' : 0.05,
-  'renderByPixels' : false
+  damping: 0.05,
+  renderByPixels: false,
 };
 
-
-
-
 scrollbar.use(AnchorPlugin);
-// scrollbar.use(OverscrollPlugin);     
-scrollbar.use(DisableScrollPlugin);    
+// scrollbar.use(OverscrollPlugin);
+scrollbar.use(DisableScrollPlugin);
 // scrollbar.addListener((s) => {console.log(s)});
 
-
-
-
 function myFunction(Hoverable) {
-  if (Hoverable.matches) { // If media query matches
+  if (Hoverable.matches) {
+    // If media query matches
     // console.log("naur")
   } else {
-    scrollbar.init(document.querySelector('#smooth'), options);
-    
+    scrollbar.init(document.querySelector("#smooth"), options);
   }
 }
 
@@ -146,18 +129,15 @@ function myFunction(Hoverable) {
 //   console.log("yes");
 // };
 
-
 // Create a MediaQueryList object
-var Hoverable = window.matchMedia("(hover: none) and (max-width: 650px)")
+var Hoverable = window.matchMedia("(hover: none) and (max-width: 650px)");
 
 // Call listener function at run time
 myFunction(Hoverable);
 
 // Attach listener function on state changes
-Hoverable.addEventListener("change", function() {
+Hoverable.addEventListener("change", function () {
   myFunction(Hoverable);
 });
-
-
 
 //YxN

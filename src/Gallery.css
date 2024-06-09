@@ -3,16 +3,14 @@
   outline: var(--outline);
   border-radius: 30px;
   margin: 5vw;
-  margin-block:24svh;
+  margin-block: 24svh;
   display: flex;
   flex-direction: column;
-  
   align-items: center;
   box-shadow: inset 0px 0px 10px var(--backgroundColor2);
-  
 }
 
-.titleWrap{
+.titleWrap {
   height: 0;
   width: 100%;
   display: flex;
@@ -21,46 +19,24 @@
 }
 
 .ContainerTitle {
-  
   width: fit-content;
   font-size: 5.5rem;
-  /* letter-spacing: 0.1em; */
-  /* margin: 5vw; */
   padding: 0.5em;
   padding-block: 0.2em;
   padding-right: 0.6em;
   position: relative;
   z-index: 8;
-  /* top: 18%;
-  left: 50%; */
   translate: 0 -60%;
   transition: 0.3s ease;
   color: var(--mainFontColor);
   font-family: var(--secondaryFont);
   font-weight: 600;
-  /* text-transform: uppercase; */
   transform-origin: center;
-  background-color: var(--backgroundColor
-  );
-  box-shadow: 0 0 80px var(--shadowGlow);
-  outline: var(--outlineGlow);
+  background-color: var(--backgroundColor);
+  /* box-shadow: 0 0 80px var(--shadowGlow), inset 0 0 40px var(--shadowGlow); */
+  outline: var(--outline);
   border-radius: 30px;
-  /* text-decoration: underline ; */
-}
-
-.ContainerTitle:focus-visible {
-  letter-spacing: 0.2em;
-  padding-left: 0.2em;
-}
-
-.ContainerSubTitle {
-  width: 75px;
-  font-size: 2rem;
-  letter-spacing: 0.1em;
-  padding: 5vw;
-  padding-inline: 0;
-  position: relative;
-  color: var(--mainFontColor);
+  text-shadow: 0 0 40px var(--shadowGlow);
 }
 
 .Container {
@@ -78,7 +54,6 @@
   margin-top: 60px;
 }
 
-
 .GalleryItem {
   width: 100%;
   height: 100%;
@@ -90,10 +65,10 @@
   z-index: 2;
   animation: move-up ease;
   animation-timeline: view(y);
-  animation-range: entry 0% cover 20% ;
+  animation-range: entry 0% cover 20%;
 }
 
-.image  {
+.image {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -103,8 +78,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* object-position: center; */
-  /* cursor: pointer; */
   transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   filter: brightness(100%) saturate(1);
 }
@@ -112,7 +85,6 @@
 .GalleryItem:hover .image img {
   filter: brightness(60%) saturate(0.5) blur(2px);
 }
-
 
 .GalleryItem:hover {
   z-index: 3;
@@ -128,7 +100,6 @@
   outline: rgb(255, 171, 54) dashed 2px;
 }
 
-
 .GalleryItem .Text {
   opacity: 0;
   position: absolute;
@@ -142,30 +113,32 @@
   z-index: 4;
   transition: opacity 0.5s ease, bottom 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
   text-decoration: none;
-  /* cursor: pointer; */
   pointer-events: none;
+  text-wrap: nowrap;
+}
+
+.Text p {
+  margin: 0;
 }
 
 .GalleryItem:hover .Text {
   opacity: 1;
   bottom: 50%;
-  
 }
 
-.Date{
+.Date {
   color: white;
   font-family: 'Noto Sans', sans-serif;
   font-weight: 600;
   position: absolute;
   bottom: 16px;
   right: 20px;
-  /* transform: translate(0, -50%); */
   transition: 0.5s ease-in-out;
-  opacity: 0;
+  opacity: 0.5;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.GalleryItem:hover .Date{
+.GalleryItem:hover .Date {
   opacity: 1;
 }
 
@@ -191,4 +164,3 @@
 .h-3 {
   grid-row: span 3;
 }
-

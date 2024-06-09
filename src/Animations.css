@@ -1,11 +1,11 @@
 @keyframes move-up {
   0% {
-    translate:  0 200px;
-    scale: .75;
-    opacity: .5;
+    translate: 0 200px;
+    scale: 0.75;
+    opacity: 0.5;
   }
   100% {
-    translate: 0 0 ;
+    translate: 0 0;
     scale: 1;
     opacity: 1;
   }
@@ -45,7 +45,7 @@
 
 @keyframes Bobbing {
   0% {
-    transform: translateY(0);
+    transform: translateY(5px);
   }
 
   100% {
@@ -69,7 +69,7 @@
 
 @keyframes Scalein {
   0% {
-    transform: scale(.6);
+    transform: scale(0.6);
   }
 
   100% {
@@ -79,15 +79,15 @@
 
 @keyframes gradient {
   0% {
-    background-position:  700px 0px;
+    background-position: 700px 0px;
   }
 
   100% {
-    background-position:  0px 0px;
+    background-position: 0px 0px;
   }
 }
 
-@keyframes faded{
+@keyframes faded {
   0% {
     opacity: 1;
   }
@@ -98,26 +98,73 @@
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(90deg); }
-  50% { transform: rotate(180deg); }
-  75% { transform: rotate(270deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes fade {
-  to {opacity: 0;}
+  to {
+    opacity: 0;
+  }
 }
 
-@keyframes backMove{
-  0% {/*background-position: var(--x) var(--y)*/
+@keyframes backMove {
+  0% {
+    /*background-position: var(--x) var(--y)*/
   }
-  100% {/*background-position: calc(100vh + var(--x)) calc(100vh + var(--y));*/
-    background-position: 100vh 100vh;}
+  100% {
+    /*background-position: calc(100vh + var(--x)) calc(100vh + var(--y));*/
+    background-position: 100vh 100vh;
+  }
 }
 
 @keyframes fullSpin {
-  0% { rotate: 0deg; scale: 1;}
-  60% {scale: 0.75;}
-  100% {rotate: 720deg; scale: 1;}
+  0% {
+    rotate: 0deg;
+    scale: 1;
+  }
+  60% {
+    scale: 0.75;
+  }
+  100% {
+    rotate: 720deg;
+    scale: 1;
+  }
+}
+
+@keyframes flickerLight {
+  0% {
+    box-shadow: 0 0 10px var(--shadowGlow);
+  }
+  17% {
+    box-shadow: 0 0 40px var(--shadowGlow);
+  }
+  34% {
+    box-shadow: 0 0 20px var(--shadowGlow);
+  }
+  50% {
+    box-shadow: 0 0 40px var(--shadowGlow);
+  }
+  67% {
+    box-shadow: 0 0 80px var(--shadowGlow);
+  }
+  84% {
+    box-shadow: 0 0 30px var(--shadowGlow);
+  }
+  100% {
+    box-shadow: 0 0 80px var(--shadowGlow);
+  }
 }

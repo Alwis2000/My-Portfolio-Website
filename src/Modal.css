@@ -1,9 +1,9 @@
-.viewer-container.viewer-backdrop.viewer-fixed.viewer-fade.viewer-transition.viewer-in{
+.viewer-container.viewer-backdrop.viewer-fixed.viewer-fade.viewer-transition.viewer-in {
   cursor: default;
 }
 
 .viewer-title {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-size: 1rem;
   color: white;
 }
@@ -25,14 +25,13 @@
 .viewer-list > li {
   height: 80px;
   width: 80px;
-  
 }
 .viewer-toolbar > ul {
   height: 50px;
   overflow: visible;
 }
 
-.viewer-toolbar>ul>.viewer-large {
+.viewer-toolbar > ul > .viewer-large {
   height: 100%;
   width: 50px;
   overflow: visible;
@@ -48,7 +47,6 @@
 
 .viewer-reset:hover {
   outline: #f90 1px solid;
-
 }
 
 .viewer-reset:focus {
@@ -57,11 +55,23 @@
   box-shadow: #f90 0 0 10px !important;
 }
 
-
-.viewer-close:before, .viewer-flip-horizontal:before, .viewer-flip-vertical:before, .viewer-fullscreen-exit:before, .viewer-fullscreen:before, .viewer-next:before, .viewer-one-to-one:before, .viewer-play:before, .viewer-prev:before, .viewer-reset:before, .viewer-rotate-left:before, .viewer-rotate-right:before, .viewer-zoom-in:before, .viewer-zoom-out:before {
+.viewer-close:before,
+.viewer-flip-horizontal:before,
+.viewer-flip-vertical:before,
+.viewer-fullscreen-exit:before,
+.viewer-fullscreen:before,
+.viewer-next:before,
+.viewer-one-to-one:before,
+.viewer-play:before,
+.viewer-prev:before,
+.viewer-reset:before,
+.viewer-rotate-left:before,
+.viewer-rotate-right:before,
+.viewer-zoom-in:before,
+.viewer-zoom-out:before {
   background-image: url(images/Reset.png);
   background-repeat: no-repeat;
-  
+
   color: transparent;
   display: block;
   font-size: 0;

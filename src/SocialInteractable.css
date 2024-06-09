@@ -1,6 +1,4 @@
-
-
-.socials{
+.socials {
   background-color: var(--accentColor);
   position: absolute;
   height: 175px;
@@ -16,46 +14,41 @@
 }
 
 #socialtwitter {
-  transform: scale(.9);
+  transform: scale(0.9);
   transition: 0.4s ease;
 }
 
 #socialDiscord {
-  transform: scale(.9);
+  transform: scale(0.9);
   transition: 0.4s ease;
 }
 
 #socialreddit {
-  transform: scale(.9);
+  transform: scale(0.9);
   transition: 0.4s ease;
 }
 
 #sociallinkedin {
-  transform: scale(.9);
+  transform: scale(0.9);
   transition: 0.4s ease;
   text-align: center;
 }
 
-  
 #socialtwitter:hover {
-  
   background-color: #1da1f2;
 
   /* padding: 10px; */
 }
 #socialDiscord:hover {
-  
-  background-color: #5865F2;
+  background-color: #5865f2;
 }
 #socialreddit:hover {
-  
   background-color: #ff4500;
 }
 #sociallinkedin:hover {
-  
   background-color: #0e76a8;
 }
-  
+
 #socialtwitter svg {
   transform: translateY(0.4vh) scale(0.5);
   transition: 0.2s ease-in-out;
@@ -75,25 +68,24 @@
   cursor: none;
 }
 #socialDiscord img {
-  transform:  translate(-312.5px, -312.5px) scale(0.12) ;
+  transform: translate(-312.5px, -312.5px) scale(0.12);
   transition: 0.2s ease-in-out;
   cursor: none;
 }
 
 #socialtwitter svg:hover {
-  transform: translateY(0.4vh)scale(0.55);
-  filter: invert() drop-shadow( -10px 12px 2px rgba(0, 0, 0, .3));
+  transform: translateY(0.4vh) scale(0.55);
+  filter: invert() drop-shadow(-10px 12px 2px rgba(0, 0, 0, 0.3));
 }
 #socialDiscord img:hover {
-  transform:  translate(-312.5px, -312.5px) scale(0.13);
-  filter: invert() drop-shadow( 30px 40px 7px rgba(0, 0, 0, .3));
-  
+  transform: translate(-312.5px, -312.5px) scale(0.13);
+  filter: invert() drop-shadow(30px 40px 7px rgba(0, 0, 0, 0.3));
 }
 #socialreddit svg:hover {
   transform: scale(0.55);
-  filter: invert(1) drop-shadow( -10px 5px 2px rgba(0, 0, 0, .3));
+  filter: invert(1) drop-shadow(-10px 5px 2px rgba(0, 0, 0, 0.3));
 }
 #sociallinkedin svg:hover {
   transform: translateY(-0.5vh) scale(0.45);
-  filter: invert(1) drop-shadow( 10px 5px 2px rgba(0, 0, 0, .3));
+  filter: invert(1) drop-shadow(10px 5px 2px rgba(0, 0, 0, 0.3));
 }
