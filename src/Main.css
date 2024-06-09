@@ -120,8 +120,9 @@ body:hover #cursor{
       width: 100%;
       height: 100%;
       position: fixed;
+      top: 0;
       background-color: rgba(0, 0, 0, 0.9);
-      transition: 4;
+      /* transition: 4; */
       z-index: 100;
       font-family: var(--secondaryFont);
       display: flex;
@@ -130,10 +131,40 @@ body:hover #cursor{
       align-items: center;
       font-size: 10rem;
       font-weight: 600;
-      display: none;
+      text-shadow: 0 0 50px palevioletred;
+      /* display: none; */
       /* text-overflow: clip; */
       /* text-wrap: wrap; */
+      transition: 1s ease;
+      opacity: 1;
+      
 }
+
+.alwaysForever.classClose {
+      opacity: 0;
+      display: none;
+}
+
+.alwaysForever p{
+      margin: 0;
+      translate: 0 10%;
+      transition: 4s ease-out;
+      animation: SecBobbing 6s ease-out infinite;
+}
+
+.alwaysForever.classClose p{
+      translate: 0 -200%;
+}
+
+
+#emoji{
+      animation: Scalein 1s cubic-bezier(0.075, 0.82, 0.165, 1) infinite alternate-reverse ;
+      filter: drop-shadow(0 0 50px red);
+      display: block;
+}
+#us{
+      font-size: 0.5em;
+}     
 
 .button{
       position: fixed;
@@ -187,18 +218,24 @@ body:hover #cursor{
       color: #350400;
       font-weight: 600;
       opacity: 1;
-      transition: 1s ease;
+      transition: 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
       padding: 1%;
       padding-inline: 1.5%;
       text-wrap: nowrap;
-      translate: 0 0;
       overflow: hidden;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      text-align: end;
+      scale: 1;
+      transform-origin: right bottom;
+}
+
+.infoBubble svg{
+      pointer-events: none;
 }
 
 .infoBubble.classClose{
-      max-width:  0;
+      scale: 0;
+      /* max-width:  0; */
       /* opacity: 0; */
-      padding: 0;
-      bottom: 2svh;
+      /* padding-inline: 0; */
 }

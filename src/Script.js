@@ -174,8 +174,11 @@ const viewer = new Viewer(document.getElementById("GalleryWrap"), {
 const infButton = document.querySelector("#infoToggle");
 const infBubble = document.querySelector(".infoBubble");
 
-infButton.addEventListener('click',showMessage)
-let isVisible = false
+infButton.addEventListener( "mouseover" ,showMessage);
+infButton.addEventListener( "mouseleave" ,showMessage);
+let isVisible = false;
+
+
 function showMessage() {
   if (isVisible == false) {
     isVisible = true
@@ -184,6 +187,5 @@ function showMessage() {
     isVisible = false
     infBubble.classList.add("classClose");
   }
-  
 }
 

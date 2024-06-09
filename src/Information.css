@@ -134,56 +134,58 @@
   align-items: center;
   justify-content: center;
   color: whitesmoke;
-}
-
-.AboutMe .AboutBody {
-  position: relative;
-  right: 0;
-  max-height: 39em; 
-  transition: 1s ease;
-  background-size: cover;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden; 
-  border-radius: 29px;
+  
 }
 
 .AboutMe.CurrentItem .AboutBody {
-  /* height: 0; */
-  max-height: 0;
+  grid-template-rows: 0fr;
+}
+
+.AboutMe .AboutBody {
+  transition: 1s ease;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 1fr;
+  border-radius: 29px;
 }
 
 #AboutMeWrap{
   border-radius: 30px;
   background-color: var(--accentColor);
   width: 90vw;
-  padding: 2px; 
-  
+  padding: 2px;
+  overflow: hidden;
 }
 
 .AboutMeText {
-  
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20%;
-  
+  text-align: justify;
   background-size: cover;
   background-position: center;
-  height: 100%;
+  padding-block: 3em;
+  padding-inline: 3em;
+  /* height: 100%; */
   translate: var(--y);
-  /* width: 100%; */
-
+  transition: padding 0.5s;
+  /* width: 80%; */
 }
+
+.AboutMe.CurrentItem .AboutMeText{
+  padding-block: 0;
+}
+
 #AboutMeHeading {
   font-family: var(--secondaryFont);
   font-size: 4rem;
   font-weight: 100;
+  overflow: hidden;
 }
 #AboutMeBody {
+  overflow: hidden;
   padding-inline: 17px;
   padding-block: 5px;
   border-radius: 30px;
@@ -191,8 +193,8 @@
   font-weight: 300;
   font-size: 1.1em;
   -webkit-font-size: 1.1em;
-  width: 100%;
-  height: fit-content;
+  /* width: 100%; */
+  /* height: fit-content; */
   background-color: rgba(0, 20, 50, 0.315);
   outline: #7b92de33 2px inset;
   backdrop-filter: blur(20px) grayscale(0.5);
@@ -204,6 +206,7 @@
 #AboutHere{
   background-image: url(images/Crystal\ Scene\ better.jpg);
   background-size: cover;
+  background-position: center;
 }
 
 .ContactMe {
@@ -376,7 +379,7 @@
 a:link {
   color: white;
   background-color: transparent;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:visited {
