@@ -25,7 +25,7 @@ function submitFeedback() {
   // console.log(feedback.value);
   feedbackStatus.innerHTML = "Sending feedback...";
   
-  if (feedback.value = 'You and Me') {
+  if (feedback.value == 'You and Me') {
     showSecret();
   } else {
     fetch(
