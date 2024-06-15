@@ -63,9 +63,9 @@
   border-radius: 10px;
   background-size: 350%;
   z-index: 2;
-  animation: move-up ease;
-  animation-timeline: view(y);
-  animation-range: entry 0% cover 20%;
+  animation-name: move-up;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .image {

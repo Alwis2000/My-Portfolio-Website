@@ -1,12 +1,12 @@
 @keyframes move-up {
   0% {
     translate: 0 200px;
-    scale: 0.75;
+    /* scale: 0.75; */
     opacity: 0.5;
   }
   100% {
     translate: 0 0;
-    scale: 1;
+    /* scale: 1; */
     opacity: 1;
   }
 }
