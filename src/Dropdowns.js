@@ -1,35 +1,35 @@
-import { aboutme, prof } from "./Script.js";
+import { aboutme, prof } from './Script.js'
 
 function ToggleDisplay() {
-  if (aboutme.classList.contains("CurrentItem")) {
-    var CurrentlyDisplayed = document.querySelectorAll(".CurrentItem");
+  if (aboutme.classList.contains('CurrentItem')) {
+    var CurrentlyDisplayed = document.querySelectorAll('.CurrentItem')
 
     for (var e = 0; e < CurrentlyDisplayed.length; e++) {
-      CurrentlyDisplayed[e].classList.remove("CurrentItem");
+      CurrentlyDisplayed[e].classList.remove('CurrentItem')
       // setTimeout(heightChange, 1000);
-      console.log("Removed .CurrentItem");
+      console.log('Removed .CurrentItem')
     }
   } else {
-    aboutme.classList.add("CurrentItem");
+    aboutme.classList.add('CurrentItem')
     // setTimeout(heightChange, 1000);
   }
 }
 
-let Scrollable = true;
+let Scrollable = true
 
 function ToggleSmoothScroll() {
-  console.log(Scrollable);
+  console.log(Scrollable)
   if (Scrollable) {
-    document.getElementById("Exclude").href = "#AboutHere";
-    Scrollable = false;
+    // document.getElementById("Exclude").href = "#AboutHere";
+    Scrollable = false
   } else {
-    document.getElementById("Exclude").href = "#";
-    Scrollable = true;
+    // document.getElementById("Exclude").href = "#";
+    Scrollable = true
   }
-  console.log(document.querySelector("#AboutHere"));
+  console.log(document.querySelector('#AboutHere'))
 }
 
-prof.addEventListener("click", () => {
-  ToggleDisplay();
-  ToggleSmoothScroll();
-});
+prof.addEventListener('click', () => {
+  ToggleDisplay()
+  ToggleSmoothScroll()
+})

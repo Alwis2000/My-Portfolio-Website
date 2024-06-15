@@ -4,15 +4,12 @@
   "description": "",
   "scripts": {
     "start": "parcel src/index.html ",
-    "build":  "parcel build src/index.html --no-cache --no-scope-hoist",
+    "build": "parcel build src/index.html --no-cache --no-scope-hoist",
     "startc": "parcel src/index.html --no-cache"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "smooth-scrollbar": "^8.8.4"
-  },
   "devDependencies": {
     "parcel": "^2.12.0"
   }

@@ -142,10 +142,11 @@
 }
 
 .AboutMe .AboutBody {
-  transition: 1s ease;
+  transition: 1s;
   background-size: cover;
   display: grid;
   grid-template-rows: 1fr;
+  grid-row: 100%;
   border-radius: 29px;
 }
 
@@ -154,11 +155,9 @@
   background-color: var(--accentColor);
   width: 90vw;
   padding: 2px;
-  overflow: hidden;
 }
 
 .AboutMeText {
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -169,9 +168,10 @@
   padding-block: 3em;
   padding-inline: 10em;
   /* height: 100%; */
-  translate: var(--y);
+  /* translate: var(--y); */
   transition: padding 0.5s;
   /* width: 80%; */
+  overflow: hidden;
 }
 
 .AboutMe.CurrentItem .AboutMeText {
@@ -183,12 +183,12 @@
   font-size: 3rem;
   font-weight: 100;
   text-wrap: nowrap;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 #AboutMeBody {
-  overflow: hidden;
-  padding-inline: 17px;
-  padding-block: 5px;
+  overflow: visible;
+  padding-inline: 1.3em;
+  padding-block: 0;
   border-radius: 30px;
   font-family: 'Noto Sans', sans-serif;
   font-weight: 300;
@@ -199,9 +199,9 @@
   background-color: rgba(0, 20, 50, 0.315);
   outline: #7b92de33 2px inset;
   backdrop-filter: blur(20px) grayscale(0.5);
-
   /* text-align: justify;
   text-justify: inter-word; */
+  overflow: hidden;
 }
 
 #AboutHere {
