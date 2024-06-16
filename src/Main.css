@@ -167,7 +167,7 @@ body:hover #cursor {
   position: fixed;
   width: 50px;
   height: 50px;
-  margin: 1%;
+  margin: 1vw;
   z-index: 5;
   padding: 0;
   border: none;
@@ -203,36 +203,48 @@ body:hover #cursor {
 
 .infoBubble {
   background-color: var(--accentColor);
-  position: fixed;
-  z-index: 5;
+  pointer-events: none;
+  position: absolute;
+  z-index: 6;
   width: fit-content;
-  max-width: 31em;
+  max-width: 60ch;
   height: fit-content;
-  bottom: 9svh;
-  right: 9svh;
-  border-radius: 30px 30px 0 30px;
+  bottom: 7svh;
+  right: 7svh;
+  border-radius: 30px 30px 5px 30px;
   font-family: 'Noto Sans', sans-serif;
   color: #350400;
   font-weight: 600;
   opacity: 1;
-  transition: 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
-  padding: 1%;
-  padding-inline: 1.5%;
+  transition: 1s ease, padding 0.1s;
+  padding: 1em;
+  padding-inline: 1.5em;
   text-wrap: nowrap;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  text-align: end;
+  text-align: right;
   scale: 1;
   transform-origin: right bottom;
 }
 
-.infoBubble svg {
+#infoToggle img {
   pointer-events: none;
+  object-fit: contain;
+  width: 80%;
+  height: 80%;
+  transition: 1s;
+}
+
+#infoToggle:hover img {
+  scale: 1.1;
+  transition: 0.2s;
 }
 
 .infoBubble.classClose {
-  scale: 0;
-  /* max-width:  0; */
+  /* scale: 0; */
+  max-width: 0;
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1), padding 1s 0.4s;
+  padding-inline: 0;
   /* opacity: 0; */
   /* padding-inline: 0; */
 }
