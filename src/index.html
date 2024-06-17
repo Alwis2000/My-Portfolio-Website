@@ -3,17 +3,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.3/viewer.min.js"
-      integrity="sha512-f8kZwYACKF8unHuRV7j/5ILZfflRncxHp1f6y/PKuuRpCVgpORNZMne1jrghNzTVlXabUXIg1iJ5PvhuAaau6Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@v0.2.26/bundled/lenis.js"></script>
     <script type="module" src="Transitions.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.js"
+      integrity="sha512-EC3CQ+2OkM+ZKsM1dbFAB6OGEPKRxi6EDRnZW9ys8LghQRAq6cXPUgXCCujmDrXdodGXX9bqaaCRtwj4h4wgSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.3/viewer.min.css"
-      integrity="sha512-zdX1vpRJc7+VHCUJcExqoI7yuYbSFAbSWxscAoLF0KoUPvMSAK09BaOZ47UFdP4ABSXpevKfcD0MTVxvh0jLHQ=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.css"
+      integrity="sha512-eG8C/4QWvW9MQKJNw2Xzr0KW7IcfBSxljko82RuSs613uOAg/jHEeuez4dfFgto1u6SRI/nXmTr9YPCjs1ozBg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
     <link
@@ -108,66 +108,65 @@
 
     <div id="smooth">
       <div class="InfoContainer">
-        <div id="TextClass">
-          <div id="DigitalArtistBgText">
+        <div id="infoWrapper">
+          <div class="textClass" id="DigitalArtistBgText">
             <p>Digital</p>
             <p>artist</p>
           </div>
-          <div id="GameDevBgText">
-            <p>Game</p>
-            <p>
-              <span style="font-size: 52.5%">Developer</span>
-            </p>
-            <p style="font-size: 20%; translate: 85px -90px">
-              Well upcoming...
-            </p>
-          </div>
-        </div>
-
-        <div id="HoverClass">
-          <div id="welcomeText">Welcome to the portfolio of</div>
-          <div class="socials" id="socialTwitter">
-            <a href="https://twitter.com/AlwisYuneth" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path
-                  d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
-              </svg>
-            </a>
-          </div>
-
-          <div class="socials" id="socialDiscord">
-            <a href="https://discord.gg/nzFchxebWY" target="_blank"
-              ><img src="images/Discord.svg"
-            /></a>
-          </div>
-
-          <div class="socials" id="socialReddit">
-            <a href="https://www.reddit.com/user/19-4yr_old" target="_blank"
-              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path
-                  d="M440.3 203.5c-15 0-28.2 6.2-37.9 15.9-35.7-24.7-83.8-40.6-137.1-42.3L293 52.3l88.2 19.8c0 21.6 17.6 39.2 39.2 39.2 22 0 39.7-18.1 39.7-39.7s-17.6-39.7-39.7-39.7c-15.4 0-28.7 9.3-35.3 22l-97.4-21.6c-4.9-1.3-9.7 2.2-11 7.1L246.3 177c-52.9 2.2-100.5 18.1-136.3 42.8-9.7-10.1-23.4-16.3-38.4-16.3-55.6 0-73.8 74.6-22.9 100.1-1.8 7.9-2.6 16.3-2.6 24.7 0 83.8 94.4 151.7 210.3 151.7 116.4 0 210.8-67.9 210.8-151.7 0-8.4-.9-17.2-3.1-25.1 49.9-25.6 31.5-99.7-23.8-99.7zM129.4 308.9c0-22 17.6-39.7 39.7-39.7 21.6 0 39.2 17.6 39.2 39.7 0 21.6-17.6 39.2-39.2 39.2-22 .1-39.7-17.6-39.7-39.2zm214.3 93.5c-36.4 36.4-139.1 36.4-175.5 0-4-3.5-4-9.7 0-13.7 3.5-3.5 9.7-3.5 13.2 0 27.8 28.5 120 29 149 0 3.5-3.5 9.7-3.5 13.2 0 4.1 4 4.1 10.2.1 13.7zm-.8-54.2c-21.6 0-39.2-17.6-39.2-39.2 0-22 17.6-39.7 39.2-39.7 22 0 39.7 17.6 39.7 39.7-.1 21.5-17.7 39.2-39.7 39.2z"></path>
-              </svg>
-            </a>
-          </div>
-
-          <div class="socials" id="socialLinkedin">
-            <div class="linkedin-wrap">
-              <a
-                href="https://www.linkedin.com/in/yuneth-alwis-2a5b85231/"
-                target="_blank"
-                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <div id="HoverClass">
+            <div id="welcomeText">Welcome to the portfolio of</div>
+            <div id="ProfileImage"></div>
+            <div class="NameClass">
+              Yuneth
+              <span style="font-size: 90%">Alwis</span>
+            </div>
+            <div class="socials" id="socialTwitter">
+              <a href="https://twitter.com/AlwisYuneth" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path
-                    d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
                 </svg>
               </a>
             </div>
+
+            <div class="socials" id="socialDiscord">
+              <a href="https://discord.gg/nzFchxebWY" target="_blank"
+                ><img src="images/Discord.svg"
+              /></a>
+            </div>
+
+            <div class="socials" id="socialReddit">
+              <a href="https://www.reddit.com/user/19-4yr_old" target="_blank"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path
+                    d="M440.3 203.5c-15 0-28.2 6.2-37.9 15.9-35.7-24.7-83.8-40.6-137.1-42.3L293 52.3l88.2 19.8c0 21.6 17.6 39.2 39.2 39.2 22 0 39.7-18.1 39.7-39.7s-17.6-39.7-39.7-39.7c-15.4 0-28.7 9.3-35.3 22l-97.4-21.6c-4.9-1.3-9.7 2.2-11 7.1L246.3 177c-52.9 2.2-100.5 18.1-136.3 42.8-9.7-10.1-23.4-16.3-38.4-16.3-55.6 0-73.8 74.6-22.9 100.1-1.8 7.9-2.6 16.3-2.6 24.7 0 83.8 94.4 151.7 210.3 151.7 116.4 0 210.8-67.9 210.8-151.7 0-8.4-.9-17.2-3.1-25.1 49.9-25.6 31.5-99.7-23.8-99.7zM129.4 308.9c0-22 17.6-39.7 39.7-39.7 21.6 0 39.2 17.6 39.2 39.7 0 21.6-17.6 39.2-39.2 39.2-22 .1-39.7-17.6-39.7-39.2zm214.3 93.5c-36.4 36.4-139.1 36.4-175.5 0-4-3.5-4-9.7 0-13.7 3.5-3.5 9.7-3.5 13.2 0 27.8 28.5 120 29 149 0 3.5-3.5 9.7-3.5 13.2 0 4.1 4 4.1 10.2.1 13.7zm-.8-54.2c-21.6 0-39.2-17.6-39.2-39.2 0-22 17.6-39.7 39.2-39.7 22 0 39.7 17.6 39.7 39.7-.1 21.5-17.7 39.2-39.7 39.2z"></path>
+                </svg>
+              </a>
+            </div>
+
+            <div class="socials" id="socialLinkedin">
+              <div class="linkedin-wrap">
+                <a
+                  href="https://www.linkedin.com/in/yuneth-alwis-2a5b85231/"
+                  target="_blank"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512">
+                    <path
+                      d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
-          <a id="Exclude">
-            <div id="ProfileImage"></div>
-          </a>
-          <div class="NameClass">
-            Yuneth
-            <span style="font-size: 90%">Alwis</span>
+          <div class="textClass" id="GameDevBgText">
+            <p>Game</p>
+            <p style="font-size: 52.5%; transform: translateY(-0.5em)">
+              Developer
+            </p>
+            <p style="font-size: 20%; transform: translate(2.6em, -2em)">
+              Well upcoming...
+            </p>
           </div>
         </div>
       </div>
@@ -217,10 +216,9 @@
         </div>
         <div class="Container">
           <div class="GalleryContainer h-2 w-4">
-            <div class="GalleryItem">
+            <div class="GalleryItem" id="daftclass">
               <div
                 class="Image"
-                id="daftclass"
                 style="
                   background-image: url(/src/images/LowRes/Daft\ Punk.webp);
                 ">

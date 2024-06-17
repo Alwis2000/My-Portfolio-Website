@@ -7,6 +7,14 @@
   align-items: center;
 }
 
+#infoWrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 #HoverClass {
   background-color: var(--backgroundColor);
   width: 61svh;
@@ -22,17 +30,18 @@
   justify-content: center;
   align-items: center;
   outline: var(--outline);
-  box-shadow: 0 0 80px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 0 20px var(--backgroundColor2),
+    0 0 40px rgba(0, 0, 0, 0.075);
 }
 
 #welcomeText {
   position: absolute;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: var(--secondaryFont);
   color: var(--mainFontColor);
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 300;
-  font-style: italic;
-  top: 7.5%;
+  /* font-style: italic; */
+  top: 6%;
 }
 
 #ProfileImage {
@@ -69,48 +78,35 @@
   width: 100%;
   color: var(--mainFontColor);
   font-family: var(--secondaryFont);
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   transition: 0.2s ease-in-out;
-  top: 85%;
+  top: 84%;
+  text-shadow: 0 0 20px var(--shadowGlow);
 }
 
-#TextClass {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+.textClass {
+  width: calc(100% / 3);
   text-transform: uppercase;
-  font-size: 140px;
+  font-size: 7.6rem;
   color: var(--mainFontColor);
   --shadow: #d50;
+  line-height: 0;
+  text-shadow: 0 0 20px var(--shadowGlow);
 }
 
 #DigitalArtistBgText {
-  z-index: 5;
-  line-height: 0px;
-  font-size: 90%;
-  left: 5%;
   transition: 0.5s ease;
-  height: fit-content;
-  transform: translateX(-130px);
 }
 
 #GameDevBgText {
-  z-index: 5;
-  font-size: 120%;
-  right: 5%;
+  font-size: 9.5rem;
   transition: 0.5s ease;
-  transform: translate(120px, -40px);
+  transform: translateY(0.05em);
 }
 
-#GameDevBgText p {
-  height: 20px;
-}
+/* #GameDevBgText p {
+  margin: 0;
+} */
 
 #DigitalArtistBgText:hover {
   color: var(--accentColor);
@@ -150,11 +146,21 @@
   border-radius: 29px;
 }
 
+.AboutMe #AboutMeWrap {
+  background-color: var(--outlineGlow2);
+}
+
+.AboutMe.CurrentItem #AboutMeWrap {
+  background-color: var(--accentColor);
+  box-shadow: 0 0 40px transparent;
+}
+
 #AboutMeWrap {
   border-radius: 30px;
-  background-color: var(--accentColor);
+  transition: 0.2s ease-out 1s;
   width: 90vw;
   padding: 2px;
+  box-shadow: 0 0 40px var(--shadowGlow2);
 }
 
 .AboutMeText {
@@ -212,7 +218,7 @@
 
 .ContactMe {
   background-color: var(--backgroundColor);
-  box-shadow: inset 0px 0px 10px var(--backgroundColor2);
+  box-shadow: inset 0px 0px 20px var(--backgroundColor2);
   position: relative;
   /* width: 100%; */
   height: 50vh;
@@ -315,7 +321,7 @@
   font-family: 'Noto Sans';
   font-weight: 700;
   letter-spacing: -1px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   transition: 0.1s ease;
   transition: 0.2s ease;
   /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); */
@@ -324,8 +330,8 @@
   border: none;
   /* margin-top: 2.5%; */
   cursor: none;
-  padding: 0.5em;
-  padding-inline: 1em;
+  padding: 0.75em;
+  padding-inline: 1.5em;
 }
 
 #FormButton:hover {

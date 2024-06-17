@@ -1,24 +1,24 @@
 //basic
-const cont = document.getElementsByClassName("InfoContainer")[0];
-const contovr = document.getElementsByClassName("ContainerOverlay")[0];
+const cont = document.getElementsByClassName('InfoContainer')[0];
+const contovr = document.getElementsByClassName('ContainerOverlay')[0];
 //quirky
-export const prof = document.getElementById("ProfileImage");
-const socT = document.getElementById("socialTwitter");
-const socD = document.getElementById("socialDiscord");
-const socR = document.getElementById("socialReddit");
-const socL = document.getElementById("socialLinkedin");
-const BGText = document.getElementById("TextClass");
-const hoverClass = document.getElementById("HoverClass");
+export const prof = document.getElementById('ProfileImage');
+const socT = document.getElementById('socialTwitter');
+const socD = document.getElementById('socialDiscord');
+const socR = document.getElementById('socialReddit');
+const socL = document.getElementById('socialLinkedin');
+const BGText = document.getElementById('TextClass');
+const hoverClass = document.getElementById('HoverClass');
 //aboutme
-const abouttext = document.getElementsByClassName("AboutMeText")[0];
-export const aboutme = document.getElementsByClassName("AboutMe")[0];
-const aboutBod = document.getElementsByClassName("AboutBody")[0];
-const aboutbody = document.getElementById("AboutImage");
+const abouttext = document.getElementsByClassName('AboutMeText')[0];
+export const aboutme = document.getElementsByClassName('AboutMe')[0];
+const aboutBod = document.getElementsByClassName('AboutBody')[0];
+const aboutbody = document.getElementById('AboutImage');
 //feedback
-const contain = document.getElementsByClassName("ContainerDropdown")[0];
-const dgtitle = document.getElementById("DGTitle");
+const contain = document.getElementsByClassName('ContainerDropdown')[0];
+const dgtitle = document.getElementById('DGTitle');
 //Gallery
-const gallimgs = document.getElementsByClassName("image");
+const gallimgs = document.getElementsByClassName('image');
 
 // get theme on page load
 
@@ -30,30 +30,30 @@ const hoverAnimDur = 400; // milliseconds
 const NormalTime = {
   duration: 300,
   iterations: 1,
-  fill: "forwards",
-  direction: "normal",
-  easing: "ease",
+  fill: 'forwards',
+  direction: 'normal',
+  easing: 'ease',
 };
 const NormalTimeSlower = {
   duration: 400,
   iterations: 1,
-  fill: "forwards",
-  direction: "normal",
-  easing: "ease",
+  fill: 'forwards',
+  direction: 'normal',
+  easing: 'ease',
 };
 const ReverseTime = {
   duration: 250,
   iterations: 1,
-  fill: "forwards",
-  direction: "reverse",
-  easing: "ease",
+  fill: 'forwards',
+  direction: 'reverse',
+  easing: 'ease',
 };
 const Scaleintime = {
   duration: 400,
   iterations: 1,
-  fill: "forwards",
-  direction: "normal",
-  easing: "ease",
+  fill: 'forwards',
+  direction: 'normal',
+  easing: 'ease',
 };
 
 let twitter, instagram, reddit, linkedin;
@@ -71,32 +71,32 @@ function resize() {
     social2Y = 40;
   }
   twitter = [
-    { transform: "translate(0px, 0px) scale(.5)" },
+    { transform: 'translate(0px, 0px) scale(.5)' },
     { transform: `translate(${-social1X}px,${social1Y}px) scale(.9)` },
   ];
   instagram = [
-    { transform: "translate(0px, 0px) scale(.5)" },
+    { transform: 'translate(0px, 0px) scale(.5)' },
     { transform: `translate(${social1X}px,${social1Y}px) scale(.9)` },
   ];
   reddit = [
-    { transform: "translate(0px, 0px) scale(.5)" },
+    { transform: 'translate(0px, 0px) scale(.5)' },
     { transform: `translate(${-social2X}px, ${social2Y}px) scale(.8)` },
   ];
   linkedin = [
-    { transform: "translate(0px, 0px) scale(.5)" },
+    { transform: 'translate(0px, 0px) scale(.5)' },
     { transform: `translate(${social2X}px, ${social2Y}px) scale(.8)` },
   ];
   NHover();
 }
 
 resize();
-window.addEventListener("resize", resize);
+window.addEventListener('resize', resize);
 document
-  .getElementById("HoverClass")
-  .addEventListener("mouseenter", () => Hover(true));
+  .getElementById('HoverClass')
+  .addEventListener('mouseenter', () => Hover(true));
 document
-  .getElementById("HoverClass")
-  .addEventListener("mouseleave", () => NHover(true));
+  .getElementById('HoverClass')
+  .addEventListener('mouseleave', () => NHover(true));
 export function Hover(real) {
   // console.log(`${real ? "Real" : "Fake"} Hovered`);
   hovered = true;
@@ -128,9 +128,9 @@ export function NHover(real) {
   };
 }
 
-const viewer = new Viewer(document.getElementById("GalleryWrap"), {
+export const viewer = new Viewer(document.getElementById('GalleryWrap'), {
   view: () => {
-    const viewerTitle = document.getElementById("viewerTitle0");
+    const viewerTitle = document.getElementById('viewerTitle0');
     const observer = new MutationObserver(() => {
       if (viewerTitle.innerText.trim().length === 0) return;
       viewerTitle.innerHTML = viewerTitle.innerText;
@@ -145,22 +145,22 @@ const viewer = new Viewer(document.getElementById("GalleryWrap"), {
   toolbar: {
     prev: {
       show: 0,
-      size: "large",
+      size: 'large',
     },
     zoomIn: 0,
     zoomOut: 0,
     oneToOne: 0,
     reset: {
       show: 1,
-      size: "large",
+      size: 'large',
     },
     play: {
       show: 0,
-      size: "large",
+      size: 'large',
     },
     next: {
       show: 0,
-      size: "large",
+      size: 'large',
     },
     rotateLeft: 0,
     rotateRight: 0,
@@ -172,19 +172,23 @@ const viewer = new Viewer(document.getElementById("GalleryWrap"), {
   toggleOnDblclick: [false],
 });
 
-const infButton = document.querySelector("#infoToggle");
-const infBubble = document.querySelector(".infoBubble");
+const infButton = document.querySelector('#infoToggle');
+const infBubble = document.querySelector('.infoBubble');
 
-infButton.addEventListener("mouseover", showMessage);
-infButton.addEventListener("mouseleave", showMessage);
+infButton.addEventListener('mouseover', showMessage);
+infButton.addEventListener('mouseleave', showMessage);
 let isVisible = false;
 
 function showMessage() {
   if (isVisible == false) {
     isVisible = true;
-    infBubble.classList.remove("classClose");
+    infBubble.classList.remove('classClose');
   } else {
     isVisible = false;
-    infBubble.classList.add("classClose");
+    infBubble.classList.add('classClose');
   }
 }
+
+// export const gallery = new Viewer(document.getElementById('GalleryWrap'));
+
+// console.log(gallery);

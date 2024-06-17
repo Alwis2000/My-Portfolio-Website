@@ -17,6 +17,11 @@
   src: url('customFonts/Feather\ Bold.ttf');
 }
 
+/* @font-face {
+  font-family: 'Bauhaus 93';
+  src: url('customFonts/Feather\ Bold.ttf');
+} */
+
 /* @media screen and (max-width: 1660px) {
   .container {
     grid-template-columns: repeat(4, 1fr);
@@ -59,7 +64,7 @@
     max-width: 850px;
   }
 
-  #TextClass {
+  .textClass {
     display: none;
   }
 
@@ -167,6 +172,10 @@
     margin-block: 14svh;
   }
 
+  .GalleryContainer:nth-child(1) {
+    animation: none;
+  }
+
   .viewer-title {
     white-space: normal;
   }
@@ -220,6 +229,8 @@
 
   .button {
     margin: 6vw;
+    width: 60px;
+    height: 60px;
   }
 
   .infoBubble {

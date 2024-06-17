@@ -45,11 +45,11 @@
 
 @keyframes Bobbing {
   0% {
-    transform: translateY(5px);
+    transform: translateY(-5px);
   }
 
   100% {
-    transform: translateY(-5px);
+    transform: translateY(-12.5px);
   }
 }
 
