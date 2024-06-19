@@ -47,7 +47,7 @@
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(1);
   padding: 20px;
-  grid-auto-rows: 240px;
+  grid-auto-rows: 255px;
   grid-auto-flow: dense;
   z-index: 2;
   gap: 20px;
@@ -67,7 +67,7 @@
   height: 100%;
   position: relative;
   overflow: hidden;
-  transition: 0.3s ease;
+  transition: 0.3s ease, outline 0s ease;
   border-radius: 10px;
   background-size: 350%;
   z-index: 2;
@@ -98,6 +98,7 @@
   height: calc(100% + 20px);
   --imgincr: 15px;
   border-radius: 15px;
+  outline: 2px solid var(--accentColor);
 }
 
 #Diane .GalleryItem:hover {

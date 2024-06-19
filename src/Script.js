@@ -20,7 +20,9 @@ const dgtitle = document.getElementById('DGTitle');
 //Gallery
 const gallimgs = document.getElementsByClassName('image');
 
-// get theme on page load
+document.addEventListener('contextmenu', (event) => {
+  event.preventDefault();
+});
 
 let social1X, social1Y, social2X, social2Y;
 let hovered = false;
@@ -59,17 +61,10 @@ const Scaleintime = {
 let twitter, instagram, reddit, linkedin;
 
 function resize() {
-  if (window.innerWidth < 400) {
-    social1X = 170;
-    social1Y = 190;
-    social2X = 240;
-    social2Y = 40;
-  } else {
-    social1X = 170;
-    social1Y = 190;
-    social2X = 240;
-    social2Y = 40;
-  }
+  social1X = 170;
+  social1Y = 190;
+  social2X = 245;
+  social2Y = 45;
   twitter = [
     { transform: 'translate(0px, 0px) scale(.5)' },
     { transform: `translate(${-social1X}px,${social1Y}px) scale(.9)` },
@@ -127,50 +122,6 @@ export function NHover(real) {
     if (hovered) Hover(false);
   };
 }
-
-export const viewer = new Viewer(document.getElementById('GalleryWrap'), {
-  view: () => {
-    const viewerTitle = document.getElementById('viewerTitle0');
-    const observer = new MutationObserver(() => {
-      if (viewerTitle.innerText.trim().length === 0) return;
-      viewerTitle.innerHTML = viewerTitle.innerText;
-      observer.disconnect();
-    });
-    observer.observe(viewerTitle, {
-      characterData: false,
-      childList: true,
-      attributes: false,
-    });
-  },
-  toolbar: {
-    prev: {
-      show: 0,
-      size: 'large',
-    },
-    zoomIn: 0,
-    zoomOut: 0,
-    oneToOne: 0,
-    reset: {
-      show: 1,
-      size: 'large',
-    },
-    play: {
-      show: 0,
-      size: 'large',
-    },
-    next: {
-      show: 0,
-      size: 'large',
-    },
-    rotateLeft: 0,
-    rotateRight: 0,
-    flipHorizontal: 0,
-    flipVertical: 0,
-  },
-  title: [1, (image, imageData) => `${image.alt}`],
-  zoomRatio: [0.2],
-  toggleOnDblclick: [false],
-});
 
 const infButton = document.querySelector('#infoToggle');
 const infBubble = document.querySelector('.infoBubble');

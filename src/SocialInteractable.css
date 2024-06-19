@@ -1,8 +1,8 @@
 .socials {
   background-color: var(--accentColor);
   position: absolute;
-  height: 175px;
-  width: 175px;
+  height: 185px;
+  width: 185px;
   border-radius: 100%;
   z-index: 1;
   /* display: none; */
@@ -68,8 +68,8 @@
   color: #ffffff;
   cursor: none;
 }
-#socialDiscord img {
-  transform: translate(-312.5px, -312.5px) scale(0.12);
+#socialDiscord svg {
+  transform: scale(0.55);
   transition: 0.2s ease-in-out;
   cursor: none;
 }
@@ -78,9 +78,9 @@
   transform: translateY(0.4vh) scale(0.55);
   filter: invert() drop-shadow(-10px 12px 2px rgba(0, 0, 0, 0.3));
 }
-#socialDiscord img:hover {
-  transform: translate(-312.5px, -312.5px) scale(0.13);
-  filter: invert() drop-shadow(30px 40px 7px rgba(0, 0, 0, 0.3));
+#socialDiscord svg:hover {
+  transform: scale(0.6);
+  filter: invert() drop-shadow(10px 12px 2px rgba(0, 0, 0, 0.3));
 }
 #socialreddit svg:hover {
   transform: scale(0.55);

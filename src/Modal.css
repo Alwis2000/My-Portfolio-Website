@@ -3,7 +3,7 @@
 }
 
 .viewer-title {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: 1rem;
   color: white;
 }
@@ -41,7 +41,7 @@
   background-position: center;
   background-image: url(images/Reset.png);
   background-size: cover;
-  content: "Reset";
+  content: 'Reset';
   overflow: visible;
 }
 
@@ -98,4 +98,8 @@
   background-repeat: no-repeat;
   border-radius: 0;
   border: none;
+}
+
+.viewer-open {
+  overflow: visible !important;
 }

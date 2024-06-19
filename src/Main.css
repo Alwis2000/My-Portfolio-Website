@@ -48,10 +48,46 @@
   --outlineGlow2: white;
 }
 
+a {
+  cursor: none;
+}
+
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+
 html {
   /* scroll-behavior: smooth; */
   scroll-padding: 15%;
   overflow-x: hidden;
+  /* pointer-events: none; */
 }
 
 #smooth {
@@ -77,17 +113,6 @@ body {
   color: var(--mainFontColor);
   user-select: none;
   cursor: none;
-  /* translate: var(--x); */
-}
-
-.scrollbar-track {
-  background: transparent !important;
-  width: 1vw;
-}
-
-.scrollbar-thumb {
-  width: 100%;
-  background: var(--accentColor) !important;
 }
 
 #cursor {
@@ -97,15 +122,19 @@ body {
   pointer-events: none;
   /* display: none; */
   opacity: 0;
-  transition: opacity 0.1s ease-out, filter 1s ease-out;
+  transition: opacity 0.3s ease-out, filter 1s ease-out;
   filter: drop-shadow(0 0 5px white);
+  /* mix-blend-mode: difference; */
+  transform-origin: right top;
+  transform: rotate(10deg);
 }
 
 #cursor svg {
   pointer-events: none;
   /* text-shadow: 0 0 10px var(--accentColor); */
+  /* display: none; */
+  /* stroke: var(--mainFontColor); */
 
-  stroke: var(--mainFontColor);
   stroke-width: 12;
   /* stroke="#ffcc80";
       stroke-width="53.299"; */

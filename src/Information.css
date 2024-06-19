@@ -56,7 +56,7 @@
   border-radius: 50%;
   /* outline: var(--accentColor) solid 3px; */
   outline: var(--outlineGlow);
-  box-shadow: 0 0 40px var(--shadowGlow);
+  /* box-shadow: 0 0 40px var(--shadowGlow); */
   background-image: url(images/Hover.png), var(--pfp);
   background-size: cover;
   translate: var(--y);
@@ -189,10 +189,10 @@
   font-size: 3rem;
   font-weight: 100;
   text-wrap: nowrap;
-  overflow: hidden;
+  /* overflow-x: hidden; */
 }
 #AboutMeBody {
-  overflow: visible;
+  /* overflow: visible; */
   padding-inline: 1.3em;
   padding-block: 0;
   border-radius: 30px;
@@ -207,7 +207,7 @@
   backdrop-filter: blur(20px) grayscale(0.5);
   /* text-align: justify;
   text-justify: inter-word; */
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #AboutHere {
@@ -246,6 +246,7 @@
 
 .FeedbackText {
   font-size: 22vw;
+  /* -webkit-text-stroke: 5vw solid var(--backgroundColors);/ */
   /* color: rgba(0, 0, 0, 0.05); */
   color: inherit;
   opacity: 0.04;
@@ -349,40 +350,4 @@
   background-color: gray;
   box-shadow: 0 0 0;
   translate: 0 0;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-::-webkit-scrollbar-track {
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-}
-
-a:link {
-  color: white;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-a:visited {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:hover {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:active {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
 }
