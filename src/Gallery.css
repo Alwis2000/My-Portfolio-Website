@@ -2,7 +2,7 @@
   background-color: var(--backgroundColor);
   outline: var(--outline);
   border-radius: 30px;
-  margin: 5vw;
+  /* margin: 5vw; */
   margin-block: 24svh;
   display: flex;
   flex-direction: column;
@@ -26,7 +26,7 @@
   padding-right: 0.6em;
   position: relative;
   z-index: 5;
-  translate: 0 -60%;
+  translate: 0% -60%;
   transition: 0.3s ease;
   color: var(--mainFontColor);
   font-family: var(--secondaryFont);
@@ -34,9 +34,9 @@
   transform-origin: center;
   background-color: var(--backgroundColor);
   /* box-shadow: 0 0 80px var(--shadowGlow), inset 0 0 40px var(--shadowGlow); */
-  outline: var(--outline);
+  border: var(--outline);
   border-radius: 30px;
-  text-shadow: 0 0 40px var(--shadowGlow);
+  text-shadow: 0px 0px 40px var(--shadowGlow2High);
   box-shadow: inset 0px 0px 20px var(--backgroundColor2);
 }
 
@@ -59,16 +59,14 @@
   animation-name: move-up;
   animation-timeline: view();
   animation-range: entry 0% cover 50%;
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
 }
 
 .GalleryItem {
   width: 100%;
   height: 100%;
   position: relative;
-  overflow: hidden;
   transition: 0.3s ease, outline 0s ease;
-  border-radius: 10px;
   background-size: 350%;
   z-index: 2;
 }
@@ -77,6 +75,20 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image:hover {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  outline: var(--outlineGlow);
+  box-shadow: 0px 0px 40px color-mix(in srgb, wheat, transparent);
+}
+
+.image.is-inViewport {
+  animation: fade-up 0.4s ease-out forwards;
 }
 
 .GalleryItem .image img {
@@ -92,18 +104,10 @@
 }
 
 .GalleryItem:hover {
-  z-index: 3;
   margin: -10px;
   width: calc(100% + 20px);
   height: calc(100% + 20px);
-  --imgincr: 15px;
   border-radius: 15px;
-  outline: 2px solid var(--accentColor);
-}
-
-#Diane .GalleryItem:hover {
-  box-shadow: red 0 0 30px;
-  outline: rgb(255, 171, 54) dashed 2px;
 }
 
 .GalleryItem .Text {
@@ -114,9 +118,10 @@
   transform: translate(-50%, 50%);
   width: 85%;
   color: white;
-  /* text-transform: uppercase; */
   font-size: 1.75rem;
-  font-weight: 100;
+  font-family: 'noto sans';
+  letter-spacing: -0.015em;
+  font-weight: 600;
   z-index: 4;
   transition: opacity 0.5s ease, bottom 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
   text-decoration: none;

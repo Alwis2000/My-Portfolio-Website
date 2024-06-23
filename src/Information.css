@@ -1,37 +1,67 @@
 .InfoContainer {
   position: relative;
-  height: 87svh;
-  width: 100vw;
+  height: 81svh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.InfoContainer::before {
+  content: '';
+  /* border-top: solid 4px #f90; */
+  background-color: var(--accentColor);
+  position: absolute;
+  top: 0;
+  width: 85%;
+  padding: 1.5px;
+  /* margin-inline: 5vw; */
+  border-radius: 2px;
 }
 
 #infoWrapper {
-  height: 100%;
+  height: 70%;
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-}
-
-#HoverClass {
   background-color: var(--backgroundColor);
-  width: 61svh;
-  height: 61svh;
-  position: relative;
-  z-index: 6;
-  /* transition: 1s; */
-
-  /* animation:  Pulsing 2.5s ease infinite; */
-  border-radius: 5%;
-  /* padding: 0px; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
   outline: var(--outline);
   box-shadow: inset 0 0 20px var(--backgroundColor2),
     0 0 40px rgba(0, 0, 0, 0.075);
+  border-radius: 20px;
+}
+
+#HoverClass {
+  height: 100%;
+  aspect-ratio: 3.5/4;
+  position: relative;
+  z-index: 6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  translate: 0 -4%;
+}
+
+#HoverClass::before {
+  content: '';
+  height: 112.5%;
+  width: 125%;
+
+  /* aspect-ratio: 3.5/4; */
+  position: absolute;
+  /* z-index: 6; */
+  background-color: var(--backgroundColor);
+  border: var(--outline);
+  border-inline: 2px solid color-mix(in srgb, var(--outlineColor) 70%, wheat);
+  box-shadow: inset 0 0 20px var(--backgroundColor2),
+    0 0 40px var(--backgroundColor2);
+  border-radius: 50px;
+  /* transition: 1s; */
+
+  /* animation:  Pulsing 2.5s ease infinite; */
+
+  /* padding: 0px; */
+  /* border-inline: var(--outline); */
 }
 
 #welcomeText {
@@ -41,7 +71,8 @@
   font-size: 2rem;
   font-weight: 300;
   /* font-style: italic; */
-  top: 6%;
+  top: 2.5%;
+  text-shadow: 0 0 20px var(--shadowGlow2High);
 }
 
 #ProfileImage {
@@ -49,24 +80,25 @@
   z-index: 2;
   width: 37.5svh;
   height: 37.5svh;
-  transition: 0.4s ease-out;
+  transition: 0.4s ease;
   pointer-events: all;
   /* filter: hue-rotate(-20deg); */
   animation: Bobbing 2.5s ease-in-out infinite alternate;
   border-radius: 50%;
   /* outline: var(--accentColor) solid 3px; */
   outline: var(--outlineGlow);
-  /* box-shadow: 0 0 40px var(--shadowGlow); */
+  box-shadow: 0 0 30px var(--shadowGlow2);
   background-image: url(images/Hover.png), var(--pfp);
   background-size: cover;
   translate: var(--y);
-  cursor: none;
+  cursor: url(./images/link.png), pointer;
 }
 
 #ProfileImage:hover {
   background-image: url(images/ClickME.png), var(--pfp);
-  border-radius: 45%;
+  /* border-radius: 45%; */
   animation-play-state: paused;
+  scale: 1.02;
 }
 
 #ProfileImage img {
@@ -75,33 +107,37 @@
 
 .NameClass {
   position: absolute;
-  width: 100%;
+  /* width: 100%; */
   color: var(--mainFontColor);
   font-family: var(--secondaryFont);
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   transition: 0.2s ease-in-out;
-  top: 84%;
-  text-shadow: 0 0 20px var(--shadowGlow);
+  bottom: 2.5%;
+  text-shadow: 0 0 20px var(--shadowGlow2High);
+  /* text-shadow: 0 0 20px var(--shadowGlow); */
+  translate: -0.1em 0;
 }
 
 .textClass {
-  width: calc(100% / 3);
+  width: calc(100% / 3.7);
   text-transform: uppercase;
   font-size: 7.6rem;
   color: var(--mainFontColor);
-  --shadow: #d50;
+  /* opacity: 0.9; */
+  --shadow: rgb(50, 75, 90);
   line-height: 0;
-  text-shadow: 0 0 20px var(--shadowGlow);
+  text-shadow: 0 0 60px var(--shadowGlow2High);
 }
 
 #DigitalArtistBgText {
+  /* transform: perspective(500px) rotateY(5deg); */
   transition: 0.5s ease;
 }
 
 #GameDevBgText {
+  transform: translateY(0.05em);
   font-size: 9.5rem;
   transition: 0.5s ease;
-  transform: translateY(0.05em);
 }
 
 /* #GameDevBgText p {
@@ -109,21 +145,15 @@
 } */
 
 #DigitalArtistBgText:hover {
-  color: var(--accentColor);
-  text-shadow: -1px 1px 0px var(--shadow), -2px 2px 0px var(--shadow),
-    -3px 3px 0px var(--shadow), -4px 4px 0px var(--shadow),
-    -5px 5px 0px var(--shadow), -6px 6px 0px var(--shadow),
-    -7px 7px 0px var(--shadow), -8px 8px 0px var(--shadow);
-  translate: 20px -10px;
+  text-shadow: -8px 0px 0px var(--shadow);
+  translate: 8px 0px;
+  opacity: 1;
 }
 
 #GameDevBgText:hover {
-  color: var(--accentColor);
-  text-shadow: 1px 1px 0px var(--shadow), 2px 2px 0px var(--shadow),
-    3px 3px 0px var(--shadow), 4px 4px 0px var(--shadow),
-    5px 5px 0px var(--shadow), 6px 6px 0px var(--shadow),
-    7px 7px 0px var(--shadow), 8px 8px 0px var(--shadow);
-  translate: -20px -10px;
+  text-shadow: 4px 0px 0px var(--shadow), 8px 0px 0px var(--shadow);
+  translate: -8px 0px;
+  opacity: 1;
 }
 
 .AboutMe {
@@ -152,15 +182,14 @@
 
 .AboutMe.CurrentItem #AboutMeWrap {
   background-color: var(--accentColor);
-  box-shadow: 0 0 40px transparent;
+  /* box-shadow: 0 0 40px transparent; */
 }
 
 #AboutMeWrap {
   border-radius: 30px;
   transition: 0.2s ease-out 1s;
-  width: 90vw;
+  width: 85%;
   padding: 2px;
-  box-shadow: 0 0 40px var(--shadowGlow2);
 }
 
 .AboutMeText {
@@ -168,10 +197,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: justify;
+  text-align: left;
+  /* text-wrap: balance; */
   background-size: cover;
   background-position: center;
-  padding-block: 3em;
+  padding-bottom: 3em;
   padding-inline: 10em;
   /* height: 100%; */
   /* translate: var(--y); */
@@ -190,28 +220,41 @@
   font-weight: 100;
   text-wrap: nowrap;
   /* overflow-x: hidden; */
+  margin: 0;
+  translate: 0 40%;
+  border: color-mix(in srgb, var(--outlineColor) 70%, wheat) 2px solid;
+  border-top: color-mix(in srgb, var(--outlineColor) 20%, wheat) 2px solid;
+  border-bottom: var(--outlineColor) 2px solid;
+  box-shadow: inset 0 0 20px var(--backgroundColor2),
+    0 0 40px var(--backgroundColor2) 2px solid;
 }
+
 #AboutMeBody {
   /* overflow: visible; */
   padding-inline: 1.3em;
   padding-block: 0;
+  padding-top: 1em;
   border-radius: 30px;
   font-family: 'Noto Sans', sans-serif;
   font-weight: 300;
   font-size: 1.1em;
-  -webkit-font-size: 1.1em;
+  /* -webkit-font-size: 1.1em; */
   /* width: 100%; */
   /* height: fit-content; */
-  background-color: rgba(0, 20, 50, 0.315);
-  outline: #7b92de33 2px inset;
-  backdrop-filter: blur(20px) grayscale(0.5);
+  background-color: var(--backgroundColor2);
+  outline: color-mix(in srgb, var(--outlineColor) 60%, wheat) 2px solid;
+  box-shadow: inset 0 0 40px var(--shadowGlow2);
+  /* backdrop-filter: blur(20px) grayscale(0.5); */
+
   /* text-align: justify;
   text-justify: inter-word; */
   /* overflow: hidden; */
 }
 
 #AboutHere {
-  background-image: url(images/Crystal\ Scene\ better.jpg);
+  /* background-image: url(images/Crystal\ Scene\ better.webp); */
+  background-color: var(--backgroundColor2);
+  box-shadow: 0 0 40px var(--shadowGlow2), inset 0 0 40px var(--shadowGlow2High);
   background-size: cover;
   background-position: center;
 }
@@ -222,7 +265,6 @@
   position: relative;
   /* width: 100%; */
   height: 50vh;
-  margin: 5vw;
   /* overflow: hidden; */
   z-index: 0;
   outline: var(--outline);
@@ -235,22 +277,14 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  /* z-index: 5; */
-  /* gap: 10%; */
   width: 100%;
   height: 100%;
-  /* height: 70%; */
-  text-transform: uppercase;
-  /* margin-top: 2.5%; */
 }
 
 .FeedbackText {
   font-size: 22vw;
-  /* -webkit-text-stroke: 5vw solid var(--backgroundColors);/ */
-  /* color: rgba(0, 0, 0, 0.05); */
   color: inherit;
   opacity: 0.04;
-  /* transform: translate(-.2vh, -.3vw); */
   position: absolute;
   display: flex;
   justify-content: center;
@@ -261,30 +295,20 @@
 }
 
 #FormFix {
-  top: 0%;
-  left: 0%;
-  /* position: absolute; */
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
   align-items: center;
   justify-content: center;
-  /* padding-top: 2.5%; */
 }
 
 #FormStatus {
   font-family: 'Noto sans', sans-serif;
   font-size: 1rem;
   opacity: 0.5;
-  /* margin: 1em;
-  margin-top: 0.5em; */
   margin-bottom: 1.5%;
 }
-
-/* #FormFillWrap {
-  
-} */
 
 #FormFill {
   font-family: 'Noto Sans', sans-serif;
@@ -300,7 +324,6 @@
   outline: none;
   margin-top: 20%;
   width: 40vw;
-  /* font-weight: 600; */
   height: 20vh;
   background-color: var(--backgroundColor2);
   transition: 0.2s ease;
@@ -308,46 +331,46 @@
 
 #FormFill:focus {
   box-shadow: 0 0 80px var(--shadowGlow);
+  --glow: var(--shadowGlow);
   animation: flickerLight 0.2s forwards;
   border: var(--outlineGlow);
+  position: relative;
+  z-index: 2;
 }
 
 #FormButton {
-  background-color: var(--accentColor);
+  background-color: var(--backgroundColor2);
+  border: var(--outlineGlow);
   width: fit-content;
   height: fit-content;
-  color: black;
-  /* margin: auto; */
-  /* margin-top: 20px; */
+  box-shadow: 0px 0px 30px var(--shadowGlow2High),
+    inset 0px 0px 30px var(--shadowGlow2);
+  color: inherit;
   font-family: 'Noto Sans';
-  font-weight: 700;
-  letter-spacing: -1px;
+  font-weight: 600;
   font-size: 1.2rem;
   transition: 0.1s ease;
   transition: 0.2s ease;
-  /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); */
-  border-radius: 30px;
+  border-radius: 10px;
   padding-top: 2px;
-  border: none;
-  /* margin-top: 2.5%; */
-  cursor: none;
+  cursor: url(./images/link.png), pointer;
   padding: 0.75em;
   padding-inline: 1.5em;
 }
 
 #FormButton:hover {
-  /* color: white; */
+  color: black;
   /* cursor: pointer; */
-  background-color: white;
-  --thicknessColor: #4d5f65;
-  box-shadow: 0px 2px 0px var(--thicknessColor),
-    0px 4px 0px var(--thicknessColor), 0px 6px 0px var(--thicknessColor),
-    0px 10px 30px var(--accentColor);
-  translate: 0 -6px;
+  background-color: var(--accentColor);
+  --thicknessColor: white;
+  box-shadow: 0px 6px 30px rgba(255, 0, 0, 0.6);
+  /* translate: 0 6px; */
 }
 
 #FormButton:disabled {
-  background-color: gray;
+  color: var(--outlineColor);
+  background-color: var(--backgroundColor2);
+  border: var(--outline);
   box-shadow: 0 0 0;
   translate: 0 0;
 }

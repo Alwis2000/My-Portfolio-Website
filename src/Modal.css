@@ -2,10 +2,25 @@
   cursor: default;
 }
 
+.viewer-button {
+  background-position: center;
+  background-image: url(images/close.svg);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  top: 1%;
+  right: 1%;
+  width: 40px;
+  height: 40px;
+  outline: white 2px solid;
+}
+
 .viewer-title {
   font-family: 'Noto Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
   color: white;
+  opacity: 1;
+  margin-bottom: 1svh;
 }
 .viewer-backdrop {
   background-color: rgba(0, 0, 0, 0.9);
@@ -23,36 +38,78 @@
   height: 100%;
 }
 .viewer-list > li {
-  height: 80px;
-  width: 80px;
-}
-.viewer-toolbar > ul {
   height: 50px;
+  width: 70px;
+}
+
+.viewer-list > li img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.viewer-toolbar > ul {
+  height: 40px;
   overflow: visible;
+  margin-bottom: 2svh;
+  padding: 4px;
 }
 
 .viewer-toolbar > ul > .viewer-large {
   height: 100%;
-  width: 50px;
+  width: 40px;
   overflow: visible;
+  margin: 0;
+  margin-inline: 5px;
+  outline: white 2px solid;
+}
+
+.viewer-toolbar > ul > .viewer-large:hover {
+  outline: #f90 2px solid;
 }
 
 .viewer-reset {
   background-position: center;
-  background-image: url(images/Reset.png);
-  background-size: cover;
+  background-image: url(images/reset.svg);
+  background-size: 60%;
+  background-repeat: no-repeat;
   content: 'Reset';
   overflow: visible;
 }
 
-.viewer-reset:hover {
-  outline: #f90 1px solid;
+.viewer-prev {
+  background-position: center;
+  background-image: url(images/previous.svg);
+  background-size: 43%;
+  background-repeat: no-repeat;
+  content: 'Prev';
+  overflow: visible;
+  fill: white;
+}
+
+.viewer-next {
+  background-position: center;
+  background-image: url(images/next.svg);
+  background-size: 43%;
+  background-repeat: no-repeat;
+  content: 'Prev';
+  overflow: visible;
+  fill: white;
+}
+
+.viewer-large::before {
+  content: none;
 }
 
 .viewer-reset:focus {
-  animation: fullSpin 0.4s ease-out;
+  animation: fullSpin 0.75s ease-out;
   outline: white 2px solid !important;
   box-shadow: #f90 0 0 10px !important;
+}
+
+.viewer-reset:active {
+  animation: none;
+  background-image: url(images/resetf90.svg);
 }
 
 .viewer-close:before,
@@ -69,15 +126,14 @@
 .viewer-rotate-right:before,
 .viewer-zoom-in:before,
 .viewer-zoom-out:before {
-  background-image: url(images/Reset.png);
+  background-image: none;
   background-repeat: no-repeat;
-
   color: transparent;
   display: block;
   font-size: 0;
-  height: 50px;
+  height: 40px;
   line-height: 0;
-  width: 50px;
+  width: 40px;
 }
 
 .viewer-loading:after {
@@ -102,4 +158,14 @@
 
 .viewer-open {
   overflow: visible !important;
+}
+
+.viewer-tooltip {
+  font-family: 'Noto sans';
+  font-size: 1.2rem;
+  font-weight: bolder;
+  padding: 0.5em;
+  width: auto;
+  height: auto;
+  background-color: #0008;
 }

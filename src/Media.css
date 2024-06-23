@@ -5,29 +5,20 @@
 @font-face {
   font-family: 'DaftPunkfont';
   src: url('customFonts/DaftFont.ttf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'FortniteFont';
   src: url('customFonts/fortnite.otf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'DuolingoFont';
   src: url('customFonts/Feather\ Bold.ttf');
+  font-display: swap;
 }
-
-/* @font-face {
-  font-family: 'Bauhaus 93';
-  src: url('customFonts/Feather\ Bold.ttf');
-} */
-
-/* @media screen and (max-width: 1660px) {
-  .container {
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 300px;
-  }
-} */
 
 @media (hover: none) or (width < 650px) {
   #ProfileImage {
@@ -48,9 +39,6 @@
 
   .socials {
     display: none;
-  }
-  #cursor {
-    display: none !important;
   }
 }
 
@@ -102,7 +90,7 @@
   }
 
   #AboutMeBody {
-    width: 75vw;
+    width: 60vw;
   }
 }
 
@@ -139,6 +127,10 @@
     overflow-x: hidden;
   }
 
+  #smooth {
+    padding-top: 6vh;
+  }
+
   #welcomeText {
     font-size: 1.4rem;
   }
@@ -147,11 +139,24 @@
     display: none;
   }
   .InfoContainer {
-    height: 120vw;
+    height: 60vh;
+  }
+
+  #infoWrapper {
+    border: none;
+    outline: none;
+    background: none;
   }
   #HoverClass {
-    width: 90vw;
-    height: 90vw;
+    /* width: 90vw;
+    height: 90vw; */
+    width: 100%;
+    translate: 0 0;
+  }
+  #HoverClass::before {
+    border-inline: var(--outline);
+    border-radius: 30px;
+    width: 100%;
   }
 
   #ProfileImage {
@@ -261,14 +266,14 @@
 
 @media (width < 400px) {
   #welcomeText {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
   }
   #ProfileImage {
     width: 55vw;
     height: 55vw;
   }
   .NameClass {
-    font-size: 1.3rem;
+    font-size: 2rem;
   }
 
   .ContainerTitle {

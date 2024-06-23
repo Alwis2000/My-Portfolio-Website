@@ -1,17 +1,22 @@
 .socials {
-  background-color: var(--accentColor);
+  background-color: var(--backgroundColor3);
   position: absolute;
-  height: 185px;
-  width: 185px;
+  height: 180px;
+  width: 180px;
   border-radius: 100%;
   z-index: 1;
   /* display: none; */
-  cursor: none;
-  box-shadow: 0 0 40px var(--shadowGlow2);
+  cursor: url(./images/link.png), pointer;
+  box-shadow: inset 0 0 25px var(--shadowGlow2), 0 0 30px var(--shadowGlow2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--outlineGlow);
 }
 
 .socials:hover {
   scale: 1.05;
+  /* border: var(--outlineGlow); */
 }
 
 #socialtwitter {
@@ -37,56 +42,61 @@
 
 #socialtwitter:hover {
   background-color: #1da1f2;
-
+  border: 2px solid hsl(203, 89%, 83%);
+  box-shadow: inset 0 0 35px hsl(203, 89%, 73%),
+    0 0 50px hsla(203, 89%, 73%, 0.5);
   /* padding: 10px; */
 }
 #socialDiscord:hover {
   background-color: #5865f2;
+  border: 2px solid hsl(235, 86%, 85%);
+
+  box-shadow: inset 0 0 35px hsl(235, 86%, 75%),
+    0 0 50px hsla(235, 86%, 75%, 0.5);
 }
 #socialreddit:hover {
   background-color: #ff4500;
+  border: 2px solid hsl(16, 100%, 80%);
+  box-shadow: inset 0 0 35px hsl(16, 100%, 70%),
+    0 0 50px hsla(16, 100%, 70%, 0.5);
 }
 #sociallinkedin:hover {
   background-color: #0e76a8;
+  border: 2px solid hsl(203, 89%, 83%);
+  box-shadow: inset 0 0 35px hsl(203, 89%, 73%),
+    0 0 50px hsla(203, 89%, 73%, 0.5);
 }
 
 #socialtwitter svg {
-  transform: translateY(0.4vh) scale(0.5);
   transition: 0.2s ease-in-out;
-  color: #ffffff;
-  cursor: none;
+  fill: var(--mainFontColor);
 }
 #socialreddit svg {
-  transform: scale(0.5);
   transition: 0.2s ease-in-out;
-  color: #ffffff;
-  cursor: none;
+  fill: var(--mainFontColor);
 }
 #sociallinkedin svg {
-  transform: translateY(-0.5vh) scale(0.4);
   transition: 0.2s ease-in-out;
-  color: #ffffff;
-  cursor: none;
+  fill: var(--mainFontColor);
 }
 #socialDiscord svg {
-  transform: scale(0.55);
   transition: 0.2s ease-in-out;
-  cursor: none;
+  fill: var(--mainFontColor);
 }
 
 #socialtwitter svg:hover {
-  transform: translateY(0.4vh) scale(0.55);
-  filter: invert() drop-shadow(-10px 12px 2px rgba(0, 0, 0, 0.3));
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px hsl(203, 89%, 73%));
 }
 #socialDiscord svg:hover {
-  transform: scale(0.6);
-  filter: invert() drop-shadow(10px 12px 2px rgba(0, 0, 0, 0.3));
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px hsl(235, 86%, 75%));
 }
 #socialreddit svg:hover {
-  transform: scale(0.55);
-  filter: invert(1) drop-shadow(-10px 5px 2px rgba(0, 0, 0, 0.3));
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px hsl(16, 100%, 70%));
 }
 #sociallinkedin svg:hover {
-  transform: translateY(-0.5vh) scale(0.45);
-  filter: invert(1) drop-shadow(10px 5px 2px rgba(0, 0, 0, 0.3));
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px hsl(199, 85%, 56%));
 }

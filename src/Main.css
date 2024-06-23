@@ -1,6 +1,5 @@
 :root {
   --accentColor: #ff9900;
-  --tertiaryBackgroundColor: #ff9900;
   --mainFontFamily: 'Anton';
   --secondaryFont: 'Great Vibes', cursive;
 }
@@ -13,18 +12,19 @@
   --secondaryBackgroundColor: rgb(29, 29, 29);
   --shadowGlow: var(--backgroundColor2);
   --shadowGlow2: var(--backgroundColor2);
+  --outlineColor: #e4e4e4;
   /* --shadowGlow: #ff990035; */
 
   /* font */
   --mainFontColor: #350400;
 
   /* containers */
-  --outline: #e4e4e4 2px solid;
+  --outline: var(--outlineColor) 2px solid;
   --outlineGlow: #c7c7c7 2px solid;
   --outlineGlow2: var(--accentColor);
 
   /* profile */
-  --pfp: url(/src/images/pfp\ 2.jpg);
+  --pfp: url(/src/images/pfp\ 2.webp);
 
   /* loader */
   --invertLogo: 1;
@@ -35,21 +35,24 @@
   /* --accentColor: #0dc; */
   --backgroundColor: rgb(17, 25, 28);
   --backgroundColor2: rgb(8, 16, 20);
+  --backgroundColor3: rgb(21, 34, 39);
   --secondaryBackgroundColor: rgb(29, 29, 29);
   --mainFontColor: #d6dfdf;
-  --outline: rgb(34, 47, 50) 2px solid;
+  --outlineColor: rgb(34, 47, 50);
+  --outline: var(--outlineColor) 2px solid;
   --transitionBack: rgb(11, 19, 23);
   --invertLogo: 0;
-  --pfp: url(/src/images/pfp\ 1.jpg);
+  --pfp: url(/src/images/pfp\ 1.webp);
   /* --shadowGlow: #ffffff80; */
   --shadowGlow: rgba(0, 221, 203, 0.3);
   --shadowGlow2: rgba(255, 195, 105, 0.2);
+  --shadowGlow2High: rgba(255, 206, 132, 0.4);
   --outlineGlow: white 2px solid;
   --outlineGlow2: white;
 }
 
 a {
-  cursor: none;
+  cursor: url(./images/link.png), pointer;
 }
 
 a:link {
@@ -76,6 +79,10 @@ a:active {
   text-decoration: none;
 }
 
+svg {
+  cursor: url(./images/link.png), pointer;
+}
+
 ::-webkit-scrollbar {
   background-color: transparent;
   position: absolute;
@@ -87,71 +94,45 @@ html {
   /* scroll-behavior: smooth; */
   scroll-padding: 15%;
   overflow-x: hidden;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  /* text-rendering: geometricPrecision; */
   /* pointer-events: none; */
 }
 
 #smooth {
   /* position: relative; */
   height: max-content;
-
-  translate: var(--x);
+  transform: translate3d(var(--x));
   transition: 0.2s ease-out;
-  padding: 0.1px;
+  padding: 5vw;
+  padding-top: 4vw;
 }
 
 body {
   background-image: url(images/BackGround.webp);
   background-color: var(--backgroundColor2);
   /* background-blend-mode: soft-light; */
-  background-size: 25rem;
-  animation: backMove linear 60s infinite;
+  background-size: 20rem;
+  animation: backMove linear 60s infinite alternate;
   background-attachment: fixed;
   margin: 0;
   padding: 0;
   text-align: center;
   font-family: var(--mainFontFamily);
+  -webkit-font-smoothing: subpixel-antialiased;
   color: var(--mainFontColor);
   user-select: none;
-  cursor: none;
+  /* cursor: none; */
+  backface-visibility: hidden;
+  cursor: url(./images/pointer.png), default;
 }
-
-#cursor {
-  position: fixed;
-  translate: var(--z);
-  z-index: 1000;
-  pointer-events: none;
-  /* display: none; */
-  opacity: 0;
-  transition: opacity 0.3s ease-out, filter 1s ease-out;
-  filter: drop-shadow(0 0 5px white);
-  /* mix-blend-mode: difference; */
-  transform-origin: right top;
-  transform: rotate(10deg);
-}
-
-#cursor svg {
-  pointer-events: none;
-  /* text-shadow: 0 0 10px var(--accentColor); */
-  /* display: none; */
-  /* stroke: var(--mainFontColor); */
-
-  stroke-width: 12;
-  /* stroke="#ffcc80";
-      stroke-width="53.299"; */
-}
-
-body:hover #cursor {
-  opacity: 1;
-  display: block;
-  filter: drop-shadow(0 0 20px white);
-}
-
 .alwaysForever {
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(68, 18, 47, 0.9);
   /* transition: 4; */
   z-index: 100;
   font-family: var(--secondaryFont);
@@ -205,8 +186,9 @@ body:hover #cursor {
   padding: 0;
   border: none;
   background-color: var(--accentColor);
-  border-radius: 20px;
-  cursor: none;
+  border-radius: 50%;
+  /* cursor: none; */
+  cursor: url(./images/link.png), pointer;
   bottom: 0;
 }
 
@@ -221,8 +203,6 @@ body:hover #cursor {
 }
 
 #themeToggle:focus img {
-  /* width: 90%;
-      height: 90%; */
   animation: fullSpin 1.5s ease;
 }
 

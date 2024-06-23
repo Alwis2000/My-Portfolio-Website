@@ -63,8 +63,8 @@ let twitter, instagram, reddit, linkedin;
 function resize() {
   social1X = 170;
   social1Y = 190;
-  social2X = 245;
-  social2Y = 45;
+  social2X = 235;
+  social2Y = 40;
   twitter = [
     { transform: 'translate(0px, 0px) scale(.5)' },
     { transform: `translate(${-social1X}px,${social1Y}px) scale(.9)` },
@@ -140,6 +140,16 @@ function showMessage() {
   }
 }
 
-// export const gallery = new Viewer(document.getElementById('GalleryWrap'));
+const inViewport = (entries, observer) => {
+  entries.forEach((entry) => {
+    entry.target.classList.toggle('is-inViewport', entry.isIntersecting);
+  });
+};
 
-// console.log(gallery);
+const Obs = new IntersectionObserver(inViewport);
+const obsOptions = {};
+
+document.querySelectorAll('.image').forEach((el) => {
+  // console.log(el);
+  Obs.observe(el, obsOptions);
+});

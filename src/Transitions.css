@@ -42,7 +42,8 @@ body {
   height: 100%;
   z-index: 100;
   background-color: var(--transitionBack);
-  transition: 0.5s ease;
+  transition: 0.5s ease, display 1s ease 0.5s;
+  /* display: none; */
 }
 
 .transition-3.is_active {
@@ -56,13 +57,24 @@ body {
   top: 50vh;
   translate: -50% -50%;
   z-index: 100;
-  animation: spin;
+  /* animation: spin;
   animation-duration: 3s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
-  animation-delay: 0s;
+  animation-delay: 0s; */
+
   scale: 60%;
-  filter: invert(var(--invertLogo));
+  /* filter: invert(var(--invertLogo)); */
+}
+
+#loader svg {
+  overflow: visible;
+  stroke-width: 5px;
+  stroke: var(--accentColor);
+  fill: white;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 1000;
+  animation: dash 2s linear infinite, filling 2s ease-in infinite;
 }
 
 :-webkit-scrollbar {

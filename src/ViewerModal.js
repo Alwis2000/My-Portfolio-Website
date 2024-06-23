@@ -20,9 +20,10 @@ const viewer = new Viewer(document.getElementById('GalleryWrap'), {
     // All methods are available here except "show".
     // this.viewer.zoomTo(1).rotateTo(180);
   },
+  navbar: false,
   toolbar: {
     prev: {
-      show: 0,
+      show: 1,
       size: 'large',
     },
     zoomIn: 0,
@@ -37,7 +38,7 @@ const viewer = new Viewer(document.getElementById('GalleryWrap'), {
       size: 'large',
     },
     next: {
-      show: 0,
+      show: 1,
       size: 'large',
     },
     rotateLeft: 0,
@@ -48,6 +49,7 @@ const viewer = new Viewer(document.getElementById('GalleryWrap'), {
   title: [1, (image, imageData) => `${image.alt}`],
   zoomRatio: [0.2],
   toggleOnDblclick: [false],
+  FullscreenOptions: true,
 });
 
 //TO-DO intialise data-prevent-lenis onto viewer-container class

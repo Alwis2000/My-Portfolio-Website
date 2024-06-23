@@ -1,45 +1,18 @@
 @keyframes move-up {
   0% {
-    translate: 0 200px;
-    /* scale: 0.75; */
-    opacity: 0;
+    translate: 0 25%;
   }
   100% {
     translate: 0 0;
-    /* scale: 1; */
-    opacity: 1;
   }
 }
 
-@keyframes zoom {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-@keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes Pulsing {
+@keyframes fade-up {
   0% {
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+    opacity: 0.2;
   }
-
-  50% {
-    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.2);
-  }
-
   100% {
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+    opacity: 1;
   }
 }
 
@@ -77,26 +50,6 @@
   }
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 700px 0px;
-  }
-
-  100% {
-    background-position: 0px 0px;
-  }
-}
-
-@keyframes faded {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -122,11 +75,7 @@
 }
 
 @keyframes backMove {
-  0% {
-    /*background-position: var(--x) var(--y)*/
-  }
   100% {
-    /*background-position: calc(100vh + var(--x)) calc(100vh + var(--y));*/
     background-position: 100vh 100vh;
   }
 }
@@ -147,24 +96,46 @@
 
 @keyframes flickerLight {
   0% {
-    box-shadow: 0 0 10px var(--shadowGlow);
+    box-shadow: 0 0 10px var(--glow);
   }
   17% {
-    box-shadow: 0 0 40px var(--shadowGlow);
+    box-shadow: 0 0 40px var(--glow);
   }
   34% {
-    box-shadow: 0 0 20px var(--shadowGlow);
+    box-shadow: 0 0 20px var(--glow);
   }
   50% {
-    box-shadow: 0 0 40px var(--shadowGlow);
+    box-shadow: 0 0 40px var(--glow);
   }
   67% {
-    box-shadow: 0 0 80px var(--shadowGlow);
+    box-shadow: 0 0 80px var(--glow);
   }
   84% {
-    box-shadow: 0 0 30px var(--shadowGlow);
+    box-shadow: 0 0 30px var(--glow);
   }
   100% {
-    box-shadow: 0 0 80px var(--shadowGlow);
+    box-shadow: 0 0 80px var(--glow);
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes filling {
+  0%,
+  50% {
+    fill-opacity: 0;
+  }
+  80%,
+  90% {
+    /* fill: var(); */
+    fill-opacity: 1;
+  }
+  100% {
+    /* fill: #bac736; */
+    fill-opacity: 0;
   }
 }
