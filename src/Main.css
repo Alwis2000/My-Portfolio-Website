@@ -101,12 +101,12 @@ html {
 }
 
 #smooth {
-  /* position: relative; */
-  height: max-content;
   transform: translate3d(var(--x), 0px);
   transition: 0.3s ease-out;
   padding: 5vw;
   padding-top: 4vw;
+  overflow-anchor: none;
+  backface-visibility: hidden;
 }
 
 body {
@@ -123,8 +123,7 @@ body {
   -webkit-font-smoothing: subpixel-antialiased;
   color: var(--mainFontColor);
   user-select: none;
-  /* cursor: none; */
-  backface-visibility: hidden;
+
   cursor: url(./images/pointer.png), default;
 }
 .alwaysForever {
