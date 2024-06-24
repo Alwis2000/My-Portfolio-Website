@@ -43,9 +43,11 @@
 .Container {
   position: relative;
   background-size: 60%;
+  width: 100%;
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(1);
+  /* grid-template-rows: repeat(1); */
   padding: 20px;
   grid-auto-rows: 255px;
   grid-auto-flow: dense;
@@ -77,12 +79,10 @@
   background-repeat: no-repeat;
   border-radius: 10px;
   overflow: hidden;
+  /* display: none; */
 }
 
 .image:hover {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   outline: var(--outlineGlow);
   box-shadow: 0px 0px 40px color-mix(in srgb, wheat, transparent);
 }

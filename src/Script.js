@@ -126,8 +126,8 @@ export function NHover(real) {
 const infButton = document.querySelector('#infoToggle');
 const infBubble = document.querySelector('.infoBubble');
 
-infButton.addEventListener('mouseover', showMessage);
-infButton.addEventListener('mouseleave', showMessage);
+infButton.addEventListener('click', showMessage);
+// infButton.addEventListener('mouseleave', showMessage);
 let isVisible = false;
 
 function showMessage() {

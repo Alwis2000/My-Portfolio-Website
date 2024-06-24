@@ -103,8 +103,8 @@ html {
 #smooth {
   /* position: relative; */
   height: max-content;
-  transform: translate3d(var(--x));
-  transition: 0.2s ease-out;
+  transform: translate3d(var(--x), 0px);
+  transition: 0.3s ease-out;
   padding: 5vw;
   padding-top: 4vw;
 }
@@ -216,7 +216,7 @@ body {
 
 .infoBubble {
   background-color: var(--accentColor);
-  pointer-events: none;
+  /* pointer-events: none; */
   position: absolute;
   z-index: 6;
   width: fit-content;
@@ -238,6 +238,7 @@ body {
   text-align: right;
   scale: 1;
   transform-origin: right bottom;
+  cursor: url(images/pointer.png), default;
 }
 
 #infoToggle img {
