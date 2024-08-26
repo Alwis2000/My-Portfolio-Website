@@ -1,24 +1,18 @@
 .socials {
   background-color: var(--backgroundColor3);
   position: absolute;
-  height: 180px;
   width: 180px;
+  aspect-ratio: 1/1;
   border-radius: 100%;
-  /* z-index: 1; */
-  /* display: none; */
   cursor: url(./images/link.png), pointer;
   box-shadow: inset 0 0 25px var(--shadowGlow2), 0 0 30px var(--shadowGlow2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  align-content: center;
   border: var(--outlineGlow);
   transition: 0.4s ease;
 }
 
 .socials:hover {
   scale: 1.05;
-  /* pointer-events: none; */
-  /* border: var(--outlineGlow); */
 }
 
 .socials svg {

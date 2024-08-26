@@ -1,3 +1,7 @@
+body {
+  --lineAccentWidth: 85%;
+}
+
 .InfoContainer {
   position: relative;
   height: 81svh;
@@ -12,10 +16,11 @@
   background-color: var(--accentColor);
   position: absolute;
   top: 0;
-  width: 85%;
-  padding: 1.5px;
+  width: var(--lineAccentWidth);
+  box-sizing: border-box;
+  padding: 1.75px;
   /* margin-inline: 5vw; */
-  border-radius: 2px;
+  /* border-radius: 2px; */
 }
 
 #infoWrapper {
@@ -36,9 +41,8 @@
   aspect-ratio: 3.5/4;
   position: relative;
   z-index: 6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
   translate: 0 -4%;
 }
 
@@ -127,22 +131,13 @@
   --shadow: rgb(50, 75, 90);
   line-height: 0;
   text-shadow: 0 0 60px var(--shadowGlow2High);
-}
-
-#DigitalArtistBgText {
-  /* transform: perspective(500px) rotateY(5deg); */
   transition: 0.5s ease;
 }
 
 #GameDevBgText {
   transform: translateY(0.05em);
   font-size: 9.5rem;
-  transition: 0.5s ease;
 }
-
-/* #GameDevBgText p {
-  margin: 0;
-} */
 
 #DigitalArtistBgText:hover {
   text-shadow: -8px 0px 0px var(--shadow);
@@ -156,9 +151,16 @@
   opacity: 1;
 }
 
+#AboutMeWrap {
+  border-radius: 30px;
+  transition: 0.2s ease-out 1s;
+  width: var(--lineAccentWidth);
+  box-sizing: border-box;
+  padding: 1.75px;
+}
+
 .AboutMe {
   display: flex;
-  align-items: center;
   justify-content: center;
   color: whitesmoke;
 }
@@ -168,11 +170,9 @@
 }
 
 .AboutMe .AboutBody {
-  transition: 1s;
-  background-size: cover;
+  transition: 1000ms grid-template-rows ease;
   display: grid;
   grid-template-rows: 1fr;
-  grid-row: 100%;
   border-radius: 29px;
 }
 
@@ -185,28 +185,16 @@
   /* box-shadow: 0 0 40px transparent; */
 }
 
-#AboutMeWrap {
-  border-radius: 30px;
-  transition: 0.2s ease-out 1s;
-  width: 85%;
-  padding: 2px;
-}
-
 .AboutMeText {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: left;
-  /* text-wrap: balance; */
   background-size: cover;
   background-position: center;
   padding-bottom: 3em;
   padding-inline: 10em;
-  /* height: 100%; */
-  /* translate: var(--y); */
   transition: padding 0.5s;
-  /* width: 80%; */
   overflow: hidden;
 }
 
@@ -286,30 +274,17 @@
   color: inherit;
   opacity: 0.04;
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  align-content: center;
   width: 100%;
   height: 100%;
   z-index: 0;
 }
-
-#FormFix {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-}
-
 #FormStatus {
   font-family: 'Noto sans', sans-serif;
   font-size: 1rem;
   opacity: 0.5;
   margin-bottom: 1.5%;
 }
-
 #FormFill {
   font-family: 'Noto Sans', sans-serif;
   color: var(--mainFontColor);
